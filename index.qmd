@@ -1,12 +1,12 @@
 ---
-title: "testwebsite"
+title: "마크다운"
 jupyter: python3
 ---
 
-This is a Quarto website.
+### 홈페이지 첫 화면입니다.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+QMD파일 안녕하세요. 데이터분석 지존짱짱맨 sol 입니다. !!!!!
 
 ```{python}
-1 + 1
+1+1
 ```

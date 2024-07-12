@@ -1,8 +1,9 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "testwebsite"
+  title: "DS_sol"
   navbar:
     left:
       - href: index.qmd
