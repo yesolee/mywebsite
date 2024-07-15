@@ -1,0 +1,108 @@
+---
+title: "hw1(24.07.15)"
+jupyter: python3
+---
+
+## Q1-1. 다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요
+
+```{python}
+import pandas as pd
+
+fruits = pd.DataFrame({
+    '제품':['사과','딸기','수박'],
+    '가격':[1800,1500,3000],
+    '판매량':[24,38,13]
+})
+fruits
+```
+## Q1-2. 앞에서 만든 데이터 프레임을 이용해 과일의 가격 평균과 판매량 평균을 구해 보세요.
+
+### Q1-2-1. 가격 평균
+```{python}
+fruits['가격'].mean()
+```
+### Q1-2-2. 판매량 평균
+```{python}
+fruits['판매량'].mean()
+```
+## Q2-1. `mpg`데이터를 불러와 복사본을 만드세요
+```{python}
+df_mpg=pd.read_csv('data/mpg.csv')
+mpg = df_mpg.copy()
+mpg
+```
+
+## Q2-2. 복사본 데이터를 이용해 `cty`는 `city`로, `hwy`는 `highway`로 수정하세요.
+```{python}
+mpg = mpg.rename(columns={'cty':'city','hwy':'highway'})
+mpg
+```
+## Q2-3. 데이터 일부를 출력해 변수명이 바뀌었는지 확인해보세요. 다음과 같은 결과물이 출력되어야 합니다.
+```{python}
+mpg.head()
+```
+## Q3-1. `midwest.csv`를 불러와 데이터의 특징을 파악하세요.
+### Q3-1-1. 파일 불러오기
+```{python}
+df_midwest = pd.read_csv('data/midwest.csv')
+midwest= df_midwest.copy()
+midwest
+```
+### Q3-1-2. 데이터의 특징 파악하기 (1) head()
+```{python}
+midwest.head()
+```
+### Q3-1-2. 데이터의 특징 파악하기 (2) tail()
+```{python}
+midwest.tail()
+```
+### Q3-1-2. 데이터의 특징 파악하기 (3) info()
+```{python}
+midwest.info()
+```
+### Q3-1-2. 데이터의 특징 파악하기 (4) shape
+```{python}
+midwest.shape
+```
+
+### Q3-1-2. 데이터의 특징 파악하기 (5) describe()
+```{python}
+midwest.describe(include='all')
+```
+## Q3-2. `poptotal`(전체인구) 변수를 `total`로, `popasian`(아시아 인구) 변수를 `asian`으로 수정하세요.
+```{python}
+midwest = midwest.rename(columns={'poptotal':'total','popasian':'asian'})
+midwest.info()
+```
+## Q3-3. `total`,`asian`변수를 이용해 '전체 인구 대비 아시아 인구 백분율' 파생변수를 추가하고, 히스토그램을 만들어 분포를 살펴보세요.
+### Q3-3-1. 파생변수 추가
+```{python}
+midwest['ratio'] = midwest['asian'] / midwest['total'] * 100
+midwest.head()
+```
+### Q3-3-2. 히스토그램 생성
+> 히스토그램이란? 값의 빈도를 막대 길이로 표현한 그래프이다.
+
+```{python}
+midwest['ratio'].plot.hist()
+```
+
+## Q3-4. 아시아 인구 백분율 전체 평균을 구하고, 평균을 초과하면 'large', 그 외에는 'small'을 부여한 파생변수를 만들어 보세요.
+```{python}
+import numpy as np
+mean = midwest['ratio'].mean()
+midwest['size'] = np.where(midwest['ratio'] > mean , 'large', 'samll')
+midwest.head()
+```
+## Q3-5. `large`와`small`에 해당하는 지역이 얼마나 많은지 빈도표와 빈도 막대 그래프를 만들어 확인해 보세요.
+### Q3-5-1. 빈도표 만들기
+```{python}
+midwest['size'].value_counts()
+```
+
+### Q3-5-2. 막대그래프 만들기
+```{python}
+count_size = midwest['size'].value_counts()
+count_size.plot.bar(rot = 0)
+```
+
