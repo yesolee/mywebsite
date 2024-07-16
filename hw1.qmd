@@ -118,4 +118,3 @@ midwest['size'].value_counts()
 count_size = midwest['size'].value_counts()
 count_size.plot.bar(rot = 0)
 ```
-

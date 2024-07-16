@@ -1,6 +1,14 @@
 ---
-title: "마크다운"
-jupyter: python3
+title: "Finely Malloc"
+toc: false
+about:
+    id: hero-heading
+    template: jolla
+    image: logo2.webp
+    links: 
+      - icon: github
+      - text: Github
+      - href: https://github.com/yesolee
 ---
 
 ### 홈페이지 첫 화면입니다.
