@@ -2,6 +2,7 @@
 title: "crime"
 jupyter: python3
 ---
+
 # 1. 파일 불러오기, 복사본 만들기
 ```{python}
 import pandas as pd
@@ -10,7 +11,7 @@ df = pd.read_csv('data/crime.csv', encoding='EUC-KR')
 crime=df.copy()
 crime.head()
 ```
-## 2. 변수이름 바꾸기
+# 2. 변수이름 바꾸기
 ```{python}
 crime = crime.rename(columns={
     '죄종별(1)':'대분류',
