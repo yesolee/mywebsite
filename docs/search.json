@@ -355,5 +355,19 @@
     "title": "hw2(24.07.16)",
     "section": "Q8. 5~7번 문제를 해결할 수 있는 하나로 연결된 pandas 구문을 만들어 실행해 보세요. 데이터는 복사본 대신 mpg 원본을 이용하세요.",
     "text": "Q8. 5~7번 문제를 해결할 수 있는 하나로 연결된 pandas 구문을 만들어 실행해 보세요. 데이터는 복사본 대신 mpg 원본을 이용하세요.\n\nmpg_raw.assign(\n    total=lambda x: x['cty']+x['hwy'],\n    mean =lambda x: x['total']/2\n).sort_values('mean',ascending=False).head(3)\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\ntotal\nmean\n\n\n\n\n221\nvolkswagen\nnew beetle\n1.9\n1999\n4\nmanual(m5)\nf\n35\n44\nd\nsubcompact\n79\n39.5\n\n\n212\nvolkswagen\njetta\n1.9\n1999\n4\nmanual(m5)\nf\n33\n44\nd\ncompact\n77\n38.5\n\n\n222\nvolkswagen\nnew beetle\n1.9\n1999\n4\nauto(l4)\nf\n29\n41\nd\nsubcompact\n70\n35.0"
+  },
+  {
+    "objectID": "crime.html",
+    "href": "crime.html",
+    "title": "crime",
+    "section": "",
+    "text": "import pandas as pd\n\ndf = pd.read_csv('data/crime.csv', encoding='EUC-KR')\ncrime=df.copy()\ncrime.head()\n\n\n\n\n\n\n\n\n죄종별(1)\n죄종별(2)\n2018\n2018.1\n2018.2\n2018.3\n2018.4\n2018.5\n2018.6\n2018.7\n...\n2021.6\n2021.7\n2022\n2022.1\n2022.2\n2022.3\n2022.4\n2022.5\n2022.6\n2022.7\n\n\n\n\n0\n죄종별(1)\n죄종별(2)\n계\n일요일\n월요일\n화요일\n수요일\n목요일\n금요일\n토요일\n...\n금요일\n토요일\n계\n일요일\n월요일\n화요일\n수요일\n목요일\n금요일\n토요일\n\n\n1\n강력범죄\n소계\n26787\n4154\n3529\n3619\n3693\n3659\n3834\n4299\n...\n3228\n3531\n24954\n3596\n3445\n3420\n3403\n3411\n3653\n4026\n\n\n2\n강력범죄\n살인기수\n309\n54\n40\n38\n53\n41\n54\n29\n...\n52\n38\n275\n32\n43\n43\n46\n39\n37\n35\n\n\n3\n강력범죄\n살인미수등\n488\n72\n74\n62\n68\n76\n67\n69\n...\n59\n53\n427\n65\n62\n76\n54\n57\n58\n55\n\n\n4\n강력범죄\n강도\n821\n126\n120\n133\n116\n117\n101\n108\n...\n88\n64\n516\n82\n80\n91\n64\n58\n73\n68\n\n\n\n\n5 rows × 42 columns\n\n\n\n\n\n\ncrime = crime.rename(columns={\n    '죄종별(1)':'대분류',\n    '죄종별(2)':'소분류',\n    '2018':'18_계',\n    '2018.1':'18_일',\n    '2018.2':'18_월',\n    '2018.3':'18_화',\n    '2018.4':'18_수',\n    '2018.5':'18_목',\n    '2018.6':'18_금',\n    '2018.7':'18_토',\n    })\ncrime.head()\n\n\n\n\n\n\n\n\n대분류\n소분류\n18_계\n18_일\n18_월\n18_화\n18_수\n18_목\n18_금\n18_토\n...\n2021.6\n2021.7\n2022\n2022.1\n2022.2\n2022.3\n2022.4\n2022.5\n2022.6\n2022.7\n\n\n\n\n0\n죄종별(1)\n죄종별(2)\n계\n일요일\n월요일\n화요일\n수요일\n목요일\n금요일\n토요일\n...\n금요일\n토요일\n계\n일요일\n월요일\n화요일\n수요일\n목요일\n금요일\n토요일\n\n\n1\n강력범죄\n소계\n26787\n4154\n3529\n3619\n3693\n3659\n3834\n4299\n...\n3228\n3531\n24954\n3596\n3445\n3420\n3403\n3411\n3653\n4026\n\n\n2\n강력범죄\n살인기수\n309\n54\n40\n38\n53\n41\n54\n29\n...\n52\n38\n275\n32\n43\n43\n46\n39\n37\n35\n\n\n3\n강력범죄\n살인미수등\n488\n72\n74\n62\n68\n76\n67\n69\n...\n59\n53\n427\n65\n62\n76\n54\n57\n58\n55\n\n\n4\n강력범죄\n강도\n821\n126\n120\n133\n116\n117\n101\n108\n...\n88\n64\n516\n82\n80\n91\n64\n58\n73\n68\n\n\n\n\n5 rows × 42 columns"
+  },
+  {
+    "objectID": "crime.html#변수이름-바꾸기",
+    "href": "crime.html#변수이름-바꾸기",
+    "title": "crime",
+    "section": "",
+    "text": "crime = crime.rename(columns={\n    '죄종별(1)':'대분류',\n    '죄종별(2)':'소분류',\n    '2018':'18_계',\n    '2018.1':'18_일',\n    '2018.2':'18_월',\n    '2018.3':'18_화',\n    '2018.4':'18_수',\n    '2018.5':'18_목',\n    '2018.6':'18_금',\n    '2018.7':'18_토',\n    })\ncrime.head()\n\n\n\n\n\n\n\n\n대분류\n소분류\n18_계\n18_일\n18_월\n18_화\n18_수\n18_목\n18_금\n18_토\n...\n2021.6\n2021.7\n2022\n2022.1\n2022.2\n2022.3\n2022.4\n2022.5\n2022.6\n2022.7\n\n\n\n\n0\n죄종별(1)\n죄종별(2)\n계\n일요일\n월요일\n화요일\n수요일\n목요일\n금요일\n토요일\n...\n금요일\n토요일\n계\n일요일\n월요일\n화요일\n수요일\n목요일\n금요일\n토요일\n\n\n1\n강력범죄\n소계\n26787\n4154\n3529\n3619\n3693\n3659\n3834\n4299\n...\n3228\n3531\n24954\n3596\n3445\n3420\n3403\n3411\n3653\n4026\n\n\n2\n강력범죄\n살인기수\n309\n54\n40\n38\n53\n41\n54\n29\n...\n52\n38\n275\n32\n43\n43\n46\n39\n37\n35\n\n\n3\n강력범죄\n살인미수등\n488\n72\n74\n62\n68\n76\n67\n69\n...\n59\n53\n427\n65\n62\n76\n54\n57\n58\n55\n\n\n4\n강력범죄\n강도\n821\n126\n120\n133\n116\n117\n101\n108\n...\n88\n64\n516\n82\n80\n91\n64\n58\n73\n68\n\n\n\n\n5 rows × 42 columns"
   }
 ]

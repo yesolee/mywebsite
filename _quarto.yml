@@ -11,6 +11,7 @@ website:
       - about.qmd
       - hw1.qmd
       - hw2.qmd
+      - crime.qmd
       
 format:
   html:
