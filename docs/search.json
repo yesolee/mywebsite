@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "summary",
+    "title": "Solog",
     "section": "",
-    "text": "홈페이지 첫 화면입니다.\nQMD파일 안녕하세요. 데이터분석 지존짱짱맨 sol 입니다. !!!!!\n\n1+1\n\n2"
+    "text": "홈페이지 첫 화면입니다.\n안녕하세요. 블로그에 오신 것을 환영합니다.\n\n1+1\n\n2"
   },
   {
     "objectID": "about.html",
@@ -403,14 +403,14 @@
     "href": "blog.html",
     "title": "myblog",
     "section": "",
-    "text": "No matching items"
+    "text": "Project1-crime\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 15, 2024\n\n\n이예솔\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "summary.html#pandas-내장함수",
     "href": "summary.html#pandas-내장함수",
     "title": "교재 summary",
     "section": "[2] pandas 내장함수",
-    "text": "[2] pandas 내장함수\n\n1. 변수명 바꾸기 .rename(columns = {‘변경전’:‘변경후’})\n\n\n2. 파생변수 만들기\n\n(1) df[‘파생변수명’] = 넣을값\n\n\n(2) 평균값 df.mean()\n\n\n\n3. 값 확인하기\n\n(1) df[‘컬럼명’].value_counts()\n\n\n(2) 빈도수를 알파벳순으로 정렬 .sort_index()\n\n\n\n4. 그래프로 확인하기\n\n(1) df.plot.bar()\n\n\n\n5. 전처리하기\n\n(1) query : 행 추출\n\n\n(2) df[] : 열(변수) 추출\n\n\n(3) sort_values() : 정렬"
+    "text": "[2] pandas 내장함수\n\n1. 변수명 바꾸기 .rename(columns = {‘변경전’:‘변경후’})\n\n\n2. 파생변수 만들기\n\n(1) df[‘파생변수명’] = 넣을값\n\n\n(2) 평균값 df.mean()\n\n\n\n3. 값 확인하기\n\n(1) df[‘컬럼명’].value_counts()\n\n\n(2) 빈도수를 알파벳순으로 정렬 .sort_index()\n\n\n\n4. 그래프로 확인하기\n\n(1) df.plot.bar()\n\n\n\n5. 전처리하기\n\n(1) query : 행 추출\n\n\n(2) df[] : 열(변수) 추출\n\n\n(3) sort_values() : 정렬\n\n\n(4) groupby(): 집단별로 나누기\n\n\n(5) assign: 변수 추가\n\n\n(6) agg(): 통계치 구하기\n\n\n(7) merge() : 데이터 합치기"
   },
   {
     "objectID": "summary.html#numpy-내장함수",
@@ -418,5 +418,166 @@
     "title": "교재 summary",
     "section": "[3] numpy 내장함수",
     "text": "[3] numpy 내장함수\n\n1. np.wehre(조건, 참일때 값, 거짓일때 값)\n\n\n2."
+  },
+  {
+    "objectID": "posts/hw1/index.html",
+    "href": "posts/hw1/index.html",
+    "title": "LS 빅데이터 스쿨 Homework 1",
+    "section": "",
+    "text": "제품\n가격\n판매량\n\n\n\n\n사과\n1800\n24\n\n\n딸기\n1500\n38\n\n\n수박\n3000\n13\n\n\n\n\n\n\nimport pandas as pd\n\nfruits = pd.DataFrame({\n    '제품':['사과','딸기','수박'],\n    '가격':[1800,1500,3000],\n    '판매량':[24,38,13]\n})\nfruits\n\n\n\n\n\n\n\n\n제품\n가격\n판매량\n\n\n\n\n0\n사과\n1800\n24\n\n\n1\n딸기\n1500\n38\n\n\n2\n수박\n3000\n13"
+  },
+  {
+    "objectID": "posts/hw1/index.html#q1.-다음-표의-내용을-데이터-프레임으로-만들어-출력해-보세요",
+    "href": "posts/hw1/index.html#q1.-다음-표의-내용을-데이터-프레임으로-만들어-출력해-보세요",
+    "title": "LS 빅데이터 스쿨 Homework 1",
+    "section": "",
+    "text": "제품\n가격\n판매량\n\n\n\n\n사과\n1800\n24\n\n\n딸기\n1500\n38\n\n\n수박\n3000\n13\n\n\n\n\n\n\nimport pandas as pd\n\nfruits = pd.DataFrame({\n    '제품':['사과','딸기','수박'],\n    '가격':[1800,1500,3000],\n    '판매량':[24,38,13]\n})\nfruits\n\n\n\n\n\n\n\n\n제품\n가격\n판매량\n\n\n\n\n0\n사과\n1800\n24\n\n\n1\n딸기\n1500\n38\n\n\n2\n수박\n3000\n13"
+  },
+  {
+    "objectID": "posts/hw1/index.html#q2.-앞에서-만든-데이터-프레임을-이용해-과일의-가격-평균과-판매량-평균을-구해-보세요.",
+    "href": "posts/hw1/index.html#q2.-앞에서-만든-데이터-프레임을-이용해-과일의-가격-평균과-판매량-평균을-구해-보세요.",
+    "title": "LS 빅데이터 스쿨 Homework 1",
+    "section": "Q2. 앞에서 만든 데이터 프레임을 이용해 과일의 가격 평균과 판매량 평균을 구해 보세요.",
+    "text": "Q2. 앞에서 만든 데이터 프레임을 이용해 과일의 가격 평균과 판매량 평균을 구해 보세요.\n\nA2-1. 가격 평균\n\nfruits['가격'].mean()\n\nnp.float64(2100.0)\n\n\n\n\nA2-2. 판매량 평균\n\nfruits['판매량'].mean()\n\nnp.float64(25.0)"
+  },
+  {
+    "objectID": "posts/hw1/index.html#q3.-mpg데이터를-불러와-복사본을-만드세요",
+    "href": "posts/hw1/index.html#q3.-mpg데이터를-불러와-복사본을-만드세요",
+    "title": "LS 빅데이터 스쿨 Homework 1",
+    "section": "Q3. mpg데이터를 불러와 복사본을 만드세요",
+    "text": "Q3. mpg데이터를 불러와 복사본을 만드세요\n\nA3. 데이터 불러와 복사본 만들기\n\ndf_mpg=pd.read_csv('data/mpg.csv')\nmpg = df_mpg.copy()\nmpg\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n229\nvolkswagen\npassat\n2.0\n2008\n4\nauto(s6)\nf\n19\n28\np\nmidsize\n\n\n230\nvolkswagen\npassat\n2.0\n2008\n4\nmanual(m6)\nf\n21\n29\np\nmidsize\n\n\n231\nvolkswagen\npassat\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\nmidsize\n\n\n232\nvolkswagen\npassat\n2.8\n1999\n6\nmanual(m5)\nf\n18\n26\np\nmidsize\n\n\n233\nvolkswagen\npassat\n3.6\n2008\n6\nauto(s6)\nf\n17\n26\np\nmidsize\n\n\n\n\n234 rows × 11 columns"
+  },
+  {
+    "objectID": "posts/hw1/index.html#q4.-복사본-데이터를-이용해-cty는-city로-hwy는-highway로-수정하세요.",
+    "href": "posts/hw1/index.html#q4.-복사본-데이터를-이용해-cty는-city로-hwy는-highway로-수정하세요.",
+    "title": "LS 빅데이터 스쿨 Homework 1",
+    "section": "Q4. 복사본 데이터를 이용해 cty는 city로, hwy는 highway로 수정하세요.",
+    "text": "Q4. 복사본 데이터를 이용해 cty는 city로, hwy는 highway로 수정하세요.\n\nA4. 데이터 열이름 바꾸기\n\nmpg = mpg.rename(columns={'cty':'city','hwy':'highway'})\nmpg\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncity\nhighway\nfl\ncategory\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n229\nvolkswagen\npassat\n2.0\n2008\n4\nauto(s6)\nf\n19\n28\np\nmidsize\n\n\n230\nvolkswagen\npassat\n2.0\n2008\n4\nmanual(m6)\nf\n21\n29\np\nmidsize\n\n\n231\nvolkswagen\npassat\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\nmidsize\n\n\n232\nvolkswagen\npassat\n2.8\n1999\n6\nmanual(m5)\nf\n18\n26\np\nmidsize\n\n\n233\nvolkswagen\npassat\n3.6\n2008\n6\nauto(s6)\nf\n17\n26\np\nmidsize\n\n\n\n\n234 rows × 11 columns"
+  },
+  {
+    "objectID": "posts/hw1/index.html#q5.-데이터-일부를-출력해-변수명이-바뀌었는지-확인해보세요.-다음과-같은-결과물이-출력되어야-합니다.",
+    "href": "posts/hw1/index.html#q5.-데이터-일부를-출력해-변수명이-바뀌었는지-확인해보세요.-다음과-같은-결과물이-출력되어야-합니다.",
+    "title": "LS 빅데이터 스쿨 Homework 1",
+    "section": "Q5. 데이터 일부를 출력해 변수명이 바뀌었는지 확인해보세요. 다음과 같은 결과물이 출력되어야 합니다.",
+    "text": "Q5. 데이터 일부를 출력해 변수명이 바뀌었는지 확인해보세요. 다음과 같은 결과물이 출력되어야 합니다.\n\nA5. 데이터 일부 출력하기\n\nmpg.head()\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncity\nhighway\nfl\ncategory\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact"
+  },
+  {
+    "objectID": "posts/hw1/index.html#q6.-midwest.csv를-불러와-데이터의-특징을-파악하세요.",
+    "href": "posts/hw1/index.html#q6.-midwest.csv를-불러와-데이터의-특징을-파악하세요.",
+    "title": "LS 빅데이터 스쿨 Homework 1",
+    "section": "Q6. midwest.csv를 불러와 데이터의 특징을 파악하세요.",
+    "text": "Q6. midwest.csv를 불러와 데이터의 특징을 파악하세요.\n\nA6-1. 파일 불러오기\n\ndf_midwest = pd.read_csv('data/midwest.csv')\nmidwest= df_midwest.copy()\nmidwest\n\n\n\n\n\n\n\n\nPID\ncounty\nstate\narea\npoptotal\npopdensity\npopwhite\npopblack\npopamerindian\npopasian\n...\npercollege\npercprof\npoppovertyknown\npercpovertyknown\npercbelowpoverty\npercchildbelowpovert\npercadultpoverty\npercelderlypoverty\ninmetro\ncategory\n\n\n\n\n0\n561\nADAMS\nIL\n0.052\n66090\n1270.961540\n63917\n1702\n98\n249\n...\n19.631392\n4.355859\n63628\n96.274777\n13.151443\n18.011717\n11.009776\n12.443812\n0\nAAR\n\n\n1\n562\nALEXANDER\nIL\n0.014\n10626\n759.000000\n7054\n3496\n19\n48\n...\n11.243308\n2.870315\n10529\n99.087145\n32.244278\n45.826514\n27.385647\n25.228976\n0\nLHR\n\n\n2\n563\nBOND\nIL\n0.022\n14991\n681.409091\n14477\n429\n35\n16\n...\n17.033819\n4.488572\n14235\n94.956974\n12.068844\n14.036061\n10.852090\n12.697410\n0\nAAR\n\n\n3\n564\nBOONE\nIL\n0.017\n30806\n1812.117650\n29344\n127\n46\n150\n...\n17.278954\n4.197800\n30337\n98.477569\n7.209019\n11.179536\n5.536013\n6.217047\n1\nALU\n\n\n4\n565\nBROWN\nIL\n0.018\n5836\n324.222222\n5264\n547\n14\n5\n...\n14.475999\n3.367680\n4815\n82.505140\n13.520249\n13.022889\n11.143211\n19.200000\n0\nAAR\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n432\n3048\nWAUKESHA\nWI\n0.034\n304715\n8962.205880\n298313\n1096\n672\n2699\n...\n35.396784\n7.667090\n299802\n98.387674\n3.121060\n3.785820\n2.590061\n4.085479\n1\nHLU\n\n\n433\n3049\nWAUPACA\nWI\n0.045\n46104\n1024.533330\n45695\n22\n125\n92\n...\n16.549869\n3.138596\n44412\n96.330036\n8.488697\n10.071411\n6.953799\n10.338641\n0\nAAR\n\n\n434\n3050\nWAUSHARA\nWI\n0.037\n19385\n523.918919\n19094\n29\n70\n43\n...\n15.064584\n2.620907\n19163\n98.854785\n13.786985\n20.050708\n11.695784\n11.804558\n0\nAAR\n\n\n435\n3051\nWINNEBAGO\nWI\n0.035\n140320\n4009.142860\n136822\n697\n685\n1728\n...\n24.995504\n5.659847\n133950\n95.460376\n8.804031\n10.592031\n8.660587\n6.661094\n1\nHAU\n\n\n436\n3052\nWOOD\nWI\n0.048\n73605\n1533.437500\n72157\n90\n481\n722\n...\n21.666382\n4.583725\n72685\n98.750085\n8.525831\n11.162997\n7.375656\n7.882918\n0\nAAR\n\n\n\n\n437 rows × 28 columns\n\n\n\n\n\nA6-2. 데이터의 특징 파악하기 (1) head()\n\nmidwest.head()\n\n\n\n\n\n\n\n\nPID\ncounty\nstate\narea\npoptotal\npopdensity\npopwhite\npopblack\npopamerindian\npopasian\n...\npercollege\npercprof\npoppovertyknown\npercpovertyknown\npercbelowpoverty\npercchildbelowpovert\npercadultpoverty\npercelderlypoverty\ninmetro\ncategory\n\n\n\n\n0\n561\nADAMS\nIL\n0.052\n66090\n1270.961540\n63917\n1702\n98\n249\n...\n19.631392\n4.355859\n63628\n96.274777\n13.151443\n18.011717\n11.009776\n12.443812\n0\nAAR\n\n\n1\n562\nALEXANDER\nIL\n0.014\n10626\n759.000000\n7054\n3496\n19\n48\n...\n11.243308\n2.870315\n10529\n99.087145\n32.244278\n45.826514\n27.385647\n25.228976\n0\nLHR\n\n\n2\n563\nBOND\nIL\n0.022\n14991\n681.409091\n14477\n429\n35\n16\n...\n17.033819\n4.488572\n14235\n94.956974\n12.068844\n14.036061\n10.852090\n12.697410\n0\nAAR\n\n\n3\n564\nBOONE\nIL\n0.017\n30806\n1812.117650\n29344\n127\n46\n150\n...\n17.278954\n4.197800\n30337\n98.477569\n7.209019\n11.179536\n5.536013\n6.217047\n1\nALU\n\n\n4\n565\nBROWN\nIL\n0.018\n5836\n324.222222\n5264\n547\n14\n5\n...\n14.475999\n3.367680\n4815\n82.505140\n13.520249\n13.022889\n11.143211\n19.200000\n0\nAAR\n\n\n\n\n5 rows × 28 columns\n\n\n\n\n\nA6-3. 데이터의 특징 파악하기 (2) tail()\n\nmidwest.tail()\n\n\n\n\n\n\n\n\nPID\ncounty\nstate\narea\npoptotal\npopdensity\npopwhite\npopblack\npopamerindian\npopasian\n...\npercollege\npercprof\npoppovertyknown\npercpovertyknown\npercbelowpoverty\npercchildbelowpovert\npercadultpoverty\npercelderlypoverty\ninmetro\ncategory\n\n\n\n\n432\n3048\nWAUKESHA\nWI\n0.034\n304715\n8962.205880\n298313\n1096\n672\n2699\n...\n35.396784\n7.667090\n299802\n98.387674\n3.121060\n3.785820\n2.590061\n4.085479\n1\nHLU\n\n\n433\n3049\nWAUPACA\nWI\n0.045\n46104\n1024.533330\n45695\n22\n125\n92\n...\n16.549869\n3.138596\n44412\n96.330036\n8.488697\n10.071411\n6.953799\n10.338641\n0\nAAR\n\n\n434\n3050\nWAUSHARA\nWI\n0.037\n19385\n523.918919\n19094\n29\n70\n43\n...\n15.064584\n2.620907\n19163\n98.854785\n13.786985\n20.050708\n11.695784\n11.804558\n0\nAAR\n\n\n435\n3051\nWINNEBAGO\nWI\n0.035\n140320\n4009.142860\n136822\n697\n685\n1728\n...\n24.995504\n5.659847\n133950\n95.460376\n8.804031\n10.592031\n8.660587\n6.661094\n1\nHAU\n\n\n436\n3052\nWOOD\nWI\n0.048\n73605\n1533.437500\n72157\n90\n481\n722\n...\n21.666382\n4.583725\n72685\n98.750085\n8.525831\n11.162997\n7.375656\n7.882918\n0\nAAR\n\n\n\n\n5 rows × 28 columns\n\n\n\n\n\nA6-4. 데이터의 특징 파악하기 (3) info()\n\nmidwest.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 437 entries, 0 to 436\nData columns (total 28 columns):\n #   Column                Non-Null Count  Dtype  \n---  ------                --------------  -----  \n 0   PID                   437 non-null    int64  \n 1   county                437 non-null    object \n 2   state                 437 non-null    object \n 3   area                  437 non-null    float64\n 4   poptotal              437 non-null    int64  \n 5   popdensity            437 non-null    float64\n 6   popwhite              437 non-null    int64  \n 7   popblack              437 non-null    int64  \n 8   popamerindian         437 non-null    int64  \n 9   popasian              437 non-null    int64  \n 10  popother              437 non-null    int64  \n 11  percwhite             437 non-null    float64\n 12  percblack             437 non-null    float64\n 13  percamerindan         437 non-null    float64\n 14  percasian             437 non-null    float64\n 15  percother             437 non-null    float64\n 16  popadults             437 non-null    int64  \n 17  perchsd               437 non-null    float64\n 18  percollege            437 non-null    float64\n 19  percprof              437 non-null    float64\n 20  poppovertyknown       437 non-null    int64  \n 21  percpovertyknown      437 non-null    float64\n 22  percbelowpoverty      437 non-null    float64\n 23  percchildbelowpovert  437 non-null    float64\n 24  percadultpoverty      437 non-null    float64\n 25  percelderlypoverty    437 non-null    float64\n 26  inmetro               437 non-null    int64  \n 27  category              437 non-null    object \ndtypes: float64(15), int64(10), object(3)\nmemory usage: 95.7+ KB\n\n\n\n\nA6-5. 데이터의 특징 파악하기 (4) shape\n\nmidwest.shape\n\n(437, 28)\n\n\n\n\nA6-6. 데이터의 특징 파악하기 (5) describe()\n\nmidwest.describe(include='all')\n\n\n\n\n\n\n\n\nPID\ncounty\nstate\narea\npoptotal\npopdensity\npopwhite\npopblack\npopamerindian\npopasian\n...\npercollege\npercprof\npoppovertyknown\npercpovertyknown\npercbelowpoverty\npercchildbelowpovert\npercadultpoverty\npercelderlypoverty\ninmetro\ncategory\n\n\n\n\ncount\n437.000000\n437\n437\n437.000000\n4.370000e+02\n437.000000\n4.370000e+02\n4.370000e+02\n437.000000\n437.000000\n...\n437.000000\n437.000000\n4.370000e+02\n437.000000\n437.000000\n437.000000\n437.000000\n437.000000\n437.000000\n437\n\n\nunique\nNaN\n320\n5\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n...\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n16\n\n\ntop\nNaN\nCRAWFORD\nIL\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n...\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nAAR\n\n\nfreq\nNaN\n5\n102\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n...\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n193\n\n\nmean\n1437.338673\nNaN\nNaN\n0.033169\n9.613030e+04\n3097.742985\n8.183992e+04\n1.102388e+04\n343.109840\n1310.464531\n...\n18.272736\n4.447259\n9.364228e+04\n97.110267\n12.510505\n16.447464\n10.918798\n11.389043\n0.343249\nNaN\n\n\nstd\n876.390266\nNaN\nNaN\n0.014679\n2.981705e+05\n7664.751786\n2.001966e+05\n7.895827e+04\n868.926751\n9518.394189\n...\n6.261908\n2.408427\n2.932351e+05\n2.749863\n5.150155\n7.228634\n5.109166\n3.661259\n0.475338\nNaN\n\n\nmin\n561.000000\nNaN\nNaN\n0.005000\n1.701000e+03\n85.050000\n4.160000e+02\n0.000000e+00\n4.000000\n0.000000\n...\n7.336108\n0.520291\n1.696000e+03\n80.902441\n2.180168\n1.918955\n1.938504\n3.547067\n0.000000\nNaN\n\n\n25%\n670.000000\nNaN\nNaN\n0.024000\n1.884000e+04\n622.407407\n1.863000e+04\n2.900000e+01\n44.000000\n35.000000\n...\n14.113725\n2.997957\n1.836400e+04\n96.894572\n9.198715\n11.624088\n7.668009\n8.911763\n0.000000\nNaN\n\n\n50%\n1221.000000\nNaN\nNaN\n0.030000\n3.532400e+04\n1156.208330\n3.447100e+04\n2.010000e+02\n94.000000\n102.000000\n...\n16.797562\n3.814239\n3.378800e+04\n98.169562\n11.822313\n15.270164\n10.007610\n10.869119\n0.000000\nNaN\n\n\n75%\n2059.000000\nNaN\nNaN\n0.038000\n7.565100e+04\n2330.000000\n7.296800e+04\n1.291000e+03\n288.000000\n401.000000\n...\n20.549893\n4.949324\n7.284000e+04\n98.598636\n15.133226\n20.351878\n13.182182\n13.412162\n1.000000\nNaN\n\n\nmax\n3052.000000\nNaN\nNaN\n0.110000\n5.105067e+06\n88018.396600\n3.204947e+06\n1.317147e+06\n10289.000000\n188565.000000\n...\n48.078510\n20.791321\n5.023523e+06\n99.860384\n48.691099\n64.308477\n43.312464\n31.161972\n1.000000\nNaN\n\n\n\n\n11 rows × 28 columns"
+  },
+  {
+    "objectID": "posts/hw1/index.html#q7.-poptotal전체인구-변수를-total로-popasian아시아-인구-변수를-asian으로-수정하세요.",
+    "href": "posts/hw1/index.html#q7.-poptotal전체인구-변수를-total로-popasian아시아-인구-변수를-asian으로-수정하세요.",
+    "title": "LS 빅데이터 스쿨 Homework 1",
+    "section": "Q7. poptotal(전체인구) 변수를 total로, popasian(아시아 인구) 변수를 asian으로 수정하세요.",
+    "text": "Q7. poptotal(전체인구) 변수를 total로, popasian(아시아 인구) 변수를 asian으로 수정하세요.\n\nA7. 컬럼 명 수정하기\n\nmidwest = midwest.rename(columns={'poptotal':'total','popasian':'asian'})\nmidwest.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 437 entries, 0 to 436\nData columns (total 28 columns):\n #   Column                Non-Null Count  Dtype  \n---  ------                --------------  -----  \n 0   PID                   437 non-null    int64  \n 1   county                437 non-null    object \n 2   state                 437 non-null    object \n 3   area                  437 non-null    float64\n 4   total                 437 non-null    int64  \n 5   popdensity            437 non-null    float64\n 6   popwhite              437 non-null    int64  \n 7   popblack              437 non-null    int64  \n 8   popamerindian         437 non-null    int64  \n 9   asian                 437 non-null    int64  \n 10  popother              437 non-null    int64  \n 11  percwhite             437 non-null    float64\n 12  percblack             437 non-null    float64\n 13  percamerindan         437 non-null    float64\n 14  percasian             437 non-null    float64\n 15  percother             437 non-null    float64\n 16  popadults             437 non-null    int64  \n 17  perchsd               437 non-null    float64\n 18  percollege            437 non-null    float64\n 19  percprof              437 non-null    float64\n 20  poppovertyknown       437 non-null    int64  \n 21  percpovertyknown      437 non-null    float64\n 22  percbelowpoverty      437 non-null    float64\n 23  percchildbelowpovert  437 non-null    float64\n 24  percadultpoverty      437 non-null    float64\n 25  percelderlypoverty    437 non-null    float64\n 26  inmetro               437 non-null    int64  \n 27  category              437 non-null    object \ndtypes: float64(15), int64(10), object(3)\nmemory usage: 95.7+ KB"
+  },
+  {
+    "objectID": "posts/hw1/index.html#q8.-totalasian변수를-이용해-전체-인구-대비-아시아-인구-백분율-파생변수를-추가하고-히스토그램을-만들어-분포를-살펴보세요.",
+    "href": "posts/hw1/index.html#q8.-totalasian변수를-이용해-전체-인구-대비-아시아-인구-백분율-파생변수를-추가하고-히스토그램을-만들어-분포를-살펴보세요.",
+    "title": "LS 빅데이터 스쿨 Homework 1",
+    "section": "Q8. total,asian변수를 이용해 ‘전체 인구 대비 아시아 인구 백분율’ 파생변수를 추가하고, 히스토그램을 만들어 분포를 살펴보세요.",
+    "text": "Q8. total,asian변수를 이용해 ‘전체 인구 대비 아시아 인구 백분율’ 파생변수를 추가하고, 히스토그램을 만들어 분포를 살펴보세요.\n\nA8-1. 파생변수 추가\n\nmidwest['ratio'] = midwest['asian'] / midwest['total'] * 100\nmidwest.head()\n\n\n\n\n\n\n\n\nPID\ncounty\nstate\narea\ntotal\npopdensity\npopwhite\npopblack\npopamerindian\nasian\n...\npercprof\npoppovertyknown\npercpovertyknown\npercbelowpoverty\npercchildbelowpovert\npercadultpoverty\npercelderlypoverty\ninmetro\ncategory\nratio\n\n\n\n\n0\n561\nADAMS\nIL\n0.052\n66090\n1270.961540\n63917\n1702\n98\n249\n...\n4.355859\n63628\n96.274777\n13.151443\n18.011717\n11.009776\n12.443812\n0\nAAR\n0.376759\n\n\n1\n562\nALEXANDER\nIL\n0.014\n10626\n759.000000\n7054\n3496\n19\n48\n...\n2.870315\n10529\n99.087145\n32.244278\n45.826514\n27.385647\n25.228976\n0\nLHR\n0.451722\n\n\n2\n563\nBOND\nIL\n0.022\n14991\n681.409091\n14477\n429\n35\n16\n...\n4.488572\n14235\n94.956974\n12.068844\n14.036061\n10.852090\n12.697410\n0\nAAR\n0.106731\n\n\n3\n564\nBOONE\nIL\n0.017\n30806\n1812.117650\n29344\n127\n46\n150\n...\n4.197800\n30337\n98.477569\n7.209019\n11.179536\n5.536013\n6.217047\n1\nALU\n0.486918\n\n\n4\n565\nBROWN\nIL\n0.018\n5836\n324.222222\n5264\n547\n14\n5\n...\n3.367680\n4815\n82.505140\n13.520249\n13.022889\n11.143211\n19.200000\n0\nAAR\n0.085675\n\n\n\n\n5 rows × 29 columns\n\n\n\n\n\nA8-2. 히스토그램 생성\n\n히스토그램이란? 값의 빈도를 막대 길이로 표현한 그래프이다.\n\n\nmidwest['ratio'].plot.hist()"
+  },
+  {
+    "objectID": "posts/hw1/index.html#q9.-아시아-인구-백분율-전체-평균을-구하고-평균을-초과하면-large-그-외에는-small을-부여한-파생변수를-만들어-보세요.",
+    "href": "posts/hw1/index.html#q9.-아시아-인구-백분율-전체-평균을-구하고-평균을-초과하면-large-그-외에는-small을-부여한-파생변수를-만들어-보세요.",
+    "title": "LS 빅데이터 스쿨 Homework 1",
+    "section": "Q9. 아시아 인구 백분율 전체 평균을 구하고, 평균을 초과하면 ‘large’, 그 외에는 ’small’을 부여한 파생변수를 만들어 보세요.",
+    "text": "Q9. 아시아 인구 백분율 전체 평균을 구하고, 평균을 초과하면 ‘large’, 그 외에는 ’small’을 부여한 파생변수를 만들어 보세요.\n\nA9. 열 추가하기\n\nimport numpy as np\nmean = midwest['ratio'].mean()\nmidwest['size'] = np.where(midwest['ratio'] &gt; mean , 'large', 'samll')\nmidwest.head()\n\n\n\n\n\n\n\n\nPID\ncounty\nstate\narea\ntotal\npopdensity\npopwhite\npopblack\npopamerindian\nasian\n...\npoppovertyknown\npercpovertyknown\npercbelowpoverty\npercchildbelowpovert\npercadultpoverty\npercelderlypoverty\ninmetro\ncategory\nratio\nsize\n\n\n\n\n0\n561\nADAMS\nIL\n0.052\n66090\n1270.961540\n63917\n1702\n98\n249\n...\n63628\n96.274777\n13.151443\n18.011717\n11.009776\n12.443812\n0\nAAR\n0.376759\nsamll\n\n\n1\n562\nALEXANDER\nIL\n0.014\n10626\n759.000000\n7054\n3496\n19\n48\n...\n10529\n99.087145\n32.244278\n45.826514\n27.385647\n25.228976\n0\nLHR\n0.451722\nsamll\n\n\n2\n563\nBOND\nIL\n0.022\n14991\n681.409091\n14477\n429\n35\n16\n...\n14235\n94.956974\n12.068844\n14.036061\n10.852090\n12.697410\n0\nAAR\n0.106731\nsamll\n\n\n3\n564\nBOONE\nIL\n0.017\n30806\n1812.117650\n29344\n127\n46\n150\n...\n30337\n98.477569\n7.209019\n11.179536\n5.536013\n6.217047\n1\nALU\n0.486918\nsamll\n\n\n4\n565\nBROWN\nIL\n0.018\n5836\n324.222222\n5264\n547\n14\n5\n...\n4815\n82.505140\n13.520249\n13.022889\n11.143211\n19.200000\n0\nAAR\n0.085675\nsamll\n\n\n\n\n5 rows × 30 columns"
+  },
+  {
+    "objectID": "posts/hw1/index.html#q10.-large와small에-해당하는-지역이-얼마나-많은지-빈도표와-빈도-막대-그래프를-만들어-확인해-보세요.",
+    "href": "posts/hw1/index.html#q10.-large와small에-해당하는-지역이-얼마나-많은지-빈도표와-빈도-막대-그래프를-만들어-확인해-보세요.",
+    "title": "LS 빅데이터 스쿨 Homework 1",
+    "section": "Q10. large와small에 해당하는 지역이 얼마나 많은지 빈도표와 빈도 막대 그래프를 만들어 확인해 보세요.",
+    "text": "Q10. large와small에 해당하는 지역이 얼마나 많은지 빈도표와 빈도 막대 그래프를 만들어 확인해 보세요.\n\nA10-1. 빈도표 만들기\n\nmidwest['size'].value_counts()\n\nsize\nsamll    318\nlarge    119\nName: count, dtype: int64\n\n\n\n\nA10-2. 막대그래프 만들기\n\ncount_size = midwest['size'].value_counts()\ncount_size.plot.bar(rot = 0)"
+  },
+  {
+    "objectID": "posts/hw2/index.html",
+    "href": "posts/hw2/index.html",
+    "title": "LS 빅데이터 스쿨 Homework 2",
+    "section": "",
+    "text": "import pandas as pd\ndf_mpg= pd.read_csv('data/mpg.csv')\nmpg = df_mpg.copy()\nmpg.head()\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n\n\n\n\n\n\n\n\n\n\n\nmpg.query('displ &lt;= 4')['hwy'].mean()\n\nnp.float64(25.96319018404908)\n\n\n\n\n\n\nmpg.query('displ &gt;= 5')['hwy'].mean()\n\nnp.float64(18.07894736842105)\n\n\n\n\n\n배기량이 4이하인 자동차의 고속도로 연비 평균이 더 높다."
+  },
+  {
+    "objectID": "posts/hw2/index.html#q1.-자동차-배기량에-따라-고속도로-연비가-다른지-알아보려고-합니다.displ배기량이-4-이하인-자동차와-5-이상인-자동차-중-어떤-자동차의-hwy고속도로-연비-평균이-더-높은지-알아보세요.",
+    "href": "posts/hw2/index.html#q1.-자동차-배기량에-따라-고속도로-연비가-다른지-알아보려고-합니다.displ배기량이-4-이하인-자동차와-5-이상인-자동차-중-어떤-자동차의-hwy고속도로-연비-평균이-더-높은지-알아보세요.",
+    "title": "LS 빅데이터 스쿨 Homework 2",
+    "section": "",
+    "text": "import pandas as pd\ndf_mpg= pd.read_csv('data/mpg.csv')\nmpg = df_mpg.copy()\nmpg.head()\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n\n\n\n\n\n\n\n\n\n\n\nmpg.query('displ &lt;= 4')['hwy'].mean()\n\nnp.float64(25.96319018404908)\n\n\n\n\n\n\nmpg.query('displ &gt;= 5')['hwy'].mean()\n\nnp.float64(18.07894736842105)\n\n\n\n\n\n배기량이 4이하인 자동차의 고속도로 연비 평균이 더 높다."
+  },
+  {
+    "objectID": "posts/hw2/index.html#q2.-자동차-제조-회사에-따라-도시-연비가-어떻게-다른지-알아보려고-합니다.-audi와-toyota-중-어느-manufacturer자동차-제조-회사의-cty도시-연비-평균이-더-높은지-알아보세요.",
+    "href": "posts/hw2/index.html#q2.-자동차-제조-회사에-따라-도시-연비가-어떻게-다른지-알아보려고-합니다.-audi와-toyota-중-어느-manufacturer자동차-제조-회사의-cty도시-연비-평균이-더-높은지-알아보세요.",
+    "title": "LS 빅데이터 스쿨 Homework 2",
+    "section": "Q2. 자동차 제조 회사에 따라 도시 연비가 어떻게 다른지 알아보려고 합니다. audi와 toyota 중 어느 manufacturer(자동차 제조 회사)의 cty(도시 연비) 평균이 더 높은지 알아보세요.",
+    "text": "Q2. 자동차 제조 회사에 따라 도시 연비가 어떻게 다른지 알아보려고 합니다. audi와 toyota 중 어느 manufacturer(자동차 제조 회사)의 cty(도시 연비) 평균이 더 높은지 알아보세요.\n\nA2-1. audi의 cty 평균\n\nmpg.query('manufacturer == \"audi\"')['cty'].mean()\n\nnp.float64(17.61111111111111)\n\n\n\n\nA2-2. toyota의 cty평균\n\nmpg.query(' manufacturer == \"toyota\" ')['cty'].mean()\n\nnp.float64(18.529411764705884)\n\n\n\n\nA2-3. 자동차 제조회사별 도시연비 평균 비교\n도요타의 도시연비 평균이 더 높다\n\n\nA2-4. groupby 이용해서 풀어보기\n\nmpg.groupby('manufacturer',as_index=False)\\\n   .agg(mean_cty=('cty','mean'))\\\n   .query('manufacturer in [\"audi\",\"toyota\"] ')\n\n\n\n\n\n\n\n\nmanufacturer\nmean_cty\n\n\n\n\n0\naudi\n17.611111\n\n\n13\ntoyota\n18.529412"
+  },
+  {
+    "objectID": "posts/hw2/index.html#q3.-chevrolet-ford-honda-자동차의-고속도로-연비-평균을-알아보려고-합니다.-세-회사의-데이터를-추출한-다음-hwy-전체-평균을-구해보세요.",
+    "href": "posts/hw2/index.html#q3.-chevrolet-ford-honda-자동차의-고속도로-연비-평균을-알아보려고-합니다.-세-회사의-데이터를-추출한-다음-hwy-전체-평균을-구해보세요.",
+    "title": "LS 빅데이터 스쿨 Homework 2",
+    "section": "Q3. chevrolet, ford, honda 자동차의 고속도로 연비 평균을 알아보려고 합니다. 세 회사의 데이터를 추출한 다음 hwy 전체 평균을 구해보세요.",
+    "text": "Q3. chevrolet, ford, honda 자동차의 고속도로 연비 평균을 알아보려고 합니다. 세 회사의 데이터를 추출한 다음 hwy 전체 평균을 구해보세요.\n\nA3. 세 회사의 고속도로 연비 전체 평균\n\nmpg.query('manufacturer in [\"chevrolet\",\"ford\",\"honda\"] ')['hwy'].mean()\n\nnp.float64(22.50943396226415)"
+  },
+  {
+    "objectID": "posts/hw2/index.html#q4.-audi에서-생산한-자동차-중에-어떤-자동차-모델의-hwy고속도로-연비가-높은지-알아보려고-합니다.-audi에서-생산한-자동차-중-hwy가-15위에-해당하는-자동차의-데이터를-출력하세요.",
+    "href": "posts/hw2/index.html#q4.-audi에서-생산한-자동차-중에-어떤-자동차-모델의-hwy고속도로-연비가-높은지-알아보려고-합니다.-audi에서-생산한-자동차-중-hwy가-15위에-해당하는-자동차의-데이터를-출력하세요.",
+    "title": "LS 빅데이터 스쿨 Homework 2",
+    "section": "Q4. audi에서 생산한 자동차 중에 어떤 자동차 모델의 hwy(고속도로 연비)가 높은지 알아보려고 합니다. audi에서 생산한 자동차 중 hwy가 1~5위에 해당하는 자동차의 데이터를 출력하세요.",
+    "text": "Q4. audi에서 생산한 자동차 중에 어떤 자동차 모델의 hwy(고속도로 연비)가 높은지 알아보려고 합니다. audi에서 생산한 자동차 중 hwy가 1~5위에 해당하는 자동차의 데이터를 출력하세요.\n\nA4. audi 자동차 중 hwy가 1~5위에 해당하는 자동차의 데이터 출력\n\nmpg.query('manufacturer == \"audi\"').sort_values('hwy', ascending=False).head()\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\n\n\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n9\naudi\na4 quattro\n2.0\n2008\n4\nmanual(m6)\n4\n20\n28\np\ncompact"
+  },
+  {
+    "objectID": "posts/hw2/index.html#q5.-mpg-데이터-복사본을-만들고-cty와-hwy를-더한-합산-연비-변수를-추가하세요.",
+    "href": "posts/hw2/index.html#q5.-mpg-데이터-복사본을-만들고-cty와-hwy를-더한-합산-연비-변수를-추가하세요.",
+    "title": "LS 빅데이터 스쿨 Homework 2",
+    "section": "Q5. mpg 데이터 복사본을 만들고, cty와 hwy를 더한 ’합산 연비 변수’를 추가하세요.",
+    "text": "Q5. mpg 데이터 복사본을 만들고, cty와 hwy를 더한 ’합산 연비 변수’를 추가하세요.\n\nA5-1. 데이터 복사본 생성\n\nmpg_raw = pd.read_csv('data/mpg.csv')\nmpg = mpg_raw.copy()\nmpg.head()\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n\n\n\n\n\n\n\n\n\nA5-2. 합산 연비 변수 생성\n\nmpg=mpg.assign(total=(mpg['cty']+mpg['hwy']))\nmpg.head()\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\ntotal\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n47\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n50\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n51\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n51\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n42"
+  },
+  {
+    "objectID": "posts/hw2/index.html#q6.-앞에서-만든-합산-연비-변수를-2로-나눠-평균-연비-변수를-추가하세요",
+    "href": "posts/hw2/index.html#q6.-앞에서-만든-합산-연비-변수를-2로-나눠-평균-연비-변수를-추가하세요",
+    "title": "LS 빅데이터 스쿨 Homework 2",
+    "section": "Q6. 앞에서 만든 ’합산 연비 변수’를 2로 나눠 ’평균 연비 변수’를 추가하세요",
+    "text": "Q6. 앞에서 만든 ’합산 연비 변수’를 2로 나눠 ’평균 연비 변수’를 추가하세요\n\nA6. 평균 연비 변수 생성\n\nmpg = mpg.assign(mean = mpg['total'] / 2)\nmpg.head()\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\ntotal\nmean\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n47\n23.5\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n50\n25.0\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n51\n25.5\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n51\n25.5\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n42\n21.0"
+  },
+  {
+    "objectID": "posts/hw2/index.html#q7.-평균-연비-변수가-가장-높은-자동차-3종의-데이터를-출력하세요.",
+    "href": "posts/hw2/index.html#q7.-평균-연비-변수가-가장-높은-자동차-3종의-데이터를-출력하세요.",
+    "title": "LS 빅데이터 스쿨 Homework 2",
+    "section": "Q7. ’평균 연비 변수’가 가장 높은 자동차 3종의 데이터를 출력하세요.",
+    "text": "Q7. ’평균 연비 변수’가 가장 높은 자동차 3종의 데이터를 출력하세요.\n\nA7. 평균 연비 변수가 가장 높은 자동차 3종 데이터 출력\n\nmpg.sort_values('mean',ascending=False).head(3)\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\ntotal\nmean\n\n\n\n\n221\nvolkswagen\nnew beetle\n1.9\n1999\n4\nmanual(m5)\nf\n35\n44\nd\nsubcompact\n79\n39.5\n\n\n212\nvolkswagen\njetta\n1.9\n1999\n4\nmanual(m5)\nf\n33\n44\nd\ncompact\n77\n38.5\n\n\n222\nvolkswagen\nnew beetle\n1.9\n1999\n4\nauto(l4)\nf\n29\n41\nd\nsubcompact\n70\n35.0"
+  },
+  {
+    "objectID": "posts/hw2/index.html#q8.-57번-문제를-해결할-수-있는-하나로-연결된-pandas-구문을-만들어-실행해-보세요.-데이터는-복사본-대신-mpg-원본을-이용하세요.",
+    "href": "posts/hw2/index.html#q8.-57번-문제를-해결할-수-있는-하나로-연결된-pandas-구문을-만들어-실행해-보세요.-데이터는-복사본-대신-mpg-원본을-이용하세요.",
+    "title": "LS 빅데이터 스쿨 Homework 2",
+    "section": "Q8. 5~7번 문제를 해결할 수 있는 하나로 연결된 pandas 구문을 만들어 실행해 보세요. 데이터는 복사본 대신 mpg 원본을 이용하세요.",
+    "text": "Q8. 5~7번 문제를 해결할 수 있는 하나로 연결된 pandas 구문을 만들어 실행해 보세요. 데이터는 복사본 대신 mpg 원본을 이용하세요.\n\nmpg_raw.assign(\n    total=lambda x: x['cty']+x['hwy'],\n    mean =lambda x: x['total']/2\n).sort_values('mean',ascending=False).head(3)\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\ntotal\nmean\n\n\n\n\n221\nvolkswagen\nnew beetle\n1.9\n1999\n4\nmanual(m5)\nf\n35\n44\nd\nsubcompact\n79\n39.5\n\n\n212\nvolkswagen\njetta\n1.9\n1999\n4\nmanual(m5)\nf\n33\n44\nd\ncompact\n77\n38.5\n\n\n222\nvolkswagen\nnew beetle\n1.9\n1999\n4\nauto(l4)\nf\n29\n41\nd\nsubcompact\n70\n35.0"
+  },
+  {
+    "objectID": "posts/project/index.html",
+    "href": "posts/project/index.html",
+    "title": "Project1-crime",
+    "section": "",
+    "text": "import pandas as pd\n\ndf = pd.read_csv('data/crime.csv', encoding='EUC-KR')\ncrime=df.copy()\ncrime.head()\n\n\n\n\n\n\n\n\n죄종별(1)\n죄종별(2)\n2018\n2018.1\n2018.2\n2018.3\n2018.4\n2018.5\n2018.6\n2018.7\n...\n2021.6\n2021.7\n2022\n2022.1\n2022.2\n2022.3\n2022.4\n2022.5\n2022.6\n2022.7\n\n\n\n\n0\n죄종별(1)\n죄종별(2)\n계\n일요일\n월요일\n화요일\n수요일\n목요일\n금요일\n토요일\n...\n금요일\n토요일\n계\n일요일\n월요일\n화요일\n수요일\n목요일\n금요일\n토요일\n\n\n1\n강력범죄\n소계\n26787\n4154\n3529\n3619\n3693\n3659\n3834\n4299\n...\n3228\n3531\n24954\n3596\n3445\n3420\n3403\n3411\n3653\n4026\n\n\n2\n강력범죄\n살인기수\n309\n54\n40\n38\n53\n41\n54\n29\n...\n52\n38\n275\n32\n43\n43\n46\n39\n37\n35\n\n\n3\n강력범죄\n살인미수등\n488\n72\n74\n62\n68\n76\n67\n69\n...\n59\n53\n427\n65\n62\n76\n54\n57\n58\n55\n\n\n4\n강력범죄\n강도\n821\n126\n120\n133\n116\n117\n101\n108\n...\n88\n64\n516\n82\n80\n91\n64\n58\n73\n68\n\n\n\n\n5 rows × 42 columns"
+  },
+  {
+    "objectID": "posts/project/index.html#지울-행의-위해-인덱스-추출",
+    "href": "posts/project/index.html#지울-행의-위해-인덱스-추출",
+    "title": "Project1-crime",
+    "section": "3-1. 지울 행의 위해 인덱스 추출",
+    "text": "3-1. 지울 행의 위해 인덱스 추출\n\nimport numpy as np\ncrime.query('소분류 == \"소계\"')\n\n\n\n\n\n\n\n\n대분류\n소분류\n18_계\n18_일\n18_월\n18_화\n18_수\n18_목\n18_금\n18_토\n...\n2021.6\n2021.7\n2022\n2022.1\n2022.2\n2022.3\n2022.4\n2022.5\n2022.6\n2022.7\n\n\n\n\n1\n강력범죄\n소계\n26787\n4154\n3529\n3619\n3693\n3659\n3834\n4299\n...\n3228\n3531\n24954\n3596\n3445\n3420\n3403\n3411\n3653\n4026\n\n\n10\n폭력범죄\n소계\n287611\n45412\n37497\n39345\n38608\n38576\n41040\n47133\n...\n34121\n37214\n245286\n37058\n33005\n33201\n33337\n33329\n35716\n39640\n\n\n19\n지능범죄\n소계\n344698\n27392\n56954\n56076\n56448\n57746\n58834\n31248\n...\n58798\n30275\n405105\n30173\n68747\n68148\n66354\n67742\n68516\n35425\n\n\n\n\n3 rows × 42 columns"
+  },
+  {
+    "objectID": "posts/project/index.html#필요-없는-행-제거",
+    "href": "posts/project/index.html#필요-없는-행-제거",
+    "title": "Project1-crime",
+    "section": "3-2. 필요 없는 행 제거",
+    "text": "3-2. 필요 없는 행 제거\n\ncrime_18 = crime[['대분류','소분류','18_계','18_일','18_월','18_화','18_수','18_목','18_금','18_토']].drop([0,1,10,19])\ncrime_18\n\n\n\n\n\n\n\n\n대분류\n소분류\n18_계\n18_일\n18_월\n18_화\n18_수\n18_목\n18_금\n18_토\n\n\n\n\n2\n강력범죄\n살인기수\n309\n54\n40\n38\n53\n41\n54\n29\n\n\n3\n강력범죄\n살인미수등\n488\n72\n74\n62\n68\n76\n67\n69\n\n\n4\n강력범죄\n강도\n821\n126\n120\n133\n116\n117\n101\n108\n\n\n5\n강력범죄\n강간\n5293\n906\n698\n709\n743\n646\n699\n892\n\n\n6\n강력범죄\n유사강간\n776\n127\n113\n103\n96\n99\n99\n139\n\n\n7\n강력범죄\n강제추행\n17053\n2564\n2197\n2263\n2333\n2389\n2547\n2760\n\n\n8\n강력범죄\n기타 강간·강제추행등\n356\n49\n51\n48\n49\n45\n55\n59\n\n\n9\n강력범죄\n방화\n1691\n256\n236\n263\n235\n246\n212\n243\n\n\n11\n폭력범죄\n상해\n39766\n6105\n5326\n5649\n5395\n5396\n5628\n6267\n\n\n12\n폭력범죄\n폭행\n159267\n25977\n20195\n21334\n21160\n21181\n22423\n26997\n\n\n13\n폭력범죄\n체포·감금\n1207\n162\n168\n189\n180\n192\n165\n151\n\n\n14\n폭력범죄\n협박\n17200\n2498\n2462\n2530\n2474\n2444\n2408\n2384\n\n\n15\n폭력범죄\n약취·유인\n187\n29\n34\n27\n26\n30\n26\n15\n\n\n16\n폭력범죄\n폭력행위등\n9204\n1705\n1175\n1205\n1088\n1163\n1206\n1662\n\n\n17\n폭력범죄\n공갈\n4096\n457\n685\n644\n604\n656\n593\n457\n\n\n18\n폭력범죄\n손괴\n56684\n8479\n7452\n7767\n7681\n7514\n8591\n9200\n\n\n20\n지능범죄\n직무유기\n581\n39\n105\n92\n92\n114\n103\n36\n\n\n21\n지능범죄\n직권남용\n603\n33\n96\n110\n110\n110\n104\n40\n\n\n22\n지능범죄\n증수뢰\n347\n22\n53\n57\n69\n64\n61\n21\n\n\n23\n지능범죄\n통화\n1194\n34\n230\n226\n208\n242\n212\n42\n\n\n24\n지능범죄\n문서·인장\n12290\n673\n2202\n1992\n1893\n2710\n1991\n829\n\n\n25\n지능범죄\n유가증권인지\n197\n17\n20\n25\n30\n32\n58\n15\n\n\n26\n지능범죄\n사기\n270029\n19524\n45478\n45020\n45399\n45752\n46698\n22158\n\n\n27\n지능범죄\n횡령\n55113\n6802\n7968\n7793\n7922\n7992\n8817\n7819\n\n\n28\n지능범죄\n배임\n4344\n248\n802\n761\n725\n730\n790\n288"
   }
 ]

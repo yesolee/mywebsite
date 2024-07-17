@@ -1,5 +1,5 @@
 ---
-title: "summary"
+title: "Solog"
 toc: false
 about:
     id: hero-heading
@@ -13,7 +13,7 @@ about:
 
 ### 홈페이지 첫 화면입니다.
 
-QMD파일 안녕하세요. 데이터분석 지존짱짱맨 sol 입니다. !!!!!
+안녕하세요. 블로그에 오신 것을 환영합니다.
 
 ```{python}
 1+1

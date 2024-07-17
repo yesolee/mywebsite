@@ -1,6 +1,8 @@
 ---
-title: "hw1(24.07.15)"
-jupyter: python3
+title: "LS 빅데이터 스쿨 Homework 1"
+author: "이예솔"
+date: "2024-07-15"
+categories: [bigdata]
 ---
 
 ## Q1. 다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요

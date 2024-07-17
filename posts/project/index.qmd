@@ -1,6 +1,8 @@
 ---
-title: "crime"
-jupyter: python3
+title: "Project1-crime"
+author: "이예솔"
+date: "2024-07-17"
+categories: [project]
 ---
 
 # 1. 파일 불러오기, 복사본 만들기
