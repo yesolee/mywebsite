@@ -71,11 +71,6 @@ crime_18
 ```{python}
 crime_18.describe()
 ```
-# 8. 그룹 변수 기준 요약
-```{python}
-monday=crime_18.groupby('대분류').agg(소계=('18'))
-monday
-```
 
 
 # 1. 변수 이름 변경 했는지?

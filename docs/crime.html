@@ -138,15 +138,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./hw1.html"> 
-<span class="menu-text">hw1(24.07.15)</span></a>
+<span class="menu-text">Homework1</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./hw2.html"> 
-<span class="menu-text">hw2(24.07.16)</span></a>
+<span class="menu-text">Homework2</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./crime.html" aria-current="page"> 
-<span class="menu-text">crime</span></a>
+<span class="menu-text">project1_Crime</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -175,7 +175,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#데이터-타입-변환" id="toc-데이터-타입-변환" class="nav-link" data-scroll-target="#데이터-타입-변환">5. 데이터 타입 변환</a></li>
   <li><a href="#파생변수-추가" id="toc-파생변수-추가" class="nav-link" data-scroll-target="#파생변수-추가">6. 파생변수 추가</a></li>
   <li><a href="#변수-기준-요약" id="toc-변수-기준-요약" class="nav-link" data-scroll-target="#변수-기준-요약">7. 변수 기준 요약</a></li>
-  <li><a href="#그룹-변수-기준-요약" id="toc-그룹-변수-기준-요약" class="nav-link" data-scroll-target="#그룹-변수-기준-요약">8. 그룹 변수 기준 요약</a></li>
   <li><a href="#변수-이름-변경-했는지" id="toc-변수-이름-변경-했는지" class="nav-link" data-scroll-target="#변수-이름-변경-했는지">1. 변수 이름 변경 했는지?</a></li>
   <li><a href="#행들을-필터링-했는지" id="toc-행들을-필터링-했는지" class="nav-link" data-scroll-target="#행들을-필터링-했는지">2. 행들을 필터링 했는지?</a></li>
   <li><a href="#새로운-변수를-생성했는지" id="toc-새로운-변수를-생성했는지" class="nav-link" data-scroll-target="#새로운-변수를-생성했는지">3. 새로운 변수를 생성했는지?</a></li>
@@ -209,13 +208,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="파일-불러오기-복사본-만들기" class="level1">
 <h1>1. 파일 불러오기, 복사본 만들기</h1>
-<div id="0f882bff" class="cell" data-execution_count="1">
+<div id="206b71e7" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'data/crime.csv'</span>, encoding<span class="op">=</span><span class="st">'EUC-KR'</span>)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>crime<span class="op">=</span>df.copy()</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>crime.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="1">
 <div>
 
 
@@ -377,7 +376,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="변수이름-바꾸기" class="level1">
 <h1>2. 변수이름 바꾸기</h1>
-<div id="8751e3ce" class="cell" data-execution_count="2">
+<div id="ae1ba476" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>crime <span class="op">=</span> crime.rename(columns<span class="op">=</span>{</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'죄종별(1)'</span>:<span class="st">'대분류'</span>,</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'죄종별(2)'</span>:<span class="st">'소분류'</span>,</span>
@@ -391,7 +390,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2018.7'</span>:<span class="st">'18_토'</span>,</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    })</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>crime.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
@@ -555,10 +554,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>3. 필요한 데이터 추출하기</h1>
 <section id="지울-행의-위해-인덱스-추출" class="level2">
 <h2 class="anchored" data-anchor-id="지울-행의-위해-인덱스-추출">3-1. 지울 행의 위해 인덱스 추출</h2>
-<div id="7273d387" class="cell" data-execution_count="3">
+<div id="4bb31c1d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>crime.query(<span class="st">'소분류 == "소계"'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
@@ -672,10 +671,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="필요-없는-행-제거" class="level2">
 <h2 class="anchored" data-anchor-id="필요-없는-행-제거">3-2. 필요 없는 행 제거</h2>
-<div id="f1d7d80b" class="cell" data-execution_count="4">
+<div id="6c0cb401" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>crime_18 <span class="op">=</span> crime[[<span class="st">'대분류'</span>,<span class="st">'소분류'</span>,<span class="st">'18_계'</span>,<span class="st">'18_일'</span>,<span class="st">'18_월'</span>,<span class="st">'18_화'</span>,<span class="st">'18_수'</span>,<span class="st">'18_목'</span>,<span class="st">'18_금'</span>,<span class="st">'18_토'</span>]].drop([<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">19</span>])</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>crime_18</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="13">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
@@ -1031,7 +1030,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="데이터-타입-확인" class="level1">
 <h1>4. 데이터 타입 확인</h1>
-<div id="dfb692ca" class="cell" data-execution_count="5">
+<div id="91fe080a" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>crime_18.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -1056,7 +1055,7 @@ memory usage: 2.1+ KB</code></pre>
 </section>
 <section id="데이터-타입-변환" class="level1">
 <h1>5. 데이터 타입 변환</h1>
-<div id="2de691dc" class="cell" data-execution_count="6">
+<div id="aead5b05" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>crime_18 <span class="op">=</span> crime_18.astype({</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'18_계'</span>:<span class="bu">int</span>,</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'18_일'</span>:<span class="bu">int</span>,</span>
@@ -1068,7 +1067,7 @@ memory usage: 2.1+ KB</code></pre>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'18_토'</span>:<span class="bu">int</span></span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>})</span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>crime_18.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>대분류     object
 소분류     object
 18_계     int64
@@ -1085,11 +1084,14 @@ dtype: object</code></pre>
 </section>
 <section id="파생변수-추가" class="level1">
 <h1>6. 파생변수 추가</h1>
-<div id="5f1a986b" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>crime_18[<span class="st">'18_요일평균'</span>] <span class="op">=</span> crime_18[<span class="st">'18_계'</span>] <span class="op">/</span> <span class="dv">7</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>pd.options.display.float_format <span class="op">=</span> <span class="st">'</span><span class="sc">{:.2f}</span><span class="st">'</span>.<span class="bu">format</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>crime_18</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="16">
+<div id="c35af89f" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>crime_18 <span class="op">=</span> crime_18.assign(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    요일평균 <span class="op">=</span> <span class="kw">lambda</span> x: x[<span class="st">'18_계'</span>] <span class="op">/</span> <span class="dv">7</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    주말합계 <span class="op">=</span> <span class="kw">lambda</span> x: x[<span class="st">'18_일'</span>]<span class="op">+</span>x[<span class="st">'18_토'</span>]<span class="op">+</span>x[<span class="st">'18_금'</span>],</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    평일합계 <span class="op">=</span> <span class="kw">lambda</span> x: x[<span class="st">'18_계'</span>]<span class="op">-</span>x[<span class="st">'주말합계'</span>] )</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># pd.options.display.float_format = '{:.2f}'.format</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>crime_18</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
 <div>
 
 
@@ -1107,7 +1109,9 @@ dtype: object</code></pre>
 <th data-quarto-table-cell-role="th">18_목</th>
 <th data-quarto-table-cell-role="th">18_금</th>
 <th data-quarto-table-cell-role="th">18_토</th>
-<th data-quarto-table-cell-role="th">18_요일평균</th>
+<th data-quarto-table-cell-role="th">요일평균</th>
+<th data-quarto-table-cell-role="th">주말합계</th>
+<th data-quarto-table-cell-role="th">평일합계</th>
 </tr>
 </thead>
 <tbody>
@@ -1123,7 +1127,9 @@ dtype: object</code></pre>
 <td>41</td>
 <td>54</td>
 <td>29</td>
-<td>44.14</td>
+<td>44.142857</td>
+<td>137</td>
+<td>172</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
@@ -1137,7 +1143,9 @@ dtype: object</code></pre>
 <td>76</td>
 <td>67</td>
 <td>69</td>
-<td>69.71</td>
+<td>69.714286</td>
+<td>208</td>
+<td>280</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
@@ -1151,7 +1159,9 @@ dtype: object</code></pre>
 <td>117</td>
 <td>101</td>
 <td>108</td>
-<td>117.29</td>
+<td>117.285714</td>
+<td>335</td>
+<td>486</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">5</td>
@@ -1165,7 +1175,9 @@ dtype: object</code></pre>
 <td>646</td>
 <td>699</td>
 <td>892</td>
-<td>756.14</td>
+<td>756.142857</td>
+<td>2497</td>
+<td>2796</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">6</td>
@@ -1179,7 +1191,9 @@ dtype: object</code></pre>
 <td>99</td>
 <td>99</td>
 <td>139</td>
-<td>110.86</td>
+<td>110.857143</td>
+<td>365</td>
+<td>411</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">7</td>
@@ -1193,7 +1207,9 @@ dtype: object</code></pre>
 <td>2389</td>
 <td>2547</td>
 <td>2760</td>
-<td>2436.14</td>
+<td>2436.142857</td>
+<td>7871</td>
+<td>9182</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">8</td>
@@ -1207,7 +1223,9 @@ dtype: object</code></pre>
 <td>45</td>
 <td>55</td>
 <td>59</td>
-<td>50.86</td>
+<td>50.857143</td>
+<td>163</td>
+<td>193</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">9</td>
@@ -1221,7 +1239,9 @@ dtype: object</code></pre>
 <td>246</td>
 <td>212</td>
 <td>243</td>
-<td>241.57</td>
+<td>241.571429</td>
+<td>711</td>
+<td>980</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">11</td>
@@ -1235,7 +1255,9 @@ dtype: object</code></pre>
 <td>5396</td>
 <td>5628</td>
 <td>6267</td>
-<td>5680.86</td>
+<td>5680.857143</td>
+<td>18000</td>
+<td>21766</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">12</td>
@@ -1249,7 +1271,9 @@ dtype: object</code></pre>
 <td>21181</td>
 <td>22423</td>
 <td>26997</td>
-<td>22752.43</td>
+<td>22752.428571</td>
+<td>75397</td>
+<td>83870</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">13</td>
@@ -1263,7 +1287,9 @@ dtype: object</code></pre>
 <td>192</td>
 <td>165</td>
 <td>151</td>
-<td>172.43</td>
+<td>172.428571</td>
+<td>478</td>
+<td>729</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">14</td>
@@ -1277,7 +1303,9 @@ dtype: object</code></pre>
 <td>2444</td>
 <td>2408</td>
 <td>2384</td>
-<td>2457.14</td>
+<td>2457.142857</td>
+<td>7290</td>
+<td>9910</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">15</td>
@@ -1291,7 +1319,9 @@ dtype: object</code></pre>
 <td>30</td>
 <td>26</td>
 <td>15</td>
-<td>26.71</td>
+<td>26.714286</td>
+<td>70</td>
+<td>117</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">16</td>
@@ -1305,7 +1335,9 @@ dtype: object</code></pre>
 <td>1163</td>
 <td>1206</td>
 <td>1662</td>
-<td>1314.86</td>
+<td>1314.857143</td>
+<td>4573</td>
+<td>4631</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">17</td>
@@ -1319,7 +1351,9 @@ dtype: object</code></pre>
 <td>656</td>
 <td>593</td>
 <td>457</td>
-<td>585.14</td>
+<td>585.142857</td>
+<td>1507</td>
+<td>2589</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">18</td>
@@ -1333,7 +1367,9 @@ dtype: object</code></pre>
 <td>7514</td>
 <td>8591</td>
 <td>9200</td>
-<td>8097.71</td>
+<td>8097.714286</td>
+<td>26270</td>
+<td>30414</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">20</td>
@@ -1347,7 +1383,9 @@ dtype: object</code></pre>
 <td>114</td>
 <td>103</td>
 <td>36</td>
-<td>83.00</td>
+<td>83.000000</td>
+<td>178</td>
+<td>403</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">21</td>
@@ -1361,7 +1399,9 @@ dtype: object</code></pre>
 <td>110</td>
 <td>104</td>
 <td>40</td>
-<td>86.14</td>
+<td>86.142857</td>
+<td>177</td>
+<td>426</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">22</td>
@@ -1375,7 +1415,9 @@ dtype: object</code></pre>
 <td>64</td>
 <td>61</td>
 <td>21</td>
-<td>49.57</td>
+<td>49.571429</td>
+<td>104</td>
+<td>243</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">23</td>
@@ -1389,7 +1431,9 @@ dtype: object</code></pre>
 <td>242</td>
 <td>212</td>
 <td>42</td>
-<td>170.57</td>
+<td>170.571429</td>
+<td>288</td>
+<td>906</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">24</td>
@@ -1403,7 +1447,9 @@ dtype: object</code></pre>
 <td>2710</td>
 <td>1991</td>
 <td>829</td>
-<td>1755.71</td>
+<td>1755.714286</td>
+<td>3493</td>
+<td>8797</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">25</td>
@@ -1417,7 +1463,9 @@ dtype: object</code></pre>
 <td>32</td>
 <td>58</td>
 <td>15</td>
-<td>28.14</td>
+<td>28.142857</td>
+<td>90</td>
+<td>107</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">26</td>
@@ -1431,7 +1479,9 @@ dtype: object</code></pre>
 <td>45752</td>
 <td>46698</td>
 <td>22158</td>
-<td>38575.57</td>
+<td>38575.571429</td>
+<td>88380</td>
+<td>181649</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">27</td>
@@ -1445,7 +1495,9 @@ dtype: object</code></pre>
 <td>7992</td>
 <td>8817</td>
 <td>7819</td>
-<td>7873.29</td>
+<td>7873.285714</td>
+<td>23438</td>
+<td>31675</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">28</td>
@@ -1459,7 +1511,9 @@ dtype: object</code></pre>
 <td>730</td>
 <td>790</td>
 <td>288</td>
-<td>620.57</td>
+<td>620.571429</td>
+<td>1326</td>
+<td>3018</td>
 </tr>
 </tbody>
 </table>
@@ -1470,9 +1524,9 @@ dtype: object</code></pre>
 </section>
 <section id="변수-기준-요약" class="level1">
 <h1>7. 변수 기준 요약</h1>
-<div id="8f187e13" class="cell" data-execution_count="8">
+<div id="699f679c" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>crime_18.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="17">
+<div class="cell-output cell-output-display" data-execution_count="8">
 <div>
 
 
@@ -1488,454 +1542,123 @@ dtype: object</code></pre>
 <th data-quarto-table-cell-role="th">18_목</th>
 <th data-quarto-table-cell-role="th">18_금</th>
 <th data-quarto-table-cell-role="th">18_토</th>
-<th data-quarto-table-cell-role="th">18_요일평균</th>
+<th data-quarto-table-cell-role="th">요일평균</th>
+<th data-quarto-table-cell-role="th">주말합계</th>
+<th data-quarto-table-cell-role="th">평일합계</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">count</td>
-<td>25.00</td>
-<td>25.00</td>
-<td>25.00</td>
-<td>25.00</td>
-<td>25.00</td>
-<td>25.00</td>
-<td>25.00</td>
-<td>25.00</td>
-<td>25.00</td>
+<td>25.000</td>
+<td>25.000000</td>
+<td>25.000000</td>
+<td>25.00000</td>
+<td>25.000000</td>
+<td>25.000000</td>
+<td>25.000000</td>
+<td>25.00000</td>
+<td>25.000000</td>
+<td>25.000000</td>
+<td>25.000000</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">mean</td>
-<td>26363.84</td>
-<td>3078.32</td>
-<td>3919.20</td>
-<td>3961.60</td>
-<td>3949.96</td>
-<td>3999.24</td>
-<td>4148.32</td>
-<td>3307.20</td>
-<td>3766.26</td>
+<td>26363.840</td>
+<td>3078.320000</td>
+<td>3919.200000</td>
+<td>3961.60000</td>
+<td>3949.960000</td>
+<td>3999.240000</td>
+<td>4148.320000</td>
+<td>3307.20000</td>
+<td>3766.262857</td>
+<td>10533.840000</td>
+<td>15830.000000</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">std</td>
-<td>61111.79</td>
-<td>6428.86</td>
-<td>9700.49</td>
-<td>9706.54</td>
-<td>9762.99</td>
-<td>9818.05</td>
-<td>10115.67</td>
-<td>6920.36</td>
-<td>8730.26</td>
+<td>61111.793</td>
+<td>6428.861788</td>
+<td>9700.486423</td>
+<td>9706.54236</td>
+<td>9762.994791</td>
+<td>9818.051055</td>
+<td>10115.673868</td>
+<td>6920.36004</td>
+<td>8730.256143</td>
+<td>22771.374947</td>
+<td>38985.125332</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">min</td>
-<td>187.00</td>
-<td>17.00</td>
-<td>20.00</td>
-<td>25.00</td>
-<td>26.00</td>
-<td>30.00</td>
-<td>26.00</td>
-<td>15.00</td>
-<td>26.71</td>
+<td>187.000</td>
+<td>17.000000</td>
+<td>20.000000</td>
+<td>25.00000</td>
+<td>26.000000</td>
+<td>30.000000</td>
+<td>26.000000</td>
+<td>15.00000</td>
+<td>26.714286</td>
+<td>70.000000</td>
+<td>107.000000</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">25%</td>
-<td>581.00</td>
-<td>49.00</td>
-<td>96.00</td>
-<td>92.00</td>
-<td>92.00</td>
-<td>99.00</td>
-<td>99.00</td>
-<td>42.00</td>
-<td>83.00</td>
+<td>581.000</td>
+<td>49.000000</td>
+<td>96.000000</td>
+<td>92.00000</td>
+<td>92.000000</td>
+<td>99.000000</td>
+<td>99.000000</td>
+<td>42.00000</td>
+<td>83.000000</td>
+<td>178.000000</td>
+<td>403.000000</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">50%</td>
-<td>1691.00</td>
-<td>248.00</td>
-<td>236.00</td>
-<td>263.00</td>
-<td>235.00</td>
-<td>246.00</td>
-<td>212.00</td>
-<td>243.00</td>
-<td>241.57</td>
+<td>1691.000</td>
+<td>248.000000</td>
+<td>236.000000</td>
+<td>263.00000</td>
+<td>235.000000</td>
+<td>246.000000</td>
+<td>212.000000</td>
+<td>243.00000</td>
+<td>241.571429</td>
+<td>711.000000</td>
+<td>980.000000</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">75%</td>
-<td>17053.00</td>
-<td>2498.00</td>
-<td>2202.00</td>
-<td>2263.00</td>
-<td>2333.00</td>
-<td>2444.00</td>
-<td>2408.00</td>
-<td>2384.00</td>
-<td>2436.14</td>
+<td>17053.000</td>
+<td>2498.000000</td>
+<td>2202.000000</td>
+<td>2263.00000</td>
+<td>2333.000000</td>
+<td>2444.000000</td>
+<td>2408.000000</td>
+<td>2384.00000</td>
+<td>2436.142857</td>
+<td>7290.000000</td>
+<td>9182.000000</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">max</td>
-<td>270029.00</td>
-<td>25977.00</td>
-<td>45478.00</td>
-<td>45020.00</td>
-<td>45399.00</td>
-<td>45752.00</td>
-<td>46698.00</td>
-<td>26997.00</td>
-<td>38575.57</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-</section>
-<section id="그룹-변수-기준-요약" class="level1">
-<h1>8. 그룹 변수 기준 요약</h1>
-<div id="ea14a373" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>monday<span class="op">=</span>crime_18.groupby([<span class="st">'대분류'</span>,<span class="st">'소분류'</span>]).<span class="bu">sum</span>()</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>monday</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="18">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">18_계</th>
-<th data-quarto-table-cell-role="th">18_일</th>
-<th data-quarto-table-cell-role="th">18_월</th>
-<th data-quarto-table-cell-role="th">18_화</th>
-<th data-quarto-table-cell-role="th">18_수</th>
-<th data-quarto-table-cell-role="th">18_목</th>
-<th data-quarto-table-cell-role="th">18_금</th>
-<th data-quarto-table-cell-role="th">18_토</th>
-<th data-quarto-table-cell-role="th">18_요일평균</th>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">대분류</th>
-<th data-quarto-table-cell-role="th">소분류</th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td rowspan="8" data-quarto-table-cell-role="th" data-valign="top">강력범죄</td>
-<td data-quarto-table-cell-role="th">강간</td>
-<td>5293</td>
-<td>906</td>
-<td>698</td>
-<td>709</td>
-<td>743</td>
-<td>646</td>
-<td>699</td>
-<td>892</td>
-<td>756.14</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">강도</td>
-<td>821</td>
-<td>126</td>
-<td>120</td>
-<td>133</td>
-<td>116</td>
-<td>117</td>
-<td>101</td>
-<td>108</td>
-<td>117.29</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">강제추행</td>
-<td>17053</td>
-<td>2564</td>
-<td>2197</td>
-<td>2263</td>
-<td>2333</td>
-<td>2389</td>
-<td>2547</td>
-<td>2760</td>
-<td>2436.14</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">기타 강간·강제추행등</td>
-<td>356</td>
-<td>49</td>
-<td>51</td>
-<td>48</td>
-<td>49</td>
-<td>45</td>
-<td>55</td>
-<td>59</td>
-<td>50.86</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">방화</td>
-<td>1691</td>
-<td>256</td>
-<td>236</td>
-<td>263</td>
-<td>235</td>
-<td>246</td>
-<td>212</td>
-<td>243</td>
-<td>241.57</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">살인기수</td>
-<td>309</td>
-<td>54</td>
-<td>40</td>
-<td>38</td>
-<td>53</td>
-<td>41</td>
-<td>54</td>
-<td>29</td>
-<td>44.14</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">살인미수등</td>
-<td>488</td>
-<td>72</td>
-<td>74</td>
-<td>62</td>
-<td>68</td>
-<td>76</td>
-<td>67</td>
-<td>69</td>
-<td>69.71</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">유사강간</td>
-<td>776</td>
-<td>127</td>
-<td>113</td>
-<td>103</td>
-<td>96</td>
-<td>99</td>
-<td>99</td>
-<td>139</td>
-<td>110.86</td>
-</tr>
-<tr class="odd">
-<td rowspan="9" data-quarto-table-cell-role="th" data-valign="top">지능범죄</td>
-<td data-quarto-table-cell-role="th">문서·인장</td>
-<td>12290</td>
-<td>673</td>
-<td>2202</td>
-<td>1992</td>
-<td>1893</td>
-<td>2710</td>
-<td>1991</td>
-<td>829</td>
-<td>1755.71</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">배임</td>
-<td>4344</td>
-<td>248</td>
-<td>802</td>
-<td>761</td>
-<td>725</td>
-<td>730</td>
-<td>790</td>
-<td>288</td>
-<td>620.57</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">사기</td>
-<td>270029</td>
-<td>19524</td>
-<td>45478</td>
-<td>45020</td>
-<td>45399</td>
-<td>45752</td>
-<td>46698</td>
-<td>22158</td>
-<td>38575.57</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">유가증권인지</td>
-<td>197</td>
-<td>17</td>
-<td>20</td>
-<td>25</td>
-<td>30</td>
-<td>32</td>
-<td>58</td>
-<td>15</td>
-<td>28.14</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">증수뢰</td>
-<td>347</td>
-<td>22</td>
-<td>53</td>
-<td>57</td>
-<td>69</td>
-<td>64</td>
-<td>61</td>
-<td>21</td>
-<td>49.57</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">직권남용</td>
-<td>603</td>
-<td>33</td>
-<td>96</td>
-<td>110</td>
-<td>110</td>
-<td>110</td>
-<td>104</td>
-<td>40</td>
-<td>86.14</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">직무유기</td>
-<td>581</td>
-<td>39</td>
-<td>105</td>
-<td>92</td>
-<td>92</td>
-<td>114</td>
-<td>103</td>
-<td>36</td>
-<td>83.00</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">통화</td>
-<td>1194</td>
-<td>34</td>
-<td>230</td>
-<td>226</td>
-<td>208</td>
-<td>242</td>
-<td>212</td>
-<td>42</td>
-<td>170.57</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">횡령</td>
-<td>55113</td>
-<td>6802</td>
-<td>7968</td>
-<td>7793</td>
-<td>7922</td>
-<td>7992</td>
-<td>8817</td>
-<td>7819</td>
-<td>7873.29</td>
-</tr>
-<tr class="even">
-<td rowspan="8" data-quarto-table-cell-role="th" data-valign="top">폭력범죄</td>
-<td data-quarto-table-cell-role="th">공갈</td>
-<td>4096</td>
-<td>457</td>
-<td>685</td>
-<td>644</td>
-<td>604</td>
-<td>656</td>
-<td>593</td>
-<td>457</td>
-<td>585.14</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">상해</td>
-<td>39766</td>
-<td>6105</td>
-<td>5326</td>
-<td>5649</td>
-<td>5395</td>
-<td>5396</td>
-<td>5628</td>
-<td>6267</td>
-<td>5680.86</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">손괴</td>
-<td>56684</td>
-<td>8479</td>
-<td>7452</td>
-<td>7767</td>
-<td>7681</td>
-<td>7514</td>
-<td>8591</td>
-<td>9200</td>
-<td>8097.71</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">약취·유인</td>
-<td>187</td>
-<td>29</td>
-<td>34</td>
-<td>27</td>
-<td>26</td>
-<td>30</td>
-<td>26</td>
-<td>15</td>
-<td>26.71</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">체포·감금</td>
-<td>1207</td>
-<td>162</td>
-<td>168</td>
-<td>189</td>
-<td>180</td>
-<td>192</td>
-<td>165</td>
-<td>151</td>
-<td>172.43</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">폭력행위등</td>
-<td>9204</td>
-<td>1705</td>
-<td>1175</td>
-<td>1205</td>
-<td>1088</td>
-<td>1163</td>
-<td>1206</td>
-<td>1662</td>
-<td>1314.86</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">폭행</td>
-<td>159267</td>
-<td>25977</td>
-<td>20195</td>
-<td>21334</td>
-<td>21160</td>
-<td>21181</td>
-<td>22423</td>
-<td>26997</td>
-<td>22752.43</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">협박</td>
-<td>17200</td>
-<td>2498</td>
-<td>2462</td>
-<td>2530</td>
-<td>2474</td>
-<td>2444</td>
-<td>2408</td>
-<td>2384</td>
-<td>2457.14</td>
+<td>270029.000</td>
+<td>25977.000000</td>
+<td>45478.000000</td>
+<td>45020.00000</td>
+<td>45399.000000</td>
+<td>45752.000000</td>
+<td>46698.000000</td>
+<td>26997.00000</td>
+<td>38575.571429</td>
+<td>88380.000000</td>
+<td>181649.000000</td>
 </tr>
 </tbody>
 </table>
