@@ -1,5 +1,5 @@
 ---
-title: "Finely Malloc"
+title: "summary"
 toc: false
 about:
     id: hero-heading
@@ -7,8 +7,8 @@ about:
     image: logo2.webp
     links: 
       - icon: github
-      - text: Github
-      - href: https://github.com/yesolee
+        text: Github
+        href: https://github.com/yesolee
 ---
 
 ### 홈페이지 첫 화면입니다.

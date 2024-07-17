@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>summary – DS_sol</title>
+<title>교재 summary – DS_sol</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -67,6 +33,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -104,7 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -122,7 +89,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -130,8 +97,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
-<span class="menu-text">Blog</span></a>
+    <a class="nav-link active" href="./summary.html" aria-current="page"> 
+<span class="menu-text">Summary</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./hw1.html"> 
+<span class="menu-text">Homework1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./hw2.html"> 
+<span class="menu-text">Homework2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./crime.html"> 
+<span class="menu-text">project1_Crime</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -144,40 +123,114 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#python-내장함수" id="toc-python-내장함수" class="nav-link active" data-scroll-target="#python-내장함수">[1] <code>python</code> 내장함수</a>
+  <ul class="collapse">
+  <li><a href="#sum-max-min" id="toc-sum-max-min" class="nav-link" data-scroll-target="#sum-max-min">1. sum(), max(), min()</a></li>
+  </ul></li>
+  <li><a href="#pandas-내장함수" id="toc-pandas-내장함수" class="nav-link" data-scroll-target="#pandas-내장함수">[2] <code>pandas</code> 내장함수</a>
+  <ul class="collapse">
+  <li><a href="#변수명-바꾸기-.renamecolumns-변경전변경후" id="toc-변수명-바꾸기-.renamecolumns-변경전변경후" class="nav-link" data-scroll-target="#변수명-바꾸기-.renamecolumns-변경전변경후">1. 변수명 바꾸기 .rename(columns = {‘변경전’:‘변경후’})</a></li>
+  <li><a href="#파생변수-만들기" id="toc-파생변수-만들기" class="nav-link" data-scroll-target="#파생변수-만들기">2. 파생변수 만들기</a></li>
+  <li><a href="#값-확인하기" id="toc-값-확인하기" class="nav-link" data-scroll-target="#값-확인하기">3. 값 확인하기</a></li>
+  <li><a href="#그래프로-확인하기" id="toc-그래프로-확인하기" class="nav-link" data-scroll-target="#그래프로-확인하기">4. 그래프로 확인하기</a></li>
+  <li><a href="#전처리하기" id="toc-전처리하기" class="nav-link" data-scroll-target="#전처리하기">5. 전처리하기</a></li>
+  </ul></li>
+  <li><a href="#numpy-내장함수" id="toc-numpy-내장함수" class="nav-link" data-scroll-target="#numpy-내장함수">[3] <code>numpy</code> 내장함수</a>
+  <ul class="collapse">
+  <li><a href="#np.wehre조건-참일때-값-거짓일때-값" id="toc-np.wehre조건-참일때-값-거짓일때-값" class="nav-link" data-scroll-target="#np.wehre조건-참일때-값-거짓일때-값">1. np.wehre(조건, 참일때 값, 거짓일때 값)</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">2.</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="logo2.webp" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">summary</h1>
+<h1 class="title">교재 summary</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header><main class="content" id="quarto-document-content">
-<section id="홈페이지-첫-화면입니다." class="level3">
-<h3 data-anchor-id="홈페이지-첫-화면입니다.">홈페이지 첫 화면입니다.</h3>
-<p>QMD파일 안녕하세요. 데이터분석 지존짱짱맨 sol 입니다. !!!!!</p>
-<div id="01ebf29e" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>2</code></pre>
-</div>
-</div>
+  
+
+
+</header>
+
+
+<section id="python-내장함수" class="level2">
+<h2 class="anchored" data-anchor-id="python-내장함수">[1] <code>python</code> 내장함수</h2>
+<section id="sum-max-min" class="level3">
+<h3 class="anchored" data-anchor-id="sum-max-min">1. sum(), max(), min()</h3>
+</section>
+</section>
+<section id="pandas-내장함수" class="level2">
+<h2 class="anchored" data-anchor-id="pandas-내장함수">[2] <code>pandas</code> 내장함수</h2>
+<section id="변수명-바꾸기-.renamecolumns-변경전변경후" class="level3">
+<h3 class="anchored" data-anchor-id="변수명-바꾸기-.renamecolumns-변경전변경후">1. 변수명 바꾸기 .rename(columns = {‘변경전’:‘변경후’})</h3>
+</section>
+<section id="파생변수-만들기" class="level3">
+<h3 class="anchored" data-anchor-id="파생변수-만들기">2. 파생변수 만들기</h3>
+<section id="df파생변수명-넣을값" class="level4">
+<h4 class="anchored" data-anchor-id="df파생변수명-넣을값">(1) df[‘파생변수명’] = 넣을값</h4>
+</section>
+<section id="평균값-df.mean" class="level4">
+<h4 class="anchored" data-anchor-id="평균값-df.mean">(2) 평균값 df.mean()</h4>
+</section>
+</section>
+<section id="값-확인하기" class="level3">
+<h3 class="anchored" data-anchor-id="값-확인하기">3. 값 확인하기</h3>
+<section id="df컬럼명.value_counts" class="level4">
+<h4 class="anchored" data-anchor-id="df컬럼명.value_counts">(1) df[‘컬럼명’].value_counts()</h4>
+</section>
+<section id="빈도수를-알파벳순으로-정렬-.sort_index" class="level4">
+<h4 class="anchored" data-anchor-id="빈도수를-알파벳순으로-정렬-.sort_index">(2) 빈도수를 알파벳순으로 정렬 .sort_index()</h4>
+</section>
+</section>
+<section id="그래프로-확인하기" class="level3">
+<h3 class="anchored" data-anchor-id="그래프로-확인하기">4. 그래프로 확인하기</h3>
+<section id="df.plot.bar" class="level4">
+<h4 class="anchored" data-anchor-id="df.plot.bar">(1) df.plot.bar()</h4>
+</section>
+</section>
+<section id="전처리하기" class="level3">
+<h3 class="anchored" data-anchor-id="전처리하기">5. 전처리하기</h3>
+<section id="query-행-추출" class="level4">
+<h4 class="anchored" data-anchor-id="query-행-추출">(1) query : 행 추출</h4>
+</section>
+<section id="df-열변수-추출" class="level4">
+<h4 class="anchored" data-anchor-id="df-열변수-추출">(2) df[] : 열(변수) 추출</h4>
+</section>
+<section id="sort_values-정렬" class="level4">
+<h4 class="anchored" data-anchor-id="sort_values-정렬">(3) sort_values() : 정렬</h4>
+</section>
+</section>
+</section>
+<section id="numpy-내장함수" class="level2">
+<h2 class="anchored" data-anchor-id="numpy-내장함수">[3] <code>numpy</code> 내장함수</h2>
+<section id="np.wehre조건-참일때-값-거짓일때-값" class="level3">
+<h3 class="anchored" data-anchor-id="np.wehre조건-참일때-값-거짓일때-값">1. np.wehre(조건, 참일때 값, 거짓일때 값)</h3>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">2.</h3>
 
 
 </section>
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://github.com/yesolee" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-</div>
-</div>
- <!-- /main -->
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -198,6 +251,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
