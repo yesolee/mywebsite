@@ -64,14 +64,15 @@ crime_18.dtypes
 ```{python}
 crime_18 = crime_18.assign(
     요일평균 = lambda x: x['18_계'] / 7,
-    주말합계 = lambda x: x['18_일']+x['18_토']+x['18_금'],
-    평일합계 = lambda x: x['18_계']-x['주말합계'] )
+    주말평균 = lambda x: (x['18_일']+x['18_토']+x['18_금'])/3,
+    평일평균 = lambda x: (x['18_월']+x['18_화']+x['18_수']+x['18_목'])/4 )
 # pd.options.display.float_format = '{:.2f}'.format
 crime_18
 ```
 # 7. 변수 기준 요약
 ```{python}
-crime_18.describe()
+crime_18.groupby('대분류').agg(mean_rob=('18_일','mean'))
+
 ```
 
 
