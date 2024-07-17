@@ -1,0 +1,237 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"crime\"\n",
+        "jupyter: python3\n",
+        "---\n",
+        "\n",
+        "\n",
+        "# 1. 파일 불러오기, 복사본 만들기"
+      ],
+      "id": "186e982d"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "df = pd.read_csv('data/crime.csv', encoding='EUC-KR')\n",
+        "crime=df.copy()\n",
+        "crime.head()"
+      ],
+      "id": "4f5371de",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# 2. 변수이름 바꾸기"
+      ],
+      "id": "88894c9a"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "crime = crime.rename(columns={\n",
+        "    '죄종별(1)':'대분류',\n",
+        "    '죄종별(2)':'소분류',\n",
+        "    '2018':'18_계',\n",
+        "    '2018.1':'18_일',\n",
+        "    '2018.2':'18_월',\n",
+        "    '2018.3':'18_화',\n",
+        "    '2018.4':'18_수',\n",
+        "    '2018.5':'18_목',\n",
+        "    '2018.6':'18_금',\n",
+        "    '2018.7':'18_토',\n",
+        "    })\n",
+        "crime.head()"
+      ],
+      "id": "fcdbbedb",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# 3. 필요한 데이터 추출하기\n",
+        "## 3-1. 지울 행의 위해 인덱스 추출"
+      ],
+      "id": "42210a97"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import numpy as np\n",
+        "crime.query('소분류 == \"소계\"')"
+      ],
+      "id": "1d8315a0",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## 3-2. 필요 없는 행 제거"
+      ],
+      "id": "1d9018fd"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "crime_18 = crime[['대분류','소분류','18_계','18_일','18_월','18_화','18_수','18_목','18_금','18_토']].drop([0,1,10,19])\n",
+        "crime_18"
+      ],
+      "id": "c2c7c02c",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# 4. 데이터 타입 확인"
+      ],
+      "id": "d08a7781"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "crime_18.info()"
+      ],
+      "id": "545392a2",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# 5. 데이터 타입 변환"
+      ],
+      "id": "c8bcd19e"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "crime_18 = crime_18.astype({\n",
+        "    '18_계':int,\n",
+        "    '18_일':int,\n",
+        "    '18_월':int,\n",
+        "    '18_화':int,\n",
+        "    '18_수':int,\n",
+        "    '18_목':int,\n",
+        "    '18_금':int,\n",
+        "    '18_토':int\n",
+        "})\n",
+        "crime_18.dtypes"
+      ],
+      "id": "79a6422a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# 6. 파생변수 추가"
+      ],
+      "id": "6c69ae89"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "crime_18 = crime_18.assign(\n",
+        "    요일평균 = lambda x: x['18_계'] / 7,\n",
+        "    주말합계 = lambda x: x['18_일']+x['18_토']+x['18_금'],\n",
+        "    평일합계 = lambda x: x['18_계']-x['주말합계'] )\n",
+        "# pd.options.display.float_format = '{:.2f}'.format\n",
+        "crime_18"
+      ],
+      "id": "d24de9b0",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# 7. 변수 기준 요약"
+      ],
+      "id": "7172c38c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "crime_18.describe()"
+      ],
+      "id": "85e6ac8e",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# 8. 그룹 변수 기준 요약"
+      ],
+      "id": "3424990a"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "monday=crime_18.groupby('대분류').agg(소계=('18'))\n",
+        "monday"
+      ],
+      "id": "51f29c05",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# 1. 변수 이름 변경 했는지?\n",
+        "# 2. 행들을 필터링 했는지?\n",
+        "# 3. 새로운 변수를 생성했는지?\n",
+        "# 4. 그룹 변수 기준으로 요약을 했는지?\n",
+        "# 5. 정렬 했는지?"
+      ],
+      "id": "7bd22975"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# .reset_index() 시리즈를 데이터프레임으로 바꿔줌\n"
+      ],
+      "id": "75310325"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\DS\\Python\\Python312\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

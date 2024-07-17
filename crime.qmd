@@ -28,8 +28,15 @@ crime = crime.rename(columns={
 crime.head()
 ```
 # 3. 필요한 데이터 추출하기
+## 3-1. 지울 행의 위해 인덱스 추출
 ```{python}
-crime_18 = crime[['대분류','소분류','18_계','18_일','18_월','18_화','18_수','18_목','18_금','18_토']].drop([0])
+import numpy as np
+crime.query('소분류 == "소계"')
+```
+## 3-2. 필요 없는 행 제거
+```{python}
+ 
+crime_18 = crime[['대분류','소분류','18_계','18_일','18_월','18_화','18_수','18_목','18_금','18_토']].drop([0,1,10,19])
 crime_18
 ```
 # 4. 데이터 타입 확인
@@ -53,11 +60,22 @@ crime_18.dtypes
 ```
 # 6. 파생변수 추가
 ```{python}
-crime_18['18_요일평균'] = crime_18['18_계'] / 7
-pd.options.display.float_format = '{:.2f}'.format
+crime_18 = crime_18.assign(
+    요일평균 = lambda x: x['18_계'] / 7,
+    주말합계 = lambda x: x['18_일']+x['18_토']+x['18_금'],
+    평일합계 = lambda x: x['18_계']-x['주말합계'] )
+# pd.options.display.float_format = '{:.2f}'.format
 crime_18
 ```
-
+# 7. 변수 기준 요약
+```{python}
+crime_18.describe()
+```
+# 8. 그룹 변수 기준 요약
+```{python}
+monday=crime_18.groupby('대분류').agg(소계=('18'))
+monday
+```
 
 
 # 1. 변수 이름 변경 했는지?
@@ -65,6 +83,9 @@ crime_18
 # 3. 새로운 변수를 생성했는지?
 # 4. 그룹 변수 기준으로 요약을 했는지?
 # 5. 정렬 했는지?
+```{python}
+
+```
 
 # .reset_index() 시리즈를 데이터프레임으로 바꿔줌
 
