@@ -1,0 +1,12 @@
+{
+  "hash": "ddc7261c6fbc9f977e647f49fb7fcc54",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"넘파이 이미지\"\nauthor: \"Sol\"\ndate: \"2024-07-18\"\ncategories: [numpy]\n---\n\n# 사진은 행렬이다\n\n## 랜덤으로 0에서 1미만의 소수 구하기 : np.random.rand()\n\n::: {#2d0c96d0 .cell execution_count=1}\n``` {.python .cell-code}\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nnp.random.seed(2024)\nimg1 = np.random.rand(3,3)\nimg1\n```\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\narray([[0.58801452, 0.69910875, 0.18815196],\n       [0.04380856, 0.20501895, 0.10606287],\n       [0.72724014, 0.67940052, 0.4738457 ]])\n```\n:::\n:::\n\n\n::: {#2766d173 .cell execution_count=2}\n``` {.python .cell-code}\nplt.imshow(img1, cmap='gray', interpolation='nearest')\nplt.colorbar()\nplt.show()\n```\n\n::: {.cell-output .cell-output-display}\n![](index_files/figure-html/cell-3-output-1.png){width=505 height=416}\n:::\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

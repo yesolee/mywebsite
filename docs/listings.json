@@ -2,6 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/np1/index.html",
+      "/posts/np_image/index.html",
       "/posts/project/index.html",
       "/posts/project_rev1/index.html",
       "/posts/hw2/index.html",
