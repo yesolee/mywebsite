@@ -282,7 +282,7 @@ Q. 1 열의 값이 50보다 큰 행들만, 열은 모두 가져오기
 mat_b[mat_b[:,1]>50,:] 
 ```
 
-# 15. 넘파이 배열 메서드: .sum(), .mean(), .max(), .min(), cumsum(), cumprod()
+# 15. 넘파이 배열 메서드: .sum(), .mean(), .max(), .min(), cumsum(), cumprod(), .argmax(), .argmin(), .clip(), .tolist(), astype(), .copy()
 ```{python}
 a = np.array([[1, 2, 3], [4, 5, 6]])
 a
@@ -292,6 +292,14 @@ a.max() # 모든 원소 중 가장 큰 수
 a.min() # 모든 원소 중 가장 작은 수
 a.cumsum() # 모든 원소 누적합
 a.cumprod() # 모든 원소 누적곱
+a.argmax() # 모든 원소 중 가장 큰 수의 인덱스
+a.argmin() # 모든 원소 중 가장 작은 수의 인덱스
+a.clip(2,4) # 2보다 작으면 2로, 4보다 크면 4로 반환
+type(a) # numpy.ndarray
+type(a.tolist()) # 넘파이배열을 list로 타입 변경
+b= np.array([1.1, 2.2, 3.3])
+b
+b.astype(int) # 원소의 타입 변경
 ```
 
 ## 행끼리, 열끼리 계산:  axis=1(행끼리), axis=0(열끼리)
@@ -304,6 +312,13 @@ a.max(axis=1) # 행별 가장 큰 수
 a.min(axis=1) # 행별 가장 작은 수
 a.cumsum(axis=1) # 행별 누적합
 a.cumprod(axis=1) # 행별 누적곱
+b = np.array([[4,2,1],[3,6,5]])
+b
+b.argmax(axis=1) # 행별 모든 원소 중 가장 큰 수의 인덱스
+b.argmin(axis=1) # 행별 모든 원소 중 가장 작은 수의 인덱스
+b.argmax(axis=0) # 열별 모든 원소 중 가장 큰 수의 인덱스
+b.argmin(axis=0) # 열별 모든 원소 중 가장 작은 수의 인덱스
+
 ```
 
 # 16. 행,열 바꾸기: .transpose()
@@ -315,8 +330,10 @@ a.transpose()
 # 17. 행렬의 곱 : .dot()
 ```{python}
 a=np.array([[1,2,3],[4,5,6]])
-b=np.array([[7,8,9],[10,11,12]])
-a.dot(y)
+a
+b=np.array([[7,8],[9,10],[11,12]])
+b
+a.dot(b)
 ```
 # 18. 행렬의 원소의 곱 : *
 ```{python}
@@ -325,4 +342,65 @@ b=np.array([[7,8,9],[10,11,12]])
 a*b
 ```
 
+# 19. 깊은 복사: .copy() 값만 복사
+```{python}
+a = np.array([1,2,3,4,5])
+a
+b = a # a의 주소값을 복사
+b
+c = a.copy() # 값을 복사
+c
+a[0] = 100
+a
+b
+c
+```
+# 20. 배열의 정렬 : .sort(), .argsort()
+```{python}
+a = np.array([3,5,2,4,1])
+a
+a.sort() # 원본을 수정
+a
+b = np.array([3,5,2,4,1])
+b.argsort() # 정렬했을때의 인덱스를 반환(원본 수정X)
+b
+b[b.argsort()] # 정렬된 인덱스로 출력
+```
+# 우리가 보는 표는 행렬의 형태이기 때문에 인덱싱과 필터링 스킬이 중요!!
+
+# 연습문제
+## 1. 
+```{python}
+A = np.array([[3,5,7],[2,3,6]])
+A
+```
+## 2. 
+```{python}
+B = np.array([[8,10,7,8],[2,4,5,5],[7,6,1,7],[2,6,8,6],[9,3,4,2]])
+B
+B[[1,3,4],:]
+```
+## 3.
+```{python}
+B[B[:,2]>3,:]
+```
+## 4.
+```{python}
+row_sums = np.sum(B, axis =1)
+print("각 행별 합계:\n", row_sums)
+B[row_sums>=20,:]
+```
+## 5. 
+```{python}
+B
+B.mean(axis=0)
+np.where(B.mean(axis=0)>5)[0]
+```
+## 6. 
+```{python}
+np.sum(B >=5)
+np.sum(B>7, axis=1)
+B[np.sum(B>7, axis=1)>0,:]
+
+```
 
