@@ -403,7 +403,7 @@
     "href": "blog.html",
     "title": "myblog",
     "section": "",
-    "text": "넘파이 배열(1차원:벡터, 2차원:행렬, 3차원:텐서)\n\n\n\n\n\n\nnumpy\n\n\n\n\n\n\n\n\n\nJul 18, 2024\n\n\nSol\n\n\n\n\n\n\n\n\n\n\n\n\n넘파이 이미지\n\n\n\n\n\n\nnumpy\n\n\n\n\n\n\n\n\n\nJul 18, 2024\n\n\nSol\n\n\n\n\n\n\n\n\n\n\n\n\nProject1-crime\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nProject1-crime_rev1\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 15, 2024\n\n\n이예솔\n\n\n\n\n\n\nNo matching items"
+    "text": "넘파이 배열\n\n\n\n\n\n\nnumpy\n\n\n\n\n\n\n\n\n\nJul 18, 2024\n\n\nSol\n\n\n\n\n\n\n\n\n\n\n\n\n넘파이 이미지\n\n\n\n\n\n\nnumpy\n\n\n\n\n\n\n\n\n\nJul 18, 2024\n\n\nSol\n\n\n\n\n\n\n\n\n\n\n\n\nProject1-crime\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nProject1-crime_rev1\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 15, 2024\n\n\n이예솔\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "summary.html#pandas-내장함수",
@@ -618,9 +618,9 @@
   {
     "objectID": "posts/np1/index.html",
     "href": "posts/np1/index.html",
-    "title": "넘파이 배열(1차원:벡터, 2차원:행렬, 3차원:텐서)",
+    "title": "넘파이 배열",
     "section": "",
-    "text": "벡터 : 숫자들의 일렬로 구성된 데이터 구조\n넘파이 벡터: 1차원 넘파이 배열\n\n\n\n\n\n동일한 자료형 : 계산의 효율성을 높이기 위해\n고속 연산 : 반복문을 사용하지 않고도 빠른 연산 수행\n다양한 연산 지원: 벡터간의 덧셈, 뺄셈 등 수학적 연산 지원\n메모리의 효율성: 파이썬 리스트보다 메모리를 적게 사용함"
+    "text": "0차원 배열: 스칼라, 단순한 하나의 숫자\n1차원 배열: 벡터, 숫자들이 일렬로 구성된 데이터 구조\n2차원 배열: 행렬\n3차원 이상: 텐서"
   },
   {
     "objectID": "posts/np1/index.html#정의",
@@ -667,14 +667,14 @@
   {
     "objectID": "posts/np1/index.html#참-거짓-값과-인덱싱을-을-이용해-2차원-배열의-값-추출",
     "href": "posts/np1/index.html#참-거짓-값과-인덱싱을-을-이용해-2차원-배열의-값-추출",
-    "title": "넘파이 배열(1차원:벡터, 2차원:행렬, 3차원:텐서)",
+    "title": "넘파이 배열",
     "section": "참, 거짓 값과 인덱싱을 을 이용해 2차원 배열의 값 추출",
     "text": "참, 거짓 값과 인덱싱을 을 이용해 2차원 배열의 값 추출\n\nx = np.arange(1, 11).reshape((5, 2)) * 2\nx\nx[[True, True, False, False, True], 0]\n\narray([ 2,  6, 18])"
   },
   {
     "objectID": "posts/np1/index.html#필터링-인덱싱에-조건식을-적용해-필터링",
     "href": "posts/np1/index.html#필터링-인덱싱에-조건식을-적용해-필터링",
-    "title": "넘파이 배열(1차원:벡터, 2차원:행렬, 3차원:텐서)",
+    "title": "넘파이 배열",
     "section": "필터링: 인덱싱에 조건식을 적용해 필터링",
     "text": "필터링: 인덱싱에 조건식을 적용해 필터링\nQ. 1 열의 값이 50보다 큰 행들만, 열은 모두 가져오기\n\nmat_b[mat_b[:,1]&gt;50,:] \n\narray([[ 51,  52,  53,  54,  55],\n       [ 56,  57,  58,  59,  60],\n       [ 61,  62,  63,  64,  65],\n       [ 66,  67,  68,  69,  70],\n       [ 71,  72,  73,  74,  75],\n       [ 76,  77,  78,  79,  80],\n       [ 81,  82,  83,  84,  85],\n       [ 86,  87,  88,  89,  90],\n       [ 91,  92,  93,  94,  95],\n       [ 96,  97,  98,  99, 100]])"
   },
@@ -691,5 +691,138 @@
     "title": "넘파이 이미지",
     "section": "",
     "text": "import numpy as np\nimport matplotlib.pyplot as plt\n\nnp.random.seed(2024)\nimg1 = np.random.rand(3,3)\nimg1\n\narray([[0.58801452, 0.69910875, 0.18815196],\n       [0.04380856, 0.20501895, 0.10606287],\n       [0.72724014, 0.67940052, 0.4738457 ]])\n\n\n\nplt.imshow(img1, cmap='gray', interpolation='nearest')\nplt.colorbar()\nplt.show()"
+  },
+  {
+    "objectID": "posts/np1/index.html#empty-쓰레기값이-들어간-빈-배열",
+    "href": "posts/np1/index.html#empty-쓰레기값이-들어간-빈-배열",
+    "title": "넘파이 배열",
+    "section": "(1) .empty(): 쓰레기값이 들어간 빈 배열",
+    "text": "(1) .empty(): 쓰레기값이 들어간 빈 배열\n\nimport numpy as np\n?np.empty\nx = np.empty(3)\n# e^-10은 10^-10이다. 0으로 봐도 무방할 정도로 0에 가까운 수\nx[0] = 3\nx[1] = 5\nx[2] = 3\nx\n\ny = np.empty(3,dtype=int)\ny[0] = 3\ny[1] = 5\ny[2] = 3\ny\n\nz = np.empty([3,3], dtype=int)\nz\nnp.zeros(3) # 0으로 채워진 원소 3개짜리 1차원 배열\n\narray([0., 0., 0.])"
+  },
+  {
+    "objectID": "posts/np1/index.html#zeros-0으로-채워진-배열",
+    "href": "posts/np1/index.html#zeros-0으로-채워진-배열",
+    "title": "넘파이 배열",
+    "section": "(2) .zeros() : 0으로 채워진 배열",
+    "text": "(2) .zeros() : 0으로 채워진 배열\n\nnp.zeros(3)\nnp.zeros([3,3])\nnp.zeros([2,2],dtype=int)\n\narray([[0, 0],\n       [0, 0]])"
+  },
+  {
+    "objectID": "posts/np1/index.html#np.array-직접-값-입력",
+    "href": "posts/np1/index.html#np.array-직접-값-입력",
+    "title": "넘파이 배열",
+    "section": "(3) np.array() : 직접 값 입력",
+    "text": "(3) np.array() : 직접 값 입력\n\nnp.array([1,2,3])\nnp.array([1,2,3],dtype=float)\n\narray([1., 2., 3.])"
+  },
+  {
+    "objectID": "posts/np1/index.html#np.arange-일정-간격으로-숫자-생성하며-배열-생성",
+    "href": "posts/np1/index.html#np.arange-일정-간격으로-숫자-생성하며-배열-생성",
+    "title": "넘파이 배열",
+    "section": "(4) np.arange() : 일정 간격으로 숫자 생성하며 배열 생성",
+    "text": "(4) np.arange() : 일정 간격으로 숫자 생성하며 배열 생성\n\nnp.arange(10) # 0부터 9까지\nnp.arange(1,10,2,dtype=float) # 1부터 9까지 2씩 건너뛰며 생성\nnp.arange(0,2,0.5)\nnp.arange(0,2.1,0.5)\nnp.arange(0,-100,-1)\n-np.arange(100)\n\narray([  0,  -1,  -2,  -3,  -4,  -5,  -6,  -7,  -8,  -9, -10, -11, -12,\n       -13, -14, -15, -16, -17, -18, -19, -20, -21, -22, -23, -24, -25,\n       -26, -27, -28, -29, -30, -31, -32, -33, -34, -35, -36, -37, -38,\n       -39, -40, -41, -42, -43, -44, -45, -46, -47, -48, -49, -50, -51,\n       -52, -53, -54, -55, -56, -57, -58, -59, -60, -61, -62, -63, -64,\n       -65, -66, -67, -68, -69, -70, -71, -72, -73, -74, -75, -76, -77,\n       -78, -79, -80, -81, -82, -83, -84, -85, -86, -87, -88, -89, -90,\n       -91, -92, -93, -94, -95, -96, -97, -98, -99])"
+  },
+  {
+    "objectID": "posts/np1/index.html#np.linspace-균일-간격으로-배열-생성",
+    "href": "posts/np1/index.html#np.linspace-균일-간격으로-배열-생성",
+    "title": "넘파이 배열",
+    "section": "(5) np.linspace() : 균일 간격으로 배열 생성",
+    "text": "(5) np.linspace() : 균일 간격으로 배열 생성\n\nnp.linspace(0,100,5) # 0부터 100까지 균일 간격으로 5개 반환\nnp.linspace(0,100,5,retstep=True) # 0부터 100까지 균일 간격 25도 함께 반환\nnp.linspace(0,100,5,retstep=True,dtype=int)\nnp.linspace(0,100,5,endpoint=False) # 100은 포함하지 않음\nnp.linspace(0,10) # 간격 기본값은 50이므로 1부터 10까지 균일간격으로 50개생성\n\narray([ 0.        ,  0.20408163,  0.40816327,  0.6122449 ,  0.81632653,\n        1.02040816,  1.2244898 ,  1.42857143,  1.63265306,  1.83673469,\n        2.04081633,  2.24489796,  2.44897959,  2.65306122,  2.85714286,\n        3.06122449,  3.26530612,  3.46938776,  3.67346939,  3.87755102,\n        4.08163265,  4.28571429,  4.48979592,  4.69387755,  4.89795918,\n        5.10204082,  5.30612245,  5.51020408,  5.71428571,  5.91836735,\n        6.12244898,  6.32653061,  6.53061224,  6.73469388,  6.93877551,\n        7.14285714,  7.34693878,  7.55102041,  7.75510204,  7.95918367,\n        8.16326531,  8.36734694,  8.57142857,  8.7755102 ,  8.97959184,\n        9.18367347,  9.3877551 ,  9.59183673,  9.79591837, 10.        ])"
+  },
+  {
+    "objectID": "posts/np1/index.html#np.random.randint-랜덤값으로-생성",
+    "href": "posts/np1/index.html#np.random.randint-랜덤값으로-생성",
+    "title": "넘파이 배열",
+    "section": "(6) np.random.randint() : 랜덤값으로 생성",
+    "text": "(6) np.random.randint() : 랜덤값으로 생성\n\nnp.random.seed(4) # seed안의 값이 같으면 다른 사람과 같은 랜덤값을 얻을 수 있다\nnp.random.rand(5) # 0부터 1미만의 수 5개\nnp.random.rand(5,3) # 0부터 1미만의 수 5행 3열\nnp.random.randint(0,10,2) # 0부터 10미만의 수 2개\nnp.random.randint(2,5) # 2에서 5미만의 수 1개\nnp.random.randint(2,5,[2,2]) # 2에서 5미만의 수로 채워진 2행2열\n\narray([[4, 2],\n       [2, 4]], dtype=int32)"
+  },
+  {
+    "objectID": "posts/np1/index.html#브로드캐스팅-다른-차원의-배열들의-연산-가능",
+    "href": "posts/np1/index.html#브로드캐스팅-다른-차원의-배열들의-연산-가능",
+    "title": "넘파이 배열",
+    "section": "브로드캐스팅: 다른 차원의 배열들의 연산 가능",
+    "text": "브로드캐스팅: 다른 차원의 배열들의 연산 가능\n\n(1) 다차원과 0차원(스칼라)의 연산: 스칼라가 다차원인 것처럼 계산\n\na= np.array([1,2,3])\na*2\n\narray([2, 4, 6])\n\n\n\n\n(2) 다차원과 1차원의 연산: 행이 일치하거나 열이 일치하면 가능\n\na=np.array([[1,2,3],[4,5,6]])\na\nb=np.array([10,20,30])\nb\na*b # b가 [[10,20,30],[10,20,30]]인것처럼 계산\nc=np.array([[10],[20]])\nc\na*c # c가 [[10,10,10],[20,20,20]]인것처럼 계산\n\narray([[ 10,  20,  30],\n       [ 80, 100, 120]])\n\n\n\n\n같은 차원의 경우 길이가 다르면 에러남\n\na = np.array([1, 2, 3, 4])\nb = np.array([1, 2])\n# a+b 에러남\na+np.tile(b,2)\n\narray([2, 4, 4, 6])\n\n\n\n\n배열 길이 맞추기 (1) np.resize() - 값을 앞에서부터 맞춰준다\n\na = np.array([1, 2, 3, 4, 5, 6])\nb = np.array([7, 8, 9, 10])\nnp.resize(b,len(a))\n\narray([ 7,  8,  9, 10,  7,  8])\n\n\n\n\n배열 길이 맞추기 (2) np.repeat() : 배열의 값을 반복\n\nnp.repeat(5,3) # 5가 3번 반복됨\nnp.repeat([1,2,3],3) # 1이 3번, 2가 3번, 3이 3번 반복됨\nnp.repeat([1,2,3],[2,1,4]) # 1이 2번, 2가 1번, 3이 4번 반복됨\nnp.array([[1,2,3],[4,5,6]])\nnp.repeat([[1,2,3],[4,5,6]],3) # 1차원으로 바뀜\nnp.repeat([[1,2,3],[4,5,6]],3,axis=1) # 각 열이 3번 반복됨\nnp.repeat([[1,2,3],[4,5,6]],3,axis=0) # 각 행이 3번 반복됨\n\narray([[1, 2, 3],\n       [1, 2, 3],\n       [1, 2, 3],\n       [4, 5, 6],\n       [4, 5, 6],\n       [4, 5, 6]])\n\n\n\n\n배열 길이 맞추기(3) np.tile() : 배열 자체를 반복\n\nnp.tile(5,3) # 5가 3번 반복됨\nnp.tile([1,2,3],3) # [1,2,3]이 3번 반복됨\nnp.tile([1,2,3],[3,2]) # [1,2,3]이 2번 반복된게 3행 생성\n\narray([[1, 2, 3, 1, 2, 3],\n       [1, 2, 3, 1, 2, 3],\n       [1, 2, 3, 1, 2, 3]])"
+  },
+  {
+    "objectID": "posts/np1/index.html#하나로-합치기-np.concate",
+    "href": "posts/np1/index.html#하나로-합치기-np.concate",
+    "title": "넘파이 배열",
+    "section": "(1) 하나로 합치기: np.concate()",
+    "text": "(1) 하나로 합치기: np.concate()\n\na=np.array([1,2])\nb=np.array([4,5,6])\nnp.concatenate((a,b))\n\narray([1, 2, 4, 5, 6])"
+  },
+  {
+    "objectID": "posts/np1/index.html#열로-쌓기-np.column_stack---길이가-같아야-함",
+    "href": "posts/np1/index.html#열로-쌓기-np.column_stack---길이가-같아야-함",
+    "title": "넘파이 배열",
+    "section": "(2) 열로 쌓기: np.column_stack() - 길이가 같아야 함",
+    "text": "(2) 열로 쌓기: np.column_stack() - 길이가 같아야 함\n\na=np.array([1,2,3])\nb=np.array([4,5,6])\nnp.column_stack((a,b)) # 첫번째 배열을 0열에, 두번째 배열을 1열에\n\narray([[1, 4],\n       [2, 5],\n       [3, 6]])"
+  },
+  {
+    "objectID": "posts/np1/index.html#행으로-쌓기-np.vstack---길이가-같아야-함",
+    "href": "posts/np1/index.html#행으로-쌓기-np.vstack---길이가-같아야-함",
+    "title": "넘파이 배열",
+    "section": "(3) 행으로 쌓기: np.vstack() - 길이가 같아야 함",
+    "text": "(3) 행으로 쌓기: np.vstack() - 길이가 같아야 함\n\na=np.array([1,2,3])\nb=np.array([4,5,6])\nnp.vstack((a,b)) # 첫번쨰 배열을 0행에, 두번쨰 배열을 0행에\n\narray([[1, 2, 3],\n       [4, 5, 6]])"
+  },
+  {
+    "objectID": "posts/np1/index.html#을-통해서-크기를-자동으로-결정할-수-있음",
+    "href": "posts/np1/index.html#을-통해서-크기를-자동으로-결정할-수-있음",
+    "title": "넘파이 배열",
+    "section": "(1) -1을 통해서 크기를 자동으로 결정할 수 있음",
+    "text": "(1) -1을 통해서 크기를 자동으로 결정할 수 있음\n\nnp.arange(1,7).reshape((2,-1))\n\narray([[1, 2, 3],\n       [4, 5, 6]])\n\n\n\nnp.arange(1,7).reshape((-1,3))\n\narray([[1, 2, 3],\n       [4, 5, 6]])"
+  },
+  {
+    "objectID": "posts/np1/index.html#orderf인자로-값의-순서를-정할-수-있음",
+    "href": "posts/np1/index.html#orderf인자로-값의-순서를-정할-수-있음",
+    "title": "넘파이 배열",
+    "section": "(2) order=“F”인자로 값의 순서를 정할 수 있음",
+    "text": "(2) order=“F”인자로 값의 순서를 정할 수 있음\n\norder=“C” : 행우선, 기본값이라 입력 안하면 자동으로 적용됨\norder=“F” : 열우선\n\n\nnp.arange(1,7).reshape((-1,3),order=\"F\")\n\narray([[1, 3, 5],\n       [2, 4, 6]])"
+  },
+  {
+    "objectID": "posts/np1/index.html#행끼리-열끼리-계산-axis1행끼리-axis0열끼리",
+    "href": "posts/np1/index.html#행끼리-열끼리-계산-axis1행끼리-axis0열끼리",
+    "title": "넘파이 배열",
+    "section": "행끼리, 열끼리 계산: axis=1(행끼리), axis=0(열끼리)",
+    "text": "행끼리, 열끼리 계산: axis=1(행끼리), axis=0(열끼리)\n\na = np.array([[1, 2, 3], [4, 5, 6]])\na\na.sum(axis=1) # 행별 합계\na.mean(axis=1) # 행별 평균\na.max(axis=1) # 행별 가장 큰 수\na.min(axis=1) # 행별 가장 작은 수\na.cumsum(axis=1) # 행별 누적합\na.cumprod(axis=1) # 행별 누적곱\nb = np.array([[4,2,1],[3,6,5]])\nb\nb.argmax(axis=1) # 행별 모든 원소 중 가장 큰 수의 인덱스\nb.argmin(axis=1) # 행별 모든 원소 중 가장 작은 수의 인덱스\nb.argmax(axis=0) # 열별 모든 원소 중 가장 큰 수의 인덱스\nb.argmin(axis=0) # 열별 모든 원소 중 가장 작은 수의 인덱스\n\narray([1, 0, 0])"
+  },
+  {
+    "objectID": "posts/np1/index.html#section",
+    "href": "posts/np1/index.html#section",
+    "title": "넘파이 배열",
+    "section": "1.",
+    "text": "1.\n\nA = np.array([[3,5,7],[2,3,6]])\nA\n\narray([[3, 5, 7],\n       [2, 3, 6]])"
+  },
+  {
+    "objectID": "posts/np1/index.html#section-1",
+    "href": "posts/np1/index.html#section-1",
+    "title": "넘파이 배열",
+    "section": "2.",
+    "text": "2.\n\nB = np.array([[8,10,7,8],[2,4,5,5],[7,6,1,7],[2,6,8,6],[9,3,4,2]])\nB\nB[[1,3,4],:]\n\narray([[2, 4, 5, 5],\n       [2, 6, 8, 6],\n       [9, 3, 4, 2]])"
+  },
+  {
+    "objectID": "posts/np1/index.html#section-2",
+    "href": "posts/np1/index.html#section-2",
+    "title": "넘파이 배열",
+    "section": "3.",
+    "text": "3.\n\nB[B[:,2]&gt;3,:]\n\narray([[ 8, 10,  7,  8],\n       [ 2,  4,  5,  5],\n       [ 2,  6,  8,  6],\n       [ 9,  3,  4,  2]])"
+  },
+  {
+    "objectID": "posts/np1/index.html#section-3",
+    "href": "posts/np1/index.html#section-3",
+    "title": "넘파이 배열",
+    "section": "4.",
+    "text": "4.\n\nrow_sums = np.sum(B, axis =1)\nprint(\"각 행별 합계:\\n\", row_sums)\nB[row_sums&gt;=20,:]\n\n각 행별 합계:\n [33 16 21 22 18]\n\n\narray([[ 8, 10,  7,  8],\n       [ 7,  6,  1,  7],\n       [ 2,  6,  8,  6]])"
+  },
+  {
+    "objectID": "posts/np1/index.html#section-4",
+    "href": "posts/np1/index.html#section-4",
+    "title": "넘파이 배열",
+    "section": "5.",
+    "text": "5.\n\nB\nB.mean(axis=0)\nnp.where(B.mean(axis=0)&gt;5)[0]\n\narray([0, 1, 3])"
+  },
+  {
+    "objectID": "posts/np1/index.html#section-5",
+    "href": "posts/np1/index.html#section-5",
+    "title": "넘파이 배열",
+    "section": "6.",
+    "text": "6.\n\nnp.sum(B &gt;=5)\nnp.sum(B&gt;7, axis=1)\nB[np.sum(B&gt;7, axis=1)&gt;0,:]\n\narray([[ 8, 10,  7,  8],\n       [ 2,  6,  8,  6],\n       [ 9,  3,  4,  2]])"
   }
 ]
