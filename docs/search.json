@@ -403,7 +403,7 @@
     "href": "blog.html",
     "title": "myblog",
     "section": "",
-    "text": "넘파이 배열\n\n\n\n\n\n\nnumpy\n\n\n\n\n\n\n\n\n\nJul 18, 2024\n\n\nSol\n\n\n\n\n\n\n\n\n\n\n\n\n넘파이 이미지\n\n\n\n\n\n\nnumpy\n\n\n\n\n\n\n\n\n\nJul 18, 2024\n\n\nSol\n\n\n\n\n\n\n\n\n\n\n\n\nProject1-crime\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nProject1-crime_rev1\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 15, 2024\n\n\n이예솔\n\n\n\n\n\n\nNo matching items"
+    "text": "plotly를 이용한 그래프 그리기\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\n넘파이 배열\n\n\n\n\n\n\nnumpy\n\n\n\n\n\n\n\n\n\nJul 18, 2024\n\n\nSol\n\n\n\n\n\n\n\n\n\n\n\n\n넘파이 이미지\n\n\n\n\n\n\nnumpy\n\n\n\n\n\n\n\n\n\nJul 18, 2024\n\n\nSol\n\n\n\n\n\n\n\n\n\n\n\n\nProject1-crime\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nProject1-crime_rev1\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 15, 2024\n\n\n이예솔\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "summary.html#pandas-내장함수",
@@ -824,5 +824,33 @@
     "title": "넘파이 배열",
     "section": "6.",
     "text": "6.\n\nnp.sum(B &gt;=5)\nnp.sum(B&gt;7, axis=1)\nB[np.sum(B&gt;7, axis=1)&gt;0,:]\n\narray([[ 8, 10,  7,  8],\n       [ 2,  6,  8,  6],\n       [ 9,  3,  4,  2]])"
+  },
+  {
+    "objectID": "posts/plot/index.html",
+    "href": "posts/plot/index.html",
+    "title": "plotly를 이용한 그래프 그리기",
+    "section": "",
+    "text": "import pandas as pd\n\nmpg=pd.read_csv('mpg.csv')\nmpg.shape\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport plotly.express as px"
+  },
+  {
+    "objectID": "posts/plot/index.html#q1.-barplot",
+    "href": "posts/plot/index.html#q1.-barplot",
+    "title": "plot",
+    "section": "",
+    "text": "import pandas as pd\n\nmpg=pd.read_csv('mpg.csv')\nmpg.shape\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt"
+  },
+  {
+    "objectID": "posts/plot/index.html#mpg데이터의-cty와-hwy로-된-산점도-그래프",
+    "href": "posts/plot/index.html#mpg데이터의-cty와-hwy로-된-산점도-그래프",
+    "title": "plotly를 이용한 그래프 그리기",
+    "section": "1. mpg데이터의 cty와 hwy로 된 산점도 그래프",
+    "text": "1. mpg데이터의 cty와 hwy로 된 산점도 그래프\n\nmpg=pd.read_csv('mpg.csv')\nsns.scatterplot(data=mpg,x='cty',y='hwy',hue='drv')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\nplotly를 사용한 상자그림\n\n\npx.scatter(data_frame=mpg,x='cty',y='hwy',color='drv')"
+  },
+  {
+    "objectID": "posts/plot/index.html#midwest데이터의-cty와-hwy로-된-산점도-그래프",
+    "href": "posts/plot/index.html#midwest데이터의-cty와-hwy로-된-산점도-그래프",
+    "title": "plotly를 이용한 그래프 그리기",
+    "section": "2. midwest데이터의 cty와 hwy로 된 산점도 그래프",
+    "text": "2. midwest데이터의 cty와 hwy로 된 산점도 그래프\n\nmidwest=pd.read_csv('midwest.csv')\nsns.scatterplot(data=midwest, x='poptotal', y='popasian').set(xlim=[0,500000],ylim=[0,10000])\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\nplotly를 사용한 상자그림\n\n\npx.scatter(data_frame=midwest,x='poptotal', y='popasian', range_x=[0,500000],range_y=[0,10000] )"
   }
 ]
