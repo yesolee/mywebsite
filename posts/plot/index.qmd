@@ -75,6 +75,7 @@ plt.clf()
 ```
 
 * plotly를 사용한 산점도 316p
+
 ```{python}
 px.bar(data_frame = df_mpg, x='drv', y='n', color='drv')
 ```
@@ -87,10 +88,12 @@ plt.clf()
 ```
 
 
-* plotly를 사용한 상자그림림
+* plotly를 사용한 상자그림
+
 ```{python}
 px.box(data_frame = mpg, x='drv', y='hwy', color='drv')
 ```
+
 # 204p 혼자서 해보기
 ## 1. `mpg`데이터의 `cty`와 `hwy`로 된 산점도 그래프
 ```{python}
@@ -101,6 +104,7 @@ plt.clf()
 ```
 
 * plotly를 사용한 상자그림
+
 ```{python}
 px.scatter(data_frame=mpg,x='cty',y='hwy',color='drv')
 ```
@@ -115,12 +119,38 @@ plt.clf()
 ```
 
 * plotly를 사용한 상자그림
+
 ```{python}
 px.scatter(data_frame=midwest,x='poptotal', y='popasian', range_x=[0,500000],range_y=[0,10000] )
 
 ```
-## 3.`mpg`데이터에서 `suv` 차종을 대상으로 `cty` 평균이 가장 높은 회사 다섯 곳을 막대 그래프로 표현(연비가 높은 순으로로)211p
+
+# 211p 혼자 해보기
+## 3.`mpg`데이터에서 `suv` 차종을 대상으로 `cty` 평균이 가장 높은 `manufacturer` 다섯 곳을 막대 그래프로 표현(연비가 높은 순으로)211p
 ```{python}
-mpg.query('category == "suv"')
+top_mean_cty = mpg.query('category == "suv"')\
+                  .groupby('manufacturer', as_index=False)\
+                  .agg(mean_cty = ('cty','mean'))\
+                  .sort_values('mean_cty',ascending=False)\
+                  .head()
+sns.barplot(data= top_mean_cty, x='manufacturer', y='mean_cty', hue='manufacturer')
+plt.show()
+```
+
+## 2. `sns.barplot()`을 이용해 `category`별 빈도를 표현한 막대 그래프를 만들어 보세요. 막대는 빈도가 높은 순으로 정렬하세요. 
+```{python}
+count_category = mpg.groupby('category',as_index=False)\
+                    .agg(n=('category','count'))\
+                    .sort_values('n',ascending=False)
+sns.barplot(data = count_category, x='category', y='n', hue='category')
+```
+
+
+### `sns.countplot()` 이용해 풀어보기기
+```{python}
+sns.countplot(data=mpg, x='category',
+              order=mpg['category'].value_counts().index,
+              hue='category')
+plt.show()
 ```
 
