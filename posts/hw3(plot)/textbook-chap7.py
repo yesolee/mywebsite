@@ -42,3 +42,4 @@ plt.clf()
 sns.countplot(data=mpg, x='drv', hue='drv', order=['4','f','r'])
 plt.show()
 plt.clf()
+

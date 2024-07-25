@@ -119,4 +119,8 @@ plt.clf()
 px.scatter(data_frame=midwest,x='poptotal', y='popasian', range_x=[0,500000],range_y=[0,10000] )
 
 ```
+## 3.`mpg`데이터에서 `suv` 차종을 대상으로 `cty` 평균이 가장 높은 회사 다섯 곳을 막대 그래프로 표현(연비가 높은 순으로로)211p
+```{python}
+mpg.query('category == "suv"')
+```
 
