@@ -19,9 +19,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import norm
 
-x= norm.rvs(loc=3, scale=2, size = 1000)
-x_min, x_max = (min(x),max(x))
-x_values = np.linspace(x_min,x_max,100)
+x_values = np.linspace(3-3*2,3+3*2,100)
 pdf_values = npdf(x_values,3,2)
 plt.plot(x_values, pdf_values, color='red', linewidth=2)
 plt.show()

@@ -202,7 +202,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="정규분포-pdf값을-계산하는-자신만의-파이썬-함수를-정의하고정규분포-mu3-sigma2의-pdf를-그릴-것" class="level1">
 <h1>1. 정규분포 pdf값을 계산하는 자신만의 파이썬 함수를 정의하고,정규분포 mu=3, sigma=2의 pdf를 그릴 것</h1>
-<div id="bf2a65ff" class="cell" data-execution_count="1">
+<div id="eae2014d" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># X ~ N(3,2)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> npdf(x, mu,sigma):</span>
@@ -216,13 +216,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span> norm.rvs(loc<span class="op">=</span><span class="dv">3</span>, scale<span class="op">=</span><span class="dv">2</span>, size <span class="op">=</span> <span class="dv">1000</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>x_min, x_max <span class="op">=</span> (<span class="bu">min</span>(x),<span class="bu">max</span>(x))</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>x_values <span class="op">=</span> np.linspace(x_min,x_max,<span class="dv">100</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>pdf_values <span class="op">=</span> npdf(x_values,<span class="dv">3</span>,<span class="dv">2</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.plot(x_values, pdf_values, color<span class="op">=</span><span class="st">'red'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>x_values <span class="op">=</span> np.linspace(<span class="dv">3</span><span class="op">-</span><span class="dv">3</span><span class="op">*</span><span class="dv">2</span>,<span class="dv">3</span><span class="op">+</span><span class="dv">3</span><span class="op">*</span><span class="dv">2</span>,<span class="dv">100</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>pdf_values <span class="op">=</span> npdf(x_values,<span class="dv">3</span>,<span class="dv">2</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.plot(x_values, pdf_values, color<span class="op">=</span><span class="st">'red'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -243,38 +241,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="px3" class="level1">
 <h1>1) P(x&lt;3)</h1>
-<div id="bf6b2b7d" class="cell" data-execution_count="2">
+<div id="d774fa74" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>norm.cdf(<span class="dv">3</span>,loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="13">
+<div class="cell-output cell-output-display" data-execution_count="22">
 <pre><code>np.float64(0.6305586598182363)</code></pre>
 </div>
 </div>
 </section>
 <section id="p2x5" class="level1">
 <h1>2) P(2&lt;x&lt;5)</h1>
-<div id="d4a3fc9b" class="cell" data-execution_count="3">
+<div id="4d750e97" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>norm.cdf(<span class="dv">5</span>,loc<span class="op">=</span><span class="dv">2</span>,scale<span class="op">=</span><span class="dv">3</span>) <span class="op">-</span> norm.cdf(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="23">
 <pre><code>np.float64(0.3413447460685429)</code></pre>
 </div>
 </div>
 </section>
 <section id="px3-or-x7" class="level1">
 <h1>3) P(x&lt;3 or x&gt;7)</h1>
-<div id="23fa9f98" class="cell" data-execution_count="4">
+<div id="cea9465f" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>norm.cdf(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">3</span>) <span class="op">+</span> <span class="dv">1</span> <span class="op">-</span> norm.cdf(<span class="dv">7</span>,<span class="dv">2</span>,<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="24">
 <pre><code>np.float64(0.6783490120910509)</code></pre>
 </div>
 </div>
 </section>
 <section id="ls-빅데이터-스쿨-학생들의-중간고사-점수는-평균-30이고-분산이-4인-정규분포를-따른다.-상위-5에-해당하는-학생의-점수는" class="level1">
 <h1>3. LS 빅데이터 스쿨 학생들의 중간고사 점수는 평균 30이고, 분산이 4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?</h1>
-<div id="e9e8fa01" class="cell" data-execution_count="5">
+<div id="06cb0be5" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># X ~ N(30, 4=2^2) </span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># P(x &gt;= 0.95)</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>norm.ppf(<span class="fl">0.95</span>, <span class="dv">30</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="16">
+<div class="cell-output cell-output-display" data-execution_count="25">
 <pre><code>np.float64(33.28970725390295)</code></pre>
 </div>
 </div>
