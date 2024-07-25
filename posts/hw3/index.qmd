@@ -1,5 +1,5 @@
 ---
-title: "LS 빅데이터 스쿨 Homework 4(plot)"
+title: "LS 빅데이터 스쿨 Homework 3"
 author: "이예솔"
 date: "2024-07-25"
 categories: [bigdata]
@@ -9,13 +9,19 @@ categories: [bigdata]
 # X ~ N(3,2)
 
 def npdf(x, mu,sigma):
-    import math
-    part1 = 1 / (sigma * math.sqrt(2 * math.pi))
-    part2 = math.exp((-1/2) * ((x-mu)/math.pi)**2)
+    x=np.array(x)
+    part1 = 1 / (sigma * np.sqrt(2 * np.pi))
+    part2 = np.exp((-1/2) * ((x-mu)/np.pi)**2)
     y = part1 * part2
     return y
 
-x_values = linspace(-3*2,3*2,100)
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+
+x= norm.rvs(loc=3, scale=2, size = 1000)
+x_min, x_max = (min(x),max(x))
+x_values = np.linspace(x_min,x_max,100)
 pdf_values = npdf(x_values,3,2)
 plt.plot(x_values, pdf_values, color='red', linewidth=2)
 plt.show()

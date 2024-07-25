@@ -42,7 +42,7 @@ import matplotlib.pyplot as plt
 ## encoding: UnicodeDecodeError 발생으로 한글 표현 가능한 인코딩 방식인 EUC-KR 지정
 ## pd.set_option(): 전체 열을 모두 표시하도록 지정
 pd.set_option('display.max_columns', None)
-df = pd.read_csv('../data/crime.csv', header = 1, encoding = 'EUC-KR')
+df = pd.read_csv('crime.csv', header = 1, encoding = 'EUC-KR')
 df.head()
 
 # 2. 원본 데이터 복사하기

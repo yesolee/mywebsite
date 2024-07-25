@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.54">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="5조(내이름은코난탐정이조)">
+<meta name="dcterms.date" content="2024-07-24">
+
+<title>TEAM PROJECT 1 – Sol</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Sol</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">TEAM PROJECT 1</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>5조(내이름은코난탐정이조) </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 24, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#어느-요일이-범죄로부터-가장-안전할까" id="toc-어느-요일이-범죄로부터-가장-안전할까" class="nav-link active" data-scroll-target="#어느-요일이-범죄로부터-가장-안전할까"><strong>어느 요일이 범죄로부터 가장 안전할까?</strong></a></li>
+  <li><a href="#데이터-로드" id="toc-데이터-로드" class="nav-link" data-scroll-target="#데이터-로드"><strong>[데이터 로드]</strong></a></li>
+  <li><a href="#변수명-변경" id="toc-변수명-변경" class="nav-link" data-scroll-target="#변수명-변경"><strong>[변수명 변경]</strong></a></li>
+  <li><a href="#파생변수-추가" id="toc-파생변수-추가" class="nav-link" data-scroll-target="#파생변수-추가"><strong>[파생변수 추가]</strong></a></li>
+  <li><a href="#범죄별-평일주말별-건수-합계-그래프" id="toc-범죄별-평일주말별-건수-합계-그래프" class="nav-link" data-scroll-target="#범죄별-평일주말별-건수-합계-그래프"><strong>[범죄별, 평일/주말별 건수 합계 그래프]</strong></a></li>
+  <li><a href="#범죄별-요일별-건수-비율-그래프" id="toc-범죄별-요일별-건수-비율-그래프" class="nav-link" data-scroll-target="#범죄별-요일별-건수-비율-그래프"><strong>[범죄별 요일별 건수 비율 그래프]</strong></a></li>
+  <li><a href="#요일-기준-범죄별-비율-비교-그래프" id="toc-요일-기준-범죄별-비율-비교-그래프" class="nav-link" data-scroll-target="#요일-기준-범죄별-비율-비교-그래프"><strong>[요일 기준 범죄별 비율 비교 그래프]</strong></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="어느-요일이-범죄로부터-가장-안전할까" class="level3">
+<h3 class="anchored" data-anchor-id="어느-요일이-범죄로부터-가장-안전할까"><strong>어느 요일이 범죄로부터 가장 안전할까?</strong></h3>
+<p><strong><a href="https://docs.google.com/spreadsheets/d/1boOUSKywiaQG2INgUrAhlV5O-tHBQDNVLQ-QvdCr55U/edit?usp=sharing">2018~2022년 강력/폭력/지능범죄의 요일별 발생 건수 데이터</a></strong></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+가설
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>평일이 상대적으로 안전할 것이다.</strong></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<a href="https://docs.google.com/spreadsheets/d/1boOUSKywiaQG2INgUrAhlV5O-tHBQDNVLQ-QvdCr55U/edit?gid=1615286912#gid=1615286912">범죄의 정의</a>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>강력범죄</strong> : 생명, 신체, 자유에 심각한 위협을 가하는 범죄</li>
+<li><strong>폭력범죄</strong> : 다른 사람에게 신체적 상해를 입히거나 신체적 위협을 가하는 범죄</li>
+<li><strong>지능범죄</strong> : 지적 능력과 계획을 통해 이루어지며, 주로 경제적 이득을 얻기 위한 범죄</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="데이터-로드" class="level3">
+<h3 class="anchored" data-anchor-id="데이터-로드"><strong>[데이터 로드]</strong></h3>
+<div id="ba323070" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 0. 패키지 로드</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. 데이터 파일 불러오기, 원본 데이터 복사하기</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">## header: 원본의 두 번째 행 데이터를 열의 이름으로 지정</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">## encoding: UnicodeDecodeError 발생으로 한글 표현 가능한 인코딩 방식인 EUC-KR 지정</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">## pd.set_option(): 전체 열을 모두 표시하도록 지정</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">'display.max_columns'</span>, <span class="va">None</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'crime.csv'</span>, header <span class="op">=</span> <span class="dv">1</span>, encoding <span class="op">=</span> <span class="st">'EUC-KR'</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>df.head()</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. 원본 데이터 복사하기</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">## deepcopy로 원본유지</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>crime <span class="op">=</span> df.copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="변수명-변경" class="level3">
+<h3 class="anchored" data-anchor-id="변수명-변경"><strong>[변수명 변경]</strong></h3>
+<div id="e11a2437" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. 열 이름, 원소 이름 변경</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">## 열 이름 변경</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">### 강력범죄는 s_, 폭력범죄는 g_, 지능범죄는 i_로 시작하도록 변경</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>crime.columns</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>crime.columns <span class="op">=</span> [<span class="st">'year'</span>,<span class="st">'day'</span>]<span class="op">\</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                <span class="op">+</span> [i.replace(i, <span class="st">"s_"</span><span class="op">+</span>i) <span class="cf">for</span> i <span class="kw">in</span> crime.columns[<span class="dv">2</span>:<span class="dv">10</span>]]<span class="op">\</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                <span class="op">+</span> [i.replace(i, <span class="st">"g_"</span><span class="op">+</span>i) <span class="cf">for</span> i <span class="kw">in</span> crime.columns[<span class="dv">10</span>:<span class="dv">18</span>]]<span class="op">\</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                <span class="op">+</span> [i.replace(i, <span class="st">"i_"</span><span class="op">+</span>i) <span class="cf">for</span> i <span class="kw">in</span> crime.columns[<span class="dv">18</span>:<span class="dv">27</span>]]</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">## 원소 이름 변경</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co">## replace(): 요일을 영어로 일괄 변경</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>crime <span class="op">=</span> crime.replace({<span class="st">'월요일'</span>:<span class="st">'mon'</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                       <span class="st">'화요일'</span>:<span class="st">'tue'</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                       <span class="st">'수요일'</span>:<span class="st">'wed'</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                       <span class="st">'목요일'</span>:<span class="st">'thu'</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>                       <span class="st">'금요일'</span>:<span class="st">'fri'</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>                       <span class="st">'토요일'</span>:<span class="st">'sat'</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>                       <span class="st">'일요일'</span>:<span class="st">'sun'</span>})</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>crime.head(<span class="dv">7</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co">## reindex(): 행의 순서 바꾸기(일&gt;토에서 월&gt;일로) &gt; 추후 그래프 순서를 위해서 설정</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(crime)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>crime <span class="op">=</span> crime.reindex([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">0</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>                       <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">7</span>,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>                       <span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">17</span>, <span class="dv">18</span>, <span class="dv">19</span>, <span class="dv">20</span>, <span class="dv">14</span>,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>                       <span class="dv">22</span>, <span class="dv">23</span>, <span class="dv">24</span>, <span class="dv">25</span>, <span class="dv">26</span>, <span class="dv">27</span>, <span class="dv">21</span>,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>                       <span class="dv">29</span>, <span class="dv">30</span>, <span class="dv">31</span>, <span class="dv">32</span>, <span class="dv">33</span>, <span class="dv">34</span>, <span class="dv">28</span>])</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>crime.head(<span class="dv">7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">day</th>
+<th data-quarto-table-cell-role="th">s_살인기수</th>
+<th data-quarto-table-cell-role="th">s_살인미수등</th>
+<th data-quarto-table-cell-role="th">s_강도</th>
+<th data-quarto-table-cell-role="th">s_강간</th>
+<th data-quarto-table-cell-role="th">s_유사강간</th>
+<th data-quarto-table-cell-role="th">s_강제추행</th>
+<th data-quarto-table-cell-role="th">s_기타 강간·강제추행등</th>
+<th data-quarto-table-cell-role="th">s_방화</th>
+<th data-quarto-table-cell-role="th">g_상해</th>
+<th data-quarto-table-cell-role="th">g_폭행</th>
+<th data-quarto-table-cell-role="th">g_체포·감금</th>
+<th data-quarto-table-cell-role="th">g_협박</th>
+<th data-quarto-table-cell-role="th">g_약취·유인</th>
+<th data-quarto-table-cell-role="th">g_폭력행위등</th>
+<th data-quarto-table-cell-role="th">g_공갈</th>
+<th data-quarto-table-cell-role="th">g_손괴</th>
+<th data-quarto-table-cell-role="th">i_직무유기</th>
+<th data-quarto-table-cell-role="th">i_직권남용</th>
+<th data-quarto-table-cell-role="th">i_증수뢰</th>
+<th data-quarto-table-cell-role="th">i_통화</th>
+<th data-quarto-table-cell-role="th">i_문서·인장</th>
+<th data-quarto-table-cell-role="th">i_유가증권인지</th>
+<th data-quarto-table-cell-role="th">i_사기</th>
+<th data-quarto-table-cell-role="th">i_횡령</th>
+<th data-quarto-table-cell-role="th">i_배임</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2018</td>
+<td>mon</td>
+<td>40</td>
+<td>74</td>
+<td>120</td>
+<td>698</td>
+<td>113</td>
+<td>2197</td>
+<td>51</td>
+<td>236</td>
+<td>5326</td>
+<td>20195</td>
+<td>168</td>
+<td>2462</td>
+<td>34</td>
+<td>1175</td>
+<td>685</td>
+<td>7452</td>
+<td>105</td>
+<td>96</td>
+<td>53</td>
+<td>230</td>
+<td>2202</td>
+<td>20</td>
+<td>45478</td>
+<td>7968</td>
+<td>802</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2018</td>
+<td>tue</td>
+<td>38</td>
+<td>62</td>
+<td>133</td>
+<td>709</td>
+<td>103</td>
+<td>2263</td>
+<td>48</td>
+<td>263</td>
+<td>5649</td>
+<td>21334</td>
+<td>189</td>
+<td>2530</td>
+<td>27</td>
+<td>1205</td>
+<td>644</td>
+<td>7767</td>
+<td>92</td>
+<td>110</td>
+<td>57</td>
+<td>226</td>
+<td>1992</td>
+<td>25</td>
+<td>45020</td>
+<td>7793</td>
+<td>761</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3</td>
+<td>2018</td>
+<td>wed</td>
+<td>53</td>
+<td>68</td>
+<td>116</td>
+<td>743</td>
+<td>96</td>
+<td>2333</td>
+<td>49</td>
+<td>235</td>
+<td>5395</td>
+<td>21160</td>
+<td>180</td>
+<td>2474</td>
+<td>26</td>
+<td>1088</td>
+<td>604</td>
+<td>7681</td>
+<td>92</td>
+<td>110</td>
+<td>69</td>
+<td>208</td>
+<td>1893</td>
+<td>30</td>
+<td>45399</td>
+<td>7922</td>
+<td>725</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">4</td>
+<td>2018</td>
+<td>thu</td>
+<td>41</td>
+<td>76</td>
+<td>117</td>
+<td>646</td>
+<td>99</td>
+<td>2389</td>
+<td>45</td>
+<td>246</td>
+<td>5396</td>
+<td>21181</td>
+<td>192</td>
+<td>2444</td>
+<td>30</td>
+<td>1163</td>
+<td>656</td>
+<td>7514</td>
+<td>114</td>
+<td>110</td>
+<td>64</td>
+<td>242</td>
+<td>2710</td>
+<td>32</td>
+<td>45752</td>
+<td>7992</td>
+<td>730</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">5</td>
+<td>2018</td>
+<td>fri</td>
+<td>54</td>
+<td>67</td>
+<td>101</td>
+<td>699</td>
+<td>99</td>
+<td>2547</td>
+<td>55</td>
+<td>212</td>
+<td>5628</td>
+<td>22423</td>
+<td>165</td>
+<td>2408</td>
+<td>26</td>
+<td>1206</td>
+<td>593</td>
+<td>8591</td>
+<td>103</td>
+<td>104</td>
+<td>61</td>
+<td>212</td>
+<td>1991</td>
+<td>58</td>
+<td>46698</td>
+<td>8817</td>
+<td>790</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">6</td>
+<td>2018</td>
+<td>sat</td>
+<td>29</td>
+<td>69</td>
+<td>108</td>
+<td>892</td>
+<td>139</td>
+<td>2760</td>
+<td>59</td>
+<td>243</td>
+<td>6267</td>
+<td>26997</td>
+<td>151</td>
+<td>2384</td>
+<td>15</td>
+<td>1662</td>
+<td>457</td>
+<td>9200</td>
+<td>36</td>
+<td>40</td>
+<td>21</td>
+<td>42</td>
+<td>829</td>
+<td>15</td>
+<td>22158</td>
+<td>7819</td>
+<td>288</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2018</td>
+<td>sun</td>
+<td>54</td>
+<td>72</td>
+<td>126</td>
+<td>906</td>
+<td>127</td>
+<td>2564</td>
+<td>49</td>
+<td>256</td>
+<td>6105</td>
+<td>25977</td>
+<td>162</td>
+<td>2498</td>
+<td>29</td>
+<td>1705</td>
+<td>457</td>
+<td>8479</td>
+<td>39</td>
+<td>33</td>
+<td>22</td>
+<td>34</td>
+<td>673</td>
+<td>17</td>
+<td>19524</td>
+<td>6802</td>
+<td>248</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="파생변수-추가" class="level3">
+<h3 class="anchored" data-anchor-id="파생변수-추가"><strong>[파생변수 추가]</strong></h3>
+<div id="d75fb67a" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. 파생변수 추가</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">## 범죄별 건수 합계 및 총 범죄 건수 합계 파생변수</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>crime <span class="op">=</span> crime.assign(</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    total_s <span class="op">=</span> crime.iloc[:, <span class="dv">2</span>:<span class="dv">10</span>].<span class="bu">sum</span>(axis <span class="op">=</span> <span class="dv">1</span>),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    total_g <span class="op">=</span> crime.iloc[:, <span class="dv">10</span>:<span class="dv">18</span>].<span class="bu">sum</span>(axis <span class="op">=</span> <span class="dv">1</span>),</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    total_i <span class="op">=</span> crime.iloc[:, <span class="dv">18</span>:<span class="dv">27</span>].<span class="bu">sum</span>(axis <span class="op">=</span> <span class="dv">1</span>),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> crime.iloc[:, <span class="dv">2</span>:<span class="dv">27</span>].<span class="bu">sum</span>(axis <span class="op">=</span> <span class="dv">1</span>))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>crime.head()</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">## 평일/주말 구분 라벨 파생변수</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">### 평일: 월~금, 주말: 토~일</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>crime[<span class="st">'day_label'</span>] <span class="op">=</span> np.where(crime[<span class="st">'day'</span>].isin([<span class="st">'mon'</span>, <span class="st">'tue'</span>, <span class="st">'wed'</span>, <span class="st">'thu'</span>, <span class="st">'fri'</span>]), <span class="op">\</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>                                                 <span class="st">'week'</span>, <span class="st">'weekend'</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>crime.head(<span class="dv">7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">day</th>
+<th data-quarto-table-cell-role="th">s_살인기수</th>
+<th data-quarto-table-cell-role="th">s_살인미수등</th>
+<th data-quarto-table-cell-role="th">s_강도</th>
+<th data-quarto-table-cell-role="th">s_강간</th>
+<th data-quarto-table-cell-role="th">s_유사강간</th>
+<th data-quarto-table-cell-role="th">s_강제추행</th>
+<th data-quarto-table-cell-role="th">s_기타 강간·강제추행등</th>
+<th data-quarto-table-cell-role="th">s_방화</th>
+<th data-quarto-table-cell-role="th">g_상해</th>
+<th data-quarto-table-cell-role="th">g_폭행</th>
+<th data-quarto-table-cell-role="th">g_체포·감금</th>
+<th data-quarto-table-cell-role="th">g_협박</th>
+<th data-quarto-table-cell-role="th">g_약취·유인</th>
+<th data-quarto-table-cell-role="th">g_폭력행위등</th>
+<th data-quarto-table-cell-role="th">g_공갈</th>
+<th data-quarto-table-cell-role="th">g_손괴</th>
+<th data-quarto-table-cell-role="th">i_직무유기</th>
+<th data-quarto-table-cell-role="th">i_직권남용</th>
+<th data-quarto-table-cell-role="th">i_증수뢰</th>
+<th data-quarto-table-cell-role="th">i_통화</th>
+<th data-quarto-table-cell-role="th">i_문서·인장</th>
+<th data-quarto-table-cell-role="th">i_유가증권인지</th>
+<th data-quarto-table-cell-role="th">i_사기</th>
+<th data-quarto-table-cell-role="th">i_횡령</th>
+<th data-quarto-table-cell-role="th">i_배임</th>
+<th data-quarto-table-cell-role="th">total_s</th>
+<th data-quarto-table-cell-role="th">total_g</th>
+<th data-quarto-table-cell-role="th">total_i</th>
+<th data-quarto-table-cell-role="th">total</th>
+<th data-quarto-table-cell-role="th">day_label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2018</td>
+<td>mon</td>
+<td>40</td>
+<td>74</td>
+<td>120</td>
+<td>698</td>
+<td>113</td>
+<td>2197</td>
+<td>51</td>
+<td>236</td>
+<td>5326</td>
+<td>20195</td>
+<td>168</td>
+<td>2462</td>
+<td>34</td>
+<td>1175</td>
+<td>685</td>
+<td>7452</td>
+<td>105</td>
+<td>96</td>
+<td>53</td>
+<td>230</td>
+<td>2202</td>
+<td>20</td>
+<td>45478</td>
+<td>7968</td>
+<td>802</td>
+<td>3529</td>
+<td>37497</td>
+<td>56954</td>
+<td>97980</td>
+<td>week</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2018</td>
+<td>tue</td>
+<td>38</td>
+<td>62</td>
+<td>133</td>
+<td>709</td>
+<td>103</td>
+<td>2263</td>
+<td>48</td>
+<td>263</td>
+<td>5649</td>
+<td>21334</td>
+<td>189</td>
+<td>2530</td>
+<td>27</td>
+<td>1205</td>
+<td>644</td>
+<td>7767</td>
+<td>92</td>
+<td>110</td>
+<td>57</td>
+<td>226</td>
+<td>1992</td>
+<td>25</td>
+<td>45020</td>
+<td>7793</td>
+<td>761</td>
+<td>3619</td>
+<td>39345</td>
+<td>56076</td>
+<td>99040</td>
+<td>week</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3</td>
+<td>2018</td>
+<td>wed</td>
+<td>53</td>
+<td>68</td>
+<td>116</td>
+<td>743</td>
+<td>96</td>
+<td>2333</td>
+<td>49</td>
+<td>235</td>
+<td>5395</td>
+<td>21160</td>
+<td>180</td>
+<td>2474</td>
+<td>26</td>
+<td>1088</td>
+<td>604</td>
+<td>7681</td>
+<td>92</td>
+<td>110</td>
+<td>69</td>
+<td>208</td>
+<td>1893</td>
+<td>30</td>
+<td>45399</td>
+<td>7922</td>
+<td>725</td>
+<td>3693</td>
+<td>38608</td>
+<td>56448</td>
+<td>98749</td>
+<td>week</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">4</td>
+<td>2018</td>
+<td>thu</td>
+<td>41</td>
+<td>76</td>
+<td>117</td>
+<td>646</td>
+<td>99</td>
+<td>2389</td>
+<td>45</td>
+<td>246</td>
+<td>5396</td>
+<td>21181</td>
+<td>192</td>
+<td>2444</td>
+<td>30</td>
+<td>1163</td>
+<td>656</td>
+<td>7514</td>
+<td>114</td>
+<td>110</td>
+<td>64</td>
+<td>242</td>
+<td>2710</td>
+<td>32</td>
+<td>45752</td>
+<td>7992</td>
+<td>730</td>
+<td>3659</td>
+<td>38576</td>
+<td>57746</td>
+<td>99981</td>
+<td>week</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">5</td>
+<td>2018</td>
+<td>fri</td>
+<td>54</td>
+<td>67</td>
+<td>101</td>
+<td>699</td>
+<td>99</td>
+<td>2547</td>
+<td>55</td>
+<td>212</td>
+<td>5628</td>
+<td>22423</td>
+<td>165</td>
+<td>2408</td>
+<td>26</td>
+<td>1206</td>
+<td>593</td>
+<td>8591</td>
+<td>103</td>
+<td>104</td>
+<td>61</td>
+<td>212</td>
+<td>1991</td>
+<td>58</td>
+<td>46698</td>
+<td>8817</td>
+<td>790</td>
+<td>3834</td>
+<td>41040</td>
+<td>58834</td>
+<td>103708</td>
+<td>week</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">6</td>
+<td>2018</td>
+<td>sat</td>
+<td>29</td>
+<td>69</td>
+<td>108</td>
+<td>892</td>
+<td>139</td>
+<td>2760</td>
+<td>59</td>
+<td>243</td>
+<td>6267</td>
+<td>26997</td>
+<td>151</td>
+<td>2384</td>
+<td>15</td>
+<td>1662</td>
+<td>457</td>
+<td>9200</td>
+<td>36</td>
+<td>40</td>
+<td>21</td>
+<td>42</td>
+<td>829</td>
+<td>15</td>
+<td>22158</td>
+<td>7819</td>
+<td>288</td>
+<td>4299</td>
+<td>47133</td>
+<td>31248</td>
+<td>82680</td>
+<td>weekend</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2018</td>
+<td>sun</td>
+<td>54</td>
+<td>72</td>
+<td>126</td>
+<td>906</td>
+<td>127</td>
+<td>2564</td>
+<td>49</td>
+<td>256</td>
+<td>6105</td>
+<td>25977</td>
+<td>162</td>
+<td>2498</td>
+<td>29</td>
+<td>1705</td>
+<td>457</td>
+<td>8479</td>
+<td>39</td>
+<td>33</td>
+<td>22</td>
+<td>34</td>
+<td>673</td>
+<td>17</td>
+<td>19524</td>
+<td>6802</td>
+<td>248</td>
+<td>4154</td>
+<td>45412</td>
+<td>27392</td>
+<td>76958</td>
+<td>weekend</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="범죄별-평일주말별-건수-합계-그래프" class="level3">
+<h3 class="anchored" data-anchor-id="범죄별-평일주말별-건수-합계-그래프"><strong>[범죄별, 평일/주말별 건수 합계 그래프]</strong></h3>
+<div id="eaffd7ec" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. (1)발생 건수 합계 기준 그래프</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">## 연도 기준 범죄별 건수 합계</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">### 그래프 설정</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'font.family'</span>:<span class="st">'Malgun Gothic'</span>,<span class="st">'font.size'</span> : <span class="dv">10</span>})</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">### 집단별 합계표 생성</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>year_total <span class="op">=</span> crime.groupby(<span class="st">'year'</span>)<span class="op">\</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>                  .agg(강력범죄<span class="op">=</span>(<span class="st">'total_s'</span>,<span class="st">'sum'</span>),</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>                       폭력범죄<span class="op">=</span>(<span class="st">'total_g'</span>,<span class="st">'sum'</span>),</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>                       지능범죄<span class="op">=</span>(<span class="st">'total_i'</span>,<span class="st">'sum'</span>))</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">### 그래프 생성                       </span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>year_total.plot.barh(stacked <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"건수"</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"연도"</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"각 범죄 발생 건수 비율 그래프"</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co">## 평일/주말 기준 건수 합계</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co">### 평일/주말별 건수 합계표 생성</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>week_end <span class="op">=</span> crime.groupby(<span class="st">'day_label'</span>, as_index <span class="op">=</span> <span class="va">False</span>) <span class="op">\</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>                .agg(total<span class="op">=</span>(<span class="st">'total'</span>, <span class="st">'sum'</span>))</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co">### 그래프 생성                </span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>sns.barplot(data <span class="op">=</span> week_end, x <span class="op">=</span> <span class="st">'day_label'</span>, y <span class="op">=</span> <span class="st">'total'</span>, hue <span class="op">=</span> <span class="st">'day_label'</span>)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"평일/주말"</span>)</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"건수(백만)"</span>)</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"평일/주말별 범죄 발생 건수 그래프"</span>)</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 768x576 with 0 Axes&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-5-output-2.png" width="597" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-5-output-3.png" width="586" height="450" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+위 그래프의 한계
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<dl>
+<dt><strong>각 범죄별 발생 건수의 볼륨 차이, 평일(5일)/주말(2일) 일수 차이 확인</strong></dt>
+<dd>
+따라서, 합계로 비교하는데 오류가 있다는 판단
+</dd>
+</dl>
+</div>
+</div>
+</section>
+<section id="범죄별-요일별-건수-비율-그래프" class="level3">
+<h3 class="anchored" data-anchor-id="범죄별-요일별-건수-비율-그래프"><strong>[범죄별 요일별 건수 비율 그래프]</strong></h3>
+<div id="d9ca393a" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. (2)연도별 범죄 발생 비율 파생변수 추가</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">## pd.options.display.float_format : 소수점 둘째 자리까지만 보이도록 설정</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>pd.options.display.float_format <span class="op">=</span> <span class="st">'</span><span class="sc">{:.2f}</span><span class="st">'</span>.<span class="bu">format</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> [<span class="st">"_s"</span>, <span class="st">"_g"</span> ,<span class="st">"_i"</span> ,<span class="st">""</span>]:</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2018</span>, <span class="dv">2023</span>):</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        crime.loc[crime[<span class="st">'year'</span>] <span class="op">==</span> j, <span class="st">'total'</span><span class="op">+</span> i <span class="op">+</span><span class="st">'_year'</span>] <span class="op">=</span> <span class="bu">sum</span>(crime.loc[crime[<span class="st">'year'</span>] <span class="op">==</span> j,<span class="st">'total'</span> <span class="op">+</span> i])</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    crime[<span class="st">'ratio'</span><span class="op">+</span> i <span class="op">+</span><span class="st">'_day'</span>] <span class="op">=</span> crime[<span class="st">'total'</span> <span class="op">+</span> i] <span class="op">/</span> crime[<span class="st">'total'</span><span class="op">+</span> i <span class="op">+</span><span class="st">'_year'</span>] <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">## 아래 코드도 같은 결과 </span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">### crime = crime.assign(</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">###               total_s_year = lambda x: x.groupby('year')['total_s'].transform('sum'), </span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co">###               ratio_s_day = lambda x: x['total_s'] / x['total_s_year'] * 100,</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">###</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co">###               total_g_year = lambda x: x.groupby('year')['total_g'].transform('sum'),</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co">###               ratio_g_day = lambda x: x['total_g'] / x['total_g_year'] * 100,</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co">###</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co">###               total_i_year = lambda x: x.groupby('year')['total_i'].transform('sum'),</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co">###               ratio_i_day = lambda x: x['total_i'] / x['total_i_year'] * 100,</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co">###</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co">###               total_year = lambda x: x.groupby('year')['total'].transform('sum'),</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co">###               ratio_day = lambda x: x['total'] / x['total_year'] * 100)</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>crime.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">day</th>
+<th data-quarto-table-cell-role="th">s_살인기수</th>
+<th data-quarto-table-cell-role="th">s_살인미수등</th>
+<th data-quarto-table-cell-role="th">s_강도</th>
+<th data-quarto-table-cell-role="th">s_강간</th>
+<th data-quarto-table-cell-role="th">s_유사강간</th>
+<th data-quarto-table-cell-role="th">s_강제추행</th>
+<th data-quarto-table-cell-role="th">s_기타 강간·강제추행등</th>
+<th data-quarto-table-cell-role="th">s_방화</th>
+<th data-quarto-table-cell-role="th">g_상해</th>
+<th data-quarto-table-cell-role="th">g_폭행</th>
+<th data-quarto-table-cell-role="th">g_체포·감금</th>
+<th data-quarto-table-cell-role="th">g_협박</th>
+<th data-quarto-table-cell-role="th">g_약취·유인</th>
+<th data-quarto-table-cell-role="th">g_폭력행위등</th>
+<th data-quarto-table-cell-role="th">g_공갈</th>
+<th data-quarto-table-cell-role="th">g_손괴</th>
+<th data-quarto-table-cell-role="th">i_직무유기</th>
+<th data-quarto-table-cell-role="th">i_직권남용</th>
+<th data-quarto-table-cell-role="th">i_증수뢰</th>
+<th data-quarto-table-cell-role="th">i_통화</th>
+<th data-quarto-table-cell-role="th">i_문서·인장</th>
+<th data-quarto-table-cell-role="th">i_유가증권인지</th>
+<th data-quarto-table-cell-role="th">i_사기</th>
+<th data-quarto-table-cell-role="th">i_횡령</th>
+<th data-quarto-table-cell-role="th">i_배임</th>
+<th data-quarto-table-cell-role="th">total_s</th>
+<th data-quarto-table-cell-role="th">total_g</th>
+<th data-quarto-table-cell-role="th">total_i</th>
+<th data-quarto-table-cell-role="th">total</th>
+<th data-quarto-table-cell-role="th">day_label</th>
+<th data-quarto-table-cell-role="th">total_s_year</th>
+<th data-quarto-table-cell-role="th">ratio_s_day</th>
+<th data-quarto-table-cell-role="th">total_g_year</th>
+<th data-quarto-table-cell-role="th">ratio_g_day</th>
+<th data-quarto-table-cell-role="th">total_i_year</th>
+<th data-quarto-table-cell-role="th">ratio_i_day</th>
+<th data-quarto-table-cell-role="th">total_year</th>
+<th data-quarto-table-cell-role="th">ratio_day</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2018</td>
+<td>mon</td>
+<td>40</td>
+<td>74</td>
+<td>120</td>
+<td>698</td>
+<td>113</td>
+<td>2197</td>
+<td>51</td>
+<td>236</td>
+<td>5326</td>
+<td>20195</td>
+<td>168</td>
+<td>2462</td>
+<td>34</td>
+<td>1175</td>
+<td>685</td>
+<td>7452</td>
+<td>105</td>
+<td>96</td>
+<td>53</td>
+<td>230</td>
+<td>2202</td>
+<td>20</td>
+<td>45478</td>
+<td>7968</td>
+<td>802</td>
+<td>3529</td>
+<td>37497</td>
+<td>56954</td>
+<td>97980</td>
+<td>week</td>
+<td>26787.00</td>
+<td>13.17</td>
+<td>287611.00</td>
+<td>13.04</td>
+<td>344698.00</td>
+<td>16.52</td>
+<td>659096.00</td>
+<td>14.87</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2018</td>
+<td>tue</td>
+<td>38</td>
+<td>62</td>
+<td>133</td>
+<td>709</td>
+<td>103</td>
+<td>2263</td>
+<td>48</td>
+<td>263</td>
+<td>5649</td>
+<td>21334</td>
+<td>189</td>
+<td>2530</td>
+<td>27</td>
+<td>1205</td>
+<td>644</td>
+<td>7767</td>
+<td>92</td>
+<td>110</td>
+<td>57</td>
+<td>226</td>
+<td>1992</td>
+<td>25</td>
+<td>45020</td>
+<td>7793</td>
+<td>761</td>
+<td>3619</td>
+<td>39345</td>
+<td>56076</td>
+<td>99040</td>
+<td>week</td>
+<td>26787.00</td>
+<td>13.51</td>
+<td>287611.00</td>
+<td>13.68</td>
+<td>344698.00</td>
+<td>16.27</td>
+<td>659096.00</td>
+<td>15.03</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3</td>
+<td>2018</td>
+<td>wed</td>
+<td>53</td>
+<td>68</td>
+<td>116</td>
+<td>743</td>
+<td>96</td>
+<td>2333</td>
+<td>49</td>
+<td>235</td>
+<td>5395</td>
+<td>21160</td>
+<td>180</td>
+<td>2474</td>
+<td>26</td>
+<td>1088</td>
+<td>604</td>
+<td>7681</td>
+<td>92</td>
+<td>110</td>
+<td>69</td>
+<td>208</td>
+<td>1893</td>
+<td>30</td>
+<td>45399</td>
+<td>7922</td>
+<td>725</td>
+<td>3693</td>
+<td>38608</td>
+<td>56448</td>
+<td>98749</td>
+<td>week</td>
+<td>26787.00</td>
+<td>13.79</td>
+<td>287611.00</td>
+<td>13.42</td>
+<td>344698.00</td>
+<td>16.38</td>
+<td>659096.00</td>
+<td>14.98</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">4</td>
+<td>2018</td>
+<td>thu</td>
+<td>41</td>
+<td>76</td>
+<td>117</td>
+<td>646</td>
+<td>99</td>
+<td>2389</td>
+<td>45</td>
+<td>246</td>
+<td>5396</td>
+<td>21181</td>
+<td>192</td>
+<td>2444</td>
+<td>30</td>
+<td>1163</td>
+<td>656</td>
+<td>7514</td>
+<td>114</td>
+<td>110</td>
+<td>64</td>
+<td>242</td>
+<td>2710</td>
+<td>32</td>
+<td>45752</td>
+<td>7992</td>
+<td>730</td>
+<td>3659</td>
+<td>38576</td>
+<td>57746</td>
+<td>99981</td>
+<td>week</td>
+<td>26787.00</td>
+<td>13.66</td>
+<td>287611.00</td>
+<td>13.41</td>
+<td>344698.00</td>
+<td>16.75</td>
+<td>659096.00</td>
+<td>15.17</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">5</td>
+<td>2018</td>
+<td>fri</td>
+<td>54</td>
+<td>67</td>
+<td>101</td>
+<td>699</td>
+<td>99</td>
+<td>2547</td>
+<td>55</td>
+<td>212</td>
+<td>5628</td>
+<td>22423</td>
+<td>165</td>
+<td>2408</td>
+<td>26</td>
+<td>1206</td>
+<td>593</td>
+<td>8591</td>
+<td>103</td>
+<td>104</td>
+<td>61</td>
+<td>212</td>
+<td>1991</td>
+<td>58</td>
+<td>46698</td>
+<td>8817</td>
+<td>790</td>
+<td>3834</td>
+<td>41040</td>
+<td>58834</td>
+<td>103708</td>
+<td>week</td>
+<td>26787.00</td>
+<td>14.31</td>
+<td>287611.00</td>
+<td>14.27</td>
+<td>344698.00</td>
+<td>17.07</td>
+<td>659096.00</td>
+<td>15.73</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">6</td>
+<td>2018</td>
+<td>sat</td>
+<td>29</td>
+<td>69</td>
+<td>108</td>
+<td>892</td>
+<td>139</td>
+<td>2760</td>
+<td>59</td>
+<td>243</td>
+<td>6267</td>
+<td>26997</td>
+<td>151</td>
+<td>2384</td>
+<td>15</td>
+<td>1662</td>
+<td>457</td>
+<td>9200</td>
+<td>36</td>
+<td>40</td>
+<td>21</td>
+<td>42</td>
+<td>829</td>
+<td>15</td>
+<td>22158</td>
+<td>7819</td>
+<td>288</td>
+<td>4299</td>
+<td>47133</td>
+<td>31248</td>
+<td>82680</td>
+<td>weekend</td>
+<td>26787.00</td>
+<td>16.05</td>
+<td>287611.00</td>
+<td>16.39</td>
+<td>344698.00</td>
+<td>9.07</td>
+<td>659096.00</td>
+<td>12.54</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2018</td>
+<td>sun</td>
+<td>54</td>
+<td>72</td>
+<td>126</td>
+<td>906</td>
+<td>127</td>
+<td>2564</td>
+<td>49</td>
+<td>256</td>
+<td>6105</td>
+<td>25977</td>
+<td>162</td>
+<td>2498</td>
+<td>29</td>
+<td>1705</td>
+<td>457</td>
+<td>8479</td>
+<td>39</td>
+<td>33</td>
+<td>22</td>
+<td>34</td>
+<td>673</td>
+<td>17</td>
+<td>19524</td>
+<td>6802</td>
+<td>248</td>
+<td>4154</td>
+<td>45412</td>
+<td>27392</td>
+<td>76958</td>
+<td>weekend</td>
+<td>26787.00</td>
+<td>15.51</td>
+<td>287611.00</td>
+<td>15.79</td>
+<td>344698.00</td>
+<td>7.95</td>
+<td>659096.00</td>
+<td>11.68</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">8</td>
+<td>2019</td>
+<td>mon</td>
+<td>45</td>
+<td>70</td>
+<td>113</td>
+<td>686</td>
+<td>99</td>
+<td>2272</td>
+<td>53</td>
+<td>181</td>
+<td>4908</td>
+<td>19966</td>
+<td>189</td>
+<td>3013</td>
+<td>40</td>
+<td>1126</td>
+<td>818</td>
+<td>7974</td>
+<td>108</td>
+<td>126</td>
+<td>46</td>
+<td>186</td>
+<td>2130</td>
+<td>22</td>
+<td>52740</td>
+<td>8559</td>
+<td>859</td>
+<td>3519</td>
+<td>38034</td>
+<td>64776</td>
+<td>106329</td>
+<td>week</td>
+<td>26476.00</td>
+<td>13.29</td>
+<td>287913.00</td>
+<td>13.21</td>
+<td>381533.00</td>
+<td>16.98</td>
+<td>695922.00</td>
+<td>15.28</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">9</td>
+<td>2019</td>
+<td>tue</td>
+<td>48</td>
+<td>68</td>
+<td>116</td>
+<td>734</td>
+<td>109</td>
+<td>2306</td>
+<td>45</td>
+<td>181</td>
+<td>5063</td>
+<td>20766</td>
+<td>170</td>
+<td>3039</td>
+<td>41</td>
+<td>1100</td>
+<td>740</td>
+<td>7634</td>
+<td>123</td>
+<td>118</td>
+<td>42</td>
+<td>169</td>
+<td>1971</td>
+<td>16</td>
+<td>51876</td>
+<td>8128</td>
+<td>730</td>
+<td>3607</td>
+<td>38553</td>
+<td>63173</td>
+<td>105333</td>
+<td>week</td>
+<td>26476.00</td>
+<td>13.62</td>
+<td>287913.00</td>
+<td>13.39</td>
+<td>381533.00</td>
+<td>16.56</td>
+<td>695922.00</td>
+<td>15.14</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">10</td>
+<td>2019</td>
+<td>wed</td>
+<td>40</td>
+<td>62</td>
+<td>105</td>
+<td>719</td>
+<td>92</td>
+<td>2358</td>
+<td>49</td>
+<td>209</td>
+<td>5038</td>
+<td>20981</td>
+<td>171</td>
+<td>3072</td>
+<td>34</td>
+<td>1086</td>
+<td>757</td>
+<td>7766</td>
+<td>106</td>
+<td>97</td>
+<td>52</td>
+<td>187</td>
+<td>1840</td>
+<td>30</td>
+<td>51225</td>
+<td>8318</td>
+<td>787</td>
+<td>3634</td>
+<td>38905</td>
+<td>62642</td>
+<td>105181</td>
+<td>week</td>
+<td>26476.00</td>
+<td>13.73</td>
+<td>287913.00</td>
+<td>13.51</td>
+<td>381533.00</td>
+<td>16.42</td>
+<td>695922.00</td>
+<td>15.11</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="35f699c7" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. (3)연도/요일별 범죄 발생 비율 변화 그래프</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">## 연도/요일별 범죄 발생 비율표 생성</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>ratio_year_day <span class="op">=</span> crime.iloc[:, [<span class="dv">0</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">7</span>, <span class="op">-</span><span class="dv">5</span>, <span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="dv">1</span>]]</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>ratio_year_day.head(<span class="dv">7</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">## 강력범죄 연도/요일별 범죄 발생 비율 변화 그래프</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">### plt.xticks() : x축의 범위를 2018~2022로 설정</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data <span class="op">=</span> ratio_year_day, x <span class="op">=</span> <span class="st">'day'</span>, y <span class="op">=</span> <span class="st">'ratio_s_day'</span>, hue <span class="op">=</span> <span class="st">'year'</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"요일"</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"비율(%)"</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"강력범죄 요일별 범죄율 비교 그래프"</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">## 폭력범죄 연도/요일별 범죄 발생 비율 변화 그래프</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data <span class="op">=</span> ratio_year_day, x <span class="op">=</span> <span class="st">'day'</span>, y <span class="op">=</span> <span class="st">'ratio_g_day'</span>, hue <span class="op">=</span> <span class="st">'year'</span>)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"요일"</span>)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"비율(%)"</span>)</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"폭력범죄 요일별 범죄율 비교 그래프"</span>)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co">## 지능범죄 연도/요일별 범죄 발생 비율 변화 그래프</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data <span class="op">=</span> ratio_year_day, x <span class="op">=</span> <span class="st">'day'</span>, y <span class="op">=</span> <span class="st">'ratio_i_day'</span>, hue <span class="op">=</span> <span class="st">'year'</span>)</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"요일"</span>)</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"비율(%)"</span>)</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"지능범죄 요일별 범죄율 비교 그래프"</span>)</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="co">## 전체 범죄 연도/요일별 범죄 발생 비율 변화 그래프</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data <span class="op">=</span> ratio_year_day, x <span class="op">=</span> <span class="st">'day'</span>, y <span class="op">=</span> <span class="st">'ratio_day'</span>, hue <span class="op">=</span> <span class="st">'year'</span>)</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"요일"</span>)</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"비율(%)"</span>)</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"전체 범죄 요일별 범죄율 비교 그래프"</span>)</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-7-output-1.png" width="594" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-7-output-2.png" width="594" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-7-output-3.png" width="583" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-7-output-4.png" width="583" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+위 그래프의 한계
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<dl>
+<dt>범죄별 그래프로 각 범죄의 요일별 발생 비율은 파악할 수 있으나,</dt>
+<dd>
+<strong>지능범죄의 주말 발생 건수가 현저히 낮아 전체 그래프에서 왜곡이 발생</strong>
+</dd>
+<dd>
+따라서, 연도 기준으로 데이터를 비교하는데 오류가 있다는 판단
+</dd>
+</dl>
+</div>
+</div>
+</section>
+<section id="요일-기준-범죄별-비율-비교-그래프" class="level3">
+<h3 class="anchored" data-anchor-id="요일-기준-범죄별-비율-비교-그래프"><strong>[요일 기준 범죄별 비율 비교 그래프]</strong></h3>
+<div id="6c938fb8" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. 요일별 전체 범죄 발생 비율 그래프</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">## 요일별 전체 범죄 발생 비율표 생성</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>total_day <span class="op">=</span> crime.groupby(<span class="st">'day'</span>) <span class="op">\</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>                 .agg(total_s <span class="op">=</span> (<span class="st">'total_s'</span>, <span class="st">'sum'</span>),</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>                      total_g <span class="op">=</span> (<span class="st">'total_g'</span>, <span class="st">'sum'</span>),</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>                      total_i <span class="op">=</span> (<span class="st">'total_i'</span>, <span class="st">'sum'</span>),</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>                      total <span class="op">=</span> (<span class="st">'total'</span>, <span class="st">'sum'</span>))</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>total_day <span class="op">=</span> total_day.assign(</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    강력범죄 <span class="op">=</span> <span class="kw">lambda</span> x: x[<span class="st">'total_s'</span>] <span class="op">/</span> <span class="bu">sum</span>(x[<span class="st">'total_s'</span>]) <span class="op">*</span> <span class="dv">100</span>,</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    폭력범죄 <span class="op">=</span> <span class="kw">lambda</span> x: x[<span class="st">'total_g'</span>] <span class="op">/</span> <span class="bu">sum</span>(x[<span class="st">'total_g'</span>]) <span class="op">*</span> <span class="dv">100</span>,</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    지능범죄 <span class="op">=</span> <span class="kw">lambda</span> x: x[<span class="st">'total_i'</span>] <span class="op">/</span> <span class="bu">sum</span>(x[<span class="st">'total_i'</span>]) <span class="op">*</span> <span class="dv">100</span>,</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    총_범죄율 <span class="op">=</span> <span class="kw">lambda</span> x: x[<span class="st">'total'</span>] <span class="op">/</span> <span class="bu">sum</span>(x[<span class="st">'total'</span>]) <span class="op">*</span> <span class="dv">100</span>)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>total_day <span class="op">=</span> total_day.reindex(index<span class="op">=</span>[<span class="st">'mon'</span>, <span class="st">'tue'</span>, <span class="st">'wed'</span>, <span class="st">'thu'</span>, <span class="st">'fri'</span>, <span class="st">'sat'</span>, <span class="st">'sun'</span>])</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>ratio_total_day <span class="op">=</span> total_day.iloc[:, <span class="dv">4</span>:]</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>ratio_total_day</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="co">## 요일별 전체 범죄 발생 비율 그래프 생성</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data <span class="op">=</span> ratio_total_day)</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"요일"</span>)</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"비율(%)"</span>)</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"요일 기준 범죄율 비교 그래프"</span>)</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-8-output-1.png" width="583" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+결론
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<dl>
+<dt><strong>강력범죄/폭력범죄는 가설에 성립하지만, 지능범죄는 반대의 결과가 도출되었다.</strong></dt>
+<dd>
+<strong>따라서, 강력범죄는 화요일/폭력범죄는 월요일/지능범죄는 일요일이 가장 안전하다.</strong>
+</dd>
+</dl>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+생각해볼 점
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>지능범죄가 평일에 많이 발생하는 이유는, 공공기관/기업 업무 시간에 이루어져야 하는 행위가 많기 때문이라고 추측된다.</strong></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+분석 발전 방향
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>데이터 추가</strong>
+<ul>
+<li><strong>범죄 발생 시간</strong> : 특정 요일의 어느 시간대에 범죄가 주로 발생하는지 분석</li>
+<li><strong>사회적/경제적 요인</strong> : 실업률, 소득 수준, 인구 밀도 등 사회적/경제적 요인으로 차이가 있는지 분석</li>
+<li><strong>이벤트/축제 정보</strong> : 특정 요일과 기간에 개최된 이벤트, 축제, 공휴일 등의 요인으로 차이가 있는지 분석</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
