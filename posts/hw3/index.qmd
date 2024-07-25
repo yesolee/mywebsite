@@ -14,6 +14,7 @@ def npdf(x, mu,sigma):
     part2 = np.exp((-1/2) * ((x-mu)/np.pi)**2)
     y = part1 * part2
     return y
+# math.exp()는 값 1개만 받을 수 있어서 npdf(리스트)를 하고 싶으면 for문으로 하나씩 넣거나 벡터를 연산해주는 np.exp()를 쓰면 된다.
 
 import numpy as np
 import matplotlib.pyplot as plt
