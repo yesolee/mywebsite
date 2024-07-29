@@ -2,6 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/hw4/index.html",
+      "/posts/stat1/index.html",
       "/posts/hw3/index.html",
       "/posts/pj1_crime/index.html",
       "/posts/plot/index.html",

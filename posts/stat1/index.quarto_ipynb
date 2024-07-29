@@ -1,0 +1,130 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"통계계\"\n",
+        "author: \"이예솔\"\n",
+        "date: \"2024-07-29\"\n",
+        "categories: [bigdata]\n",
+        "---\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "# 1. 모집단과 표본집단\n",
+        "- 모집단: 특성을알아내고싶은전체집단\n",
+        "- 표본집단: 모집단에서선택된부분집단\n",
+        "- 표본추출 방법 중 단순랜덤추출:𝑁개중𝑛개를임의로선택하여추출\n",
+        "어떤실험에서나올수있는결과의경우의수가여러개이고,실험을진행하기전에어떠한결과가\n",
+        "나올지예측불가능하며,각결과가나올가능성을수치화할수있는실험\n",
+        "- 표본공간(S): 랜덤실험으로부터나올수있는결과값들의집합\n",
+        "- 사건(event): 표본공간의 부분집합\n",
+        "- 확률함수(P): 어떤사건이일어나는가능성을측정하는함수(입력값은 사건, 결과값은 1과 0사이의 실수)\n",
+        "- 확률변수(X): 는표본공간의원소들(실험의결과값)에정의된실수값을갖는함수\n",
+        "- 확률분포: 확률변수𝑋의 값에 대응하는 확률이 어떻게 퍼져있는지 나타내는 용어. 확률변수𝑋가 가질 수 있는 값 𝑥에 대응하는 확률을 시각화 한 것\n",
+        " 𝑋∼𝑓x : 확률변수 X가 확률분포 𝑓를 따른다.\n",
+        "- 기대값(확률변수의 평균): 확률변수가가질수있는각각의값에그값이나타날확률을곱한\n",
+        "값들의합.\n",
+        "확률이 전체 횟수중의 빈도이므로 평균으로 볼 수 있다. 확률분포의무게중심을 잡아내는지표\n",
+        "# 이산형 확률변수와 확률질량함수\n",
+        "## 1. 베르누이 분포\n"
+      ],
+      "id": "31ae67a6"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from scipy.stats import bernoulli\n",
+        "bernoulli.pmf(k, p)\n",
+        "bernoulli.cdf(k, p)\n",
+        "bernoulli.ppf(q, p)\n",
+        "bernoulli.rvs(p, size, random_state)"
+      ],
+      "id": "8793ef91",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## 2. 이항분포\n"
+      ],
+      "id": "0d7ff4aa"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from scipy.stats import binom\n",
+        "binom.pmf(k, n, p)\n",
+        "binom.cdf(k, n, p)\n",
+        "binom.ppf(q, n, p)\n",
+        "binom.rvs(n, p, size=1, random_state=None)"
+      ],
+      "id": "091adcb5",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# 연속형 확률변수와 확률밀도함수\n",
+        "## 1. 균일분포\n"
+      ],
+      "id": "6216bc7f"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from scipy.stats import uniform\n",
+        "uniform.pdf(x, loc=0, scale=1)\n",
+        "uniform.cdf(x, loc=0, scale=1)\n",
+        "uniform.ppf(q, loc=0, scale=1)\n",
+        "uniform.rvs(loc=0, scale=1, size=None, random_state=None)"
+      ],
+      "id": "7af8cdba",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## 2. 정규분포\n"
+      ],
+      "id": "a156b69d"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from scipy.stats import norm\n",
+        "norm.pdf(x, loc=0, scale=1)\n",
+        "norm.cdf(x, loc=0, scale=1)\n",
+        "norm.ppf(q, loc=0, scale=1)\n",
+        "norm.rvs(loc=0, scale=1, size=None, random_state=None)"
+      ],
+      "id": "cf643467",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\DS\\Python\\Python312\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

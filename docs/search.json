@@ -403,7 +403,7 @@
     "href": "blog.html",
     "title": "myblog",
     "section": "",
-    "text": "LS 빅데이터 스쿨 Homework 3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nTEAM PROJECT 1\n\n\n\n\n\n\n\n\n\n\n\nJul 24, 2024\n\n\n5조(내이름은코난탐정이조)\n\n\n\n\n\n\n\n\n\n\n\n\nplotly를 이용한 그래프 그리기\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\n넘파이 배열\n\n\n\n\n\n\nnumpy\n\n\n\n\n\n\n\n\n\nJul 18, 2024\n\n\nSol\n\n\n\n\n\n\n\n\n\n\n\n\n넘파이 이미지\n\n\n\n\n\n\nnumpy\n\n\n\n\n\n\n\n\n\nJul 18, 2024\n\n\nSol\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 15, 2024\n\n\n이예솔\n\n\n\n\n\n\nNo matching items"
+    "text": "LS 빅데이터 스쿨 Homework 4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 29, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\n통계계\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 29, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nTEAM PROJECT 1\n\n\n\n\n\n\n\n\n\n\n\nJul 24, 2024\n\n\n5조(내이름은코난탐정이조)\n\n\n\n\n\n\n\n\n\n\n\n\nplotly를 이용한 그래프 그리기\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\n넘파이 배열\n\n\n\n\n\n\nnumpy\n\n\n\n\n\n\n\n\n\nJul 18, 2024\n\n\nSol\n\n\n\n\n\n\n\n\n\n\n\n\n넘파이 이미지\n\n\n\n\n\n\nnumpy\n\n\n\n\n\n\n\n\n\nJul 18, 2024\n\n\nSol\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\n이예솔\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 15, 2024\n\n\n이예솔\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "summary.html#pandas-내장함수",
@@ -880,5 +880,47 @@
     "title": "plotly를 이용한 그래프 그리기",
     "section": "2. sns.barplot()을 이용해 category별 빈도를 표현한 막대 그래프를 만들어 보세요. 막대는 빈도가 높은 순으로 정렬하세요.",
     "text": "2. sns.barplot()을 이용해 category별 빈도를 표현한 막대 그래프를 만들어 보세요. 막대는 빈도가 높은 순으로 정렬하세요.\n\ncount_category = mpg.groupby('category',as_index=False)\\\n                    .agg(n=('category','count'))\\\n                    .sort_values('n',ascending=False)\nsns.barplot(data = count_category, x='category', y='n', hue='category')\n\n\n\n\n\n\n\n\n\nsns.countplot() 이용해 풀어보기기\n\nsns.countplot(data=mpg, x='category',\n              order=mpg['category'].value_counts().index,\n              hue='category')\nplt.show()"
+  },
+  {
+    "objectID": "posts/hw4/index.html",
+    "href": "posts/hw4/index.html",
+    "title": "LS 빅데이터 스쿨 Homework 4",
+    "section": "",
+    "text": "표본 분산 계산 시 왜 n-1로 나누는지 알아보도록 하겠습니다.\n\n\n\n\n\n\n\n\n# X ~ 균일분포 U(a, b)\n# loc: a, scale: b-a\nimport numpy as np\nfrom scipy.stats import uniform\nimport matplotlib.pyplot as plt\n\nx = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\n\nk_2 = np.var(x, axis=1)\nplt.hist(k_2)\n\ns_2 = np.var(x, ddof=1, axis=1)\nplt.hist(s_2)\n\nx_var= uniform.var(loc=3, scale=4)\n\nplt.axvline(x_var, color='green', linestyle='--', linewidth=2)\nplt.axvline(k_2.mean(), color='red', linestyle='--', linewidth=2)\nplt.axvline(s_2.mean(), color='black', linestyle='--', linewidth=2)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\nn-1로 나눈 값이 n으로 나누었을때보다 모분산에 가깝기 때문이다."
+  },
+  {
+    "objectID": "posts/hw4/index.html#균일분포-3-7에서-20개의-표본을-뽑아서-분산을-2가지-방법으로-추정해보세요.",
+    "href": "posts/hw4/index.html#균일분포-3-7에서-20개의-표본을-뽑아서-분산을-2가지-방법으로-추정해보세요.",
+    "title": "LS 빅데이터 스쿨 Homework 4",
+    "section": "",
+    "text": "# X ~ 균일분포 U(a, b)\n# loc: a, scale: b-a\nimport numpy as np\nfrom scipy.stats import uniform\nimport matplotlib.pyplot as plt\n\nx = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\n\nk_2 = np.var(x, axis=1)\nplt.hist(k_2)\n\ns_2 = np.var(x, ddof=1, axis=1)\nplt.hist(s_2)\n\nx_var= uniform.var(loc=3, scale=4)\n\nplt.axvline(x_var, color='green', linestyle='--', linewidth=2)\nplt.axvline(k_2.mean(), color='red', linestyle='--', linewidth=2)\nplt.axvline(s_2.mean(), color='black', linestyle='--', linewidth=2)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\nn-1로 나눈 값이 n으로 나누었을때보다 모분산에 가깝기 때문이다."
+  },
+  {
+    "objectID": "posts/stat1/index.html",
+    "href": "posts/stat1/index.html",
+    "title": "통계계",
+    "section": "",
+    "text": "모집단: 특성을알아내고싶은전체집단\n표본집단: 모집단에서선택된부분집단\n표본추출 방법 중 단순랜덤추출:𝑁개중𝑛개를임의로선택하여추출 어떤실험에서나올수있는결과의경우의수가여러개이고,실험을진행하기전에어떠한결과가 나올지예측불가능하며,각결과가나올가능성을수치화할수있는실험\n표본공간(S): 랜덤실험으로부터나올수있는결과값들의집합\n사건(event): 표본공간의 부분집합\n확률함수(P): 어떤사건이일어나는가능성을측정하는함수(입력값은 사건, 결과값은 1과 0사이의 실수)\n확률변수(X): 는표본공간의원소들(실험의결과값)에정의된실수값을갖는함수\n확률분포: 확률변수𝑋의 값에 대응하는 확률이 어떻게 퍼져있는지 나타내는 용어. 확률변수𝑋가 가질 수 있는 값 𝑥에 대응하는 확률을 시각화 한 것 𝑋∼𝑓x : 확률변수 X가 확률분포 𝑓를 따른다.\n기대값(확률변수의 평균): 확률변수가가질수있는각각의값에그값이나타날확률을곱한 값들의합. 확률이 전체 횟수중의 빈도이므로 평균으로 볼 수 있다. 확률분포의무게중심을 잡아내는지표 # 이산형 확률변수와 확률질량함수 ## 1. 베르누이 분포\n\nfrom scipy.stats import bernoulli bernoulli.pmf(k, p) bernoulli.cdf(k, p) bernoulli.ppf(q, p) bernoulli.rvs(p, size, random_state)\n\n\nfrom scipy.stats import binom binom.pmf(k, n, p) binom.cdf(k, n, p) binom.ppf(q, n, p) binom.rvs(n, p, size=1, random_state=None)"
+  },
+  {
+    "objectID": "posts/stat1/index.html#이항분포",
+    "href": "posts/stat1/index.html#이항분포",
+    "title": "통계계",
+    "section": "",
+    "text": "from scipy.stats import binom binom.pmf(k, n, p) binom.cdf(k, n, p) binom.ppf(q, n, p) binom.rvs(n, p, size=1, random_state=None)"
+  },
+  {
+    "objectID": "posts/stat1/index.html#균일분포",
+    "href": "posts/stat1/index.html#균일분포",
+    "title": "통계계",
+    "section": "1. 균일분포",
+    "text": "1. 균일분포\nfrom scipy.stats import uniform uniform.pdf(x, loc=0, scale=1) uniform.cdf(x, loc=0, scale=1) uniform.ppf(q, loc=0, scale=1) uniform.rvs(loc=0, scale=1, size=None, random_state=None)"
+  },
+  {
+    "objectID": "posts/stat1/index.html#정규분포",
+    "href": "posts/stat1/index.html#정규분포",
+    "title": "통계계",
+    "section": "2. 정규분포",
+    "text": "2. 정규분포\nfrom scipy.stats import norm norm.pdf(x, loc=0, scale=1) norm.cdf(x, loc=0, scale=1) norm.ppf(q, loc=0, scale=1) norm.rvs(loc=0, scale=1, size=None, random_state=None)"
   }
 ]

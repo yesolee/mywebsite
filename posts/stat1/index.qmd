@@ -1,0 +1,52 @@
+---
+title: "통계계"
+author: "이예솔"
+date: "2024-07-29"
+categories: [bigdata]
+---
+
+# 1. 모집단과 표본집단
+- 모집단: 특성을알아내고싶은전체집단
+- 표본집단: 모집단에서선택된부분집단
+- 표본추출 방법 중 단순랜덤추출:𝑁개중𝑛개를임의로선택하여추출
+어떤실험에서나올수있는결과의경우의수가여러개이고,실험을진행하기전에어떠한결과가
+나올지예측불가능하며,각결과가나올가능성을수치화할수있는실험
+- 표본공간(S): 랜덤실험으로부터나올수있는결과값들의집합
+- 사건(event): 표본공간의 부분집합
+- 확률함수(P): 어떤사건이일어나는가능성을측정하는함수(입력값은 사건, 결과값은 1과 0사이의 실수)
+- 확률변수(X): 는표본공간의원소들(실험의결과값)에정의된실수값을갖는함수
+- 확률분포: 확률변수𝑋의 값에 대응하는 확률이 어떻게 퍼져있는지 나타내는 용어. 확률변수𝑋가 가질 수 있는 값 𝑥에 대응하는 확률을 시각화 한 것
+ 𝑋∼𝑓x : 확률변수 X가 확률분포 𝑓를 따른다.
+- 기대값(확률변수의 평균): 확률변수가가질수있는각각의값에그값이나타날확률을곱한
+값들의합.
+확률이 전체 횟수중의 빈도이므로 평균으로 볼 수 있다. 확률분포의무게중심을 잡아내는지표
+# 이산형 확률변수와 확률질량함수
+## 1. 베르누이 분포
+
+from scipy.stats import bernoulli
+bernoulli.pmf(k, p)
+bernoulli.cdf(k, p)
+bernoulli.ppf(q, p)
+bernoulli.rvs(p, size, random_state)
+
+## 2. 이항분포
+from scipy.stats import binom
+binom.pmf(k, n, p)
+binom.cdf(k, n, p)
+binom.ppf(q, n, p)
+binom.rvs(n, p, size=1, random_state=None)
+
+# 연속형 확률변수와 확률밀도함수
+## 1. 균일분포
+from scipy.stats import uniform
+uniform.pdf(x, loc=0, scale=1)
+uniform.cdf(x, loc=0, scale=1)
+uniform.ppf(q, loc=0, scale=1)
+uniform.rvs(loc=0, scale=1, size=None, random_state=None)
+
+## 2. 정규분포
+from scipy.stats import norm
+norm.pdf(x, loc=0, scale=1)
+norm.cdf(x, loc=0, scale=1)
+norm.ppf(q, loc=0, scale=1)
+norm.rvs(loc=0, scale=1, size=None, random_state=None)
