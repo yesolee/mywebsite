@@ -1,0 +1,97 @@
+---
+title: "LS 빅데이터 스쿨 Homework 5"
+author: "이예솔"
+date: "2024-07-30"
+categories: [bigdata]
+---
+
+```{python}
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+    
+#!pip install pyreadstat
+raw_welfare= pd.read_spss('./koweps/Koweps_hpwc14_2019_beta2.sav')
+
+welfare = raw_welfare.copy()
+
+welfare.shape
+welfare.info()
+welfare.describe()
+
+welfare = welfare.rename(
+    columns = {
+        "h14_g3": "sex",
+        "h14_g4": "birth",
+        "h14_g10": "marriage_type",
+        "h14_g11": "religion",
+        "p1402_8aq1": "income",
+        "h14_eco9": "code_job",
+        "h14_reg7": "code_region",
+    }
+)
+
+welfare = welfare[["sex","birth","marriage_type","religion","income","code_job","code_region"]]
+welfare.shape
+
+welfare['sex'].dtypes
+welfare['sex'].value_counts()
+welfare['sex'].isna().sum()
+
+welfare['sex'] = np.where(welfare['sex']==1,'male','female')
+welfare['sex']
+
+welfare['income'].describe()
+welfare['income'].isna().sum()
+welfare['income'].value_counts().sort_values()
+sum(welfare['income'] >9998)
+
+sex_income = welfare.dropna(subset='income').groupby('sex', as_index=False).agg(mean_income=("income","mean"))
+sex_income
+?sns.barplot
+
+sns.barplot(data=sex_income, x="sex", y="mean_income", hue="sex",errorbar=('ci', 95))
+plt.show()
+plt.clf()
+
+```
+
+# 위 그래프에서 각 성별 95% 신뢰구간 계산 후 그리기(위 아래 검성색 막대기로 표시)
+```{python}
+# 표본 평균 구하기(income이 nan이 아닌 여자, 남자)
+x_var_F, x_var_M = sex_income['mean_income']
+# 표본 갯수 구하기(income이 nan이 아닌 여자, 남자)
+n_F, n_M = welfare.dropna(subset='income').value_counts('sex')
+# 표본 표준편차 구하기
+income_female = welfare.dropna(subset='income').query('sex=="female"')['income']
+income_male = welfare.dropna(subset='income').query('sex=="male"')['income']
+s_F = np.std(income_female, ddof=1)
+s_M = np.std(income_male, ddof=1)
+# 표본 표준오차 구하기
+se_F = np.std(income_female, ddof=1) / np.sqrt(n_F)
+se_M = np.std(income_male, ddof=1) / np.sqrt(n_M)
+# 신뢰구간 95%
+
+## 방법1) 직접 계산산
+# from scipy.stats import norm
+# z0025 = norm.ppf(0.975, loc=0, scale=1)
+# ci_left_F = x_var_F - z0025 * se_F
+# ci_right_F = x_var_F + z0025 * se_F
+# ci_left_M = x_var_M - z0025 * se_M
+# ci_right_M = x_var_M + z0025 * se_M
+
+## 방법2) scipy 함수쓰기
+from scipy.stats import t
+ci_left_F,ci_right_F = t.interval(0.95, loc=x_var_F, scale=se_F, df=n_F-1)
+ci_left_M,ci_right_M = t.interval(0.95, loc=x_var_M, scale=se_M, df=n_M-1)
+sex_income['ci_left'] = np.array([ci_left_F,ci_left_M])
+sex_income['ci_right'] = np.array([ci_right_F,ci_right_M])
+
+sns.barplot(data=sex_income, x="sex", y="mean_income", hue="sex")
+plt.show()
+plt.clf()
+
+sex_income
+```
+

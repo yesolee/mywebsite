@@ -21,13 +21,15 @@ import matplotlib.pyplot as plt
 x = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)
 
 k_2 = np.var(x, axis=1)
+# k_2 *20/19 하면 s_2랑 같아짐. 20으로 나눌걸 19로 나눈거니까
 plt.hist(k_2)
 
 s_2 = np.var(x, ddof=1, axis=1)
 plt.hist(s_2)
 
 x_var= uniform.var(loc=3, scale=4)
-
+20/19
+k_2.mean()-s_2.mean()
 plt.axvline(x_var, color='green', linestyle='--', linewidth=2)
 plt.axvline(k_2.mean(), color='red', linestyle='--', linewidth=2)
 plt.axvline(s_2.mean(), color='black', linestyle='--', linewidth=2)
