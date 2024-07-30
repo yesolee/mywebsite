@@ -73,7 +73,7 @@ se_F = np.std(income_female, ddof=1) / np.sqrt(n_F)
 se_M = np.std(income_male, ddof=1) / np.sqrt(n_M)
 # 신뢰구간 95%
 
-## 방법1) 직접 계산산
+## 방법1) 직접 계산
 # from scipy.stats import norm
 # z0025 = norm.ppf(0.975, loc=0, scale=1)
 # ci_left_F = x_var_F - z0025 * se_F
@@ -82,16 +82,22 @@ se_M = np.std(income_male, ddof=1) / np.sqrt(n_M)
 # ci_right_M = x_var_M + z0025 * se_M
 
 ## 방법2) scipy 함수쓰기
-from scipy.stats import t
-ci_left_F,ci_right_F = t.interval(0.95, loc=x_var_F, scale=se_F, df=n_F-1)
-ci_left_M,ci_right_M = t.interval(0.95, loc=x_var_M, scale=se_M, df=n_M-1)
-sex_income['ci_left'] = np.array([ci_left_F,ci_left_M])
-sex_income['ci_right'] = np.array([ci_right_F,ci_right_M])
+# from scipy.stats import t
+# ci_left_F,ci_right_F = t.interval(0.95, loc=x_var_F, scale=se_F, df=n_F-1)
+# ci_left_M,ci_right_M = t.interval(0.95, loc=x_var_M, scale=se_M, df=n_M-1)
+# sex_income['ci_left'] = np.array([ci_left_F,ci_left_M])
+# sex_income['ci_right'] = np.array([ci_right_F,ci_right_M])
 
+# 평균에서 더하고 빼줄 95% 신뢰구간 (Errorbar에는 평균값빼고 그 다음항만 필요)
+from scipy.stats import norm
+z0025 = norm.ppf(0.975, loc=0, scale=1)
+ci_F = z0025 * se_F
+ci_M = z0025 * se_M
 sns.barplot(data=sex_income, x="sex", y="mean_income", hue="sex")
+plt.errorbar(x=sex_income['sex'], y=sex_income['mean_income'], yerr=ci_F, fmt='none', c='k')
+plt.errorbar(x=sex_income['sex'], y=sex_income['mean_income'], yerr=ci_M, fmt='none', c='k')
 plt.show()
 plt.clf()
 
-sex_income
 ```
 

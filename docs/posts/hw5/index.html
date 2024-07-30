@@ -59,7 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -102,12 +102,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
-
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -200,7 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="d5b7b62e" class="cell" data-execution_count="1">
+<div id="4f84be93" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -269,7 +263,7 @@ memory usage: 91.3+ MB</code></pre>
 </div>
 <section id="위-그래프에서-각-성별-95-신뢰구간-계산-후-그리기위-아래-검성색-막대기로-표시" class="level1">
 <h1>위 그래프에서 각 성별 95% 신뢰구간 계산 후 그리기(위 아래 검성색 막대기로 표시)</h1>
-<div id="8426e405" class="cell" data-execution_count="2">
+<div id="bb97aacc" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 표본 평균 구하기(income이 nan이 아닌 여자, 남자)</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>x_var_F, x_var_M <span class="op">=</span> sex_income[<span class="st">'mean_income'</span>]</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 표본 갯수 구하기(income이 nan이 아닌 여자, 남자)</span></span>
@@ -284,7 +278,7 @@ memory usage: 91.3+ MB</code></pre>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>se_M <span class="op">=</span> np.std(income_male, ddof<span class="op">=</span><span class="dv">1</span>) <span class="op">/</span> np.sqrt(n_M)</span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 신뢰구간 95%</span></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">## 방법1) 직접 계산산</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">## 방법1) 직접 계산</span></span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># from scipy.stats import norm</span></span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># z0025 = norm.ppf(0.975, loc=0, scale=1)</span></span>
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_left_F = x_var_F - z0025 * se_F</span></span>
@@ -293,56 +287,27 @@ memory usage: 91.3+ MB</code></pre>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_right_M = x_var_M + z0025 * se_M</span></span>
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="co">## 방법2) scipy 함수쓰기</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> t</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>ci_left_F,ci_right_F <span class="op">=</span> t.interval(<span class="fl">0.95</span>, loc<span class="op">=</span>x_var_F, scale<span class="op">=</span>se_F, df<span class="op">=</span>n_F<span class="op">-</span><span class="dv">1</span>)</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>ci_left_M,ci_right_M <span class="op">=</span> t.interval(<span class="fl">0.95</span>, loc<span class="op">=</span>x_var_M, scale<span class="op">=</span>se_M, df<span class="op">=</span>n_M<span class="op">-</span><span class="dv">1</span>)</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>sex_income[<span class="st">'ci_left'</span>] <span class="op">=</span> np.array([ci_left_F,ci_left_M])</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>sex_income[<span class="st">'ci_right'</span>] <span class="op">=</span> np.array([ci_right_F,ci_right_M])</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># from scipy.stats import t</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_left_F,ci_right_F = t.interval(0.95, loc=x_var_F, scale=se_F, df=n_F-1)</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_left_M,ci_right_M = t.interval(0.95, loc=x_var_M, scale=se_M, df=n_M-1)</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="co"># sex_income['ci_left'] = np.array([ci_left_F,ci_left_M])</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="co"># sex_income['ci_right'] = np.array([ci_right_F,ci_right_M])</span></span>
 <span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>sns.barplot(data<span class="op">=</span>sex_income, x<span class="op">=</span><span class="st">"sex"</span>, y<span class="op">=</span><span class="st">"mean_income"</span>, hue<span class="op">=</span><span class="st">"sex"</span>)</span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>sex_income</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="co"># 평균에서 더하고 빼줄 95% 신뢰구간 (Errorbar에는 평균값빼고 그 다음항만 필요)</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>z0025 <span class="op">=</span> norm.ppf(<span class="fl">0.975</span>, loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>ci_F <span class="op">=</span> z0025 <span class="op">*</span> se_F</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>ci_M <span class="op">=</span> z0025 <span class="op">*</span> se_M</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>sns.barplot(data<span class="op">=</span>sex_income, x<span class="op">=</span><span class="st">"sex"</span>, y<span class="op">=</span><span class="st">"mean_income"</span>, hue<span class="op">=</span><span class="st">"sex"</span>)</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>plt.errorbar(x<span class="op">=</span>sex_income[<span class="st">'sex'</span>], y<span class="op">=</span>sex_income[<span class="st">'mean_income'</span>], yerr<span class="op">=</span>ci_F, fmt<span class="op">=</span><span class="st">'none'</span>, c<span class="op">=</span><span class="st">'k'</span>)</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>plt.errorbar(x<span class="op">=</span>sex_income[<span class="st">'sex'</span>], y<span class="op">=</span>sex_income[<span class="st">'mean_income'</span>], yerr<span class="op">=</span>ci_M, fmt<span class="op">=</span><span class="st">'none'</span>, c<span class="op">=</span><span class="st">'k'</span>)</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
 <p><img src="index_files/figure-html/cell-3-output-1.png" width="593" height="429" class="figure-img"></p>
 </figure>
-</div>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">sex</th>
-<th data-quarto-table-cell-role="th">mean_income</th>
-<th data-quarto-table-cell-role="th">ci_left</th>
-<th data-quarto-table-cell-role="th">ci_right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>female</td>
-<td>186.293096</td>
-<td>180.880349</td>
-<td>191.705843</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>male</td>
-<td>349.037571</td>
-<td>340.020692</td>
-<td>358.054450</td>
-</tr>
-</tbody>
-</table>
-
 </div>
 </div>
 <div class="cell-output cell-output-display">
