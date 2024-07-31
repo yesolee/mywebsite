@@ -194,7 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="4f84be93" class="cell" data-execution_count="1">
+<div id="cd1d4207" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -263,9 +263,9 @@ memory usage: 91.3+ MB</code></pre>
 </div>
 <section id="위-그래프에서-각-성별-95-신뢰구간-계산-후-그리기위-아래-검성색-막대기로-표시" class="level1">
 <h1>위 그래프에서 각 성별 95% 신뢰구간 계산 후 그리기(위 아래 검성색 막대기로 표시)</h1>
-<div id="bb97aacc" class="cell" data-execution_count="2">
+<div id="8680e8b0" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 표본 평균 구하기(income이 nan이 아닌 여자, 남자)</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>x_var_F, x_var_M <span class="op">=</span> sex_income[<span class="st">'mean_income'</span>]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>x_bar_F, x_bar_M <span class="op">=</span> sex_income[<span class="st">'mean_income'</span>]</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 표본 갯수 구하기(income이 nan이 아닌 여자, 남자)</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>n_F, n_M <span class="op">=</span> welfare.dropna(subset<span class="op">=</span><span class="st">'income'</span>).value_counts(<span class="st">'sex'</span>)</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 표본 표준편차 구하기</span></span>
@@ -281,15 +281,15 @@ memory usage: 91.3+ MB</code></pre>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">## 방법1) 직접 계산</span></span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># from scipy.stats import norm</span></span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># z0025 = norm.ppf(0.975, loc=0, scale=1)</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_left_F = x_var_F - z0025 * se_F</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_right_F = x_var_F + z0025 * se_F</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_left_M = x_var_M - z0025 * se_M</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_right_M = x_var_M + z0025 * se_M</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_left_F = x_bar_F - z0025 * se_F</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_right_F = x_bar_F + z0025 * se_F</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_left_M = x_bar_M - z0025 * se_M</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_right_M = x_bar_M + z0025 * se_M</span></span>
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="co">## 방법2) scipy 함수쓰기</span></span>
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># from scipy.stats import t</span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_left_F,ci_right_F = t.interval(0.95, loc=x_var_F, scale=se_F, df=n_F-1)</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_left_M,ci_right_M = t.interval(0.95, loc=x_var_M, scale=se_M, df=n_M-1)</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_left_F,ci_right_F = t.interval(0.95, loc=x_bar_F, scale=se_F, df=n_F-1)</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co"># ci_left_M,ci_right_M = t.interval(0.95, loc=x_bar_M, scale=se_M, df=n_M-1)</span></span>
 <span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="co"># sex_income['ci_left'] = np.array([ci_left_F,ci_left_M])</span></span>
 <span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="co"># sex_income['ci_right'] = np.array([ci_right_F,ci_right_M])</span></span>
 <span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
