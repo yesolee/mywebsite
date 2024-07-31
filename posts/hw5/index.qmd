@@ -60,7 +60,7 @@ plt.clf()
 # 위 그래프에서 각 성별 95% 신뢰구간 계산 후 그리기(위 아래 검성색 막대기로 표시)
 ```{python}
 # 표본 평균 구하기(income이 nan이 아닌 여자, 남자)
-x_var_F, x_var_M = sex_income['mean_income']
+x_bar_F, x_bar_M = sex_income['mean_income']
 # 표본 갯수 구하기(income이 nan이 아닌 여자, 남자)
 n_F, n_M = welfare.dropna(subset='income').value_counts('sex')
 # 표본 표준편차 구하기
@@ -76,15 +76,15 @@ se_M = np.std(income_male, ddof=1) / np.sqrt(n_M)
 ## 방법1) 직접 계산
 # from scipy.stats import norm
 # z0025 = norm.ppf(0.975, loc=0, scale=1)
-# ci_left_F = x_var_F - z0025 * se_F
-# ci_right_F = x_var_F + z0025 * se_F
-# ci_left_M = x_var_M - z0025 * se_M
-# ci_right_M = x_var_M + z0025 * se_M
+# ci_left_F = x_bar_F - z0025 * se_F
+# ci_right_F = x_bar_F + z0025 * se_F
+# ci_left_M = x_bar_M - z0025 * se_M
+# ci_right_M = x_bar_M + z0025 * se_M
 
 ## 방법2) scipy 함수쓰기
 # from scipy.stats import t
-# ci_left_F,ci_right_F = t.interval(0.95, loc=x_var_F, scale=se_F, df=n_F-1)
-# ci_left_M,ci_right_M = t.interval(0.95, loc=x_var_M, scale=se_M, df=n_M-1)
+# ci_left_F,ci_right_F = t.interval(0.95, loc=x_bar_F, scale=se_F, df=n_F-1)
+# ci_left_M,ci_right_M = t.interval(0.95, loc=x_bar_M, scale=se_M, df=n_M-1)
 # sex_income['ci_left'] = np.array([ci_left_F,ci_left_M])
 # sex_income['ci_right'] = np.array([ci_right_F,ci_right_M])
 
