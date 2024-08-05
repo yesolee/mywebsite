@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="이예솔">
-<meta name="dcterms.date" content="2024-07-29">
+<meta name="author" content="sol">
+<meta name="dcterms.date" content="2024-08-05">
 
-<title>통계 – Sol</title>
+<title>통계적 추정정 – Sol</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">통계</h1>
+      <h1 class="title">통계적 추정정</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">statistics</div>
               </div>
@@ -126,14 +126,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>이예솔 </p>
+               <p>sol </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 29, 2024</p>
+        <p class="date">August 5, 2024</p>
       </div>
     </div>
     
@@ -149,14 +149,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#모집단과-표본집단" id="toc-모집단과-표본집단" class="nav-link active" data-scroll-target="#모집단과-표본집단">1. 모집단과 표본집단</a>
+  <li><a href="#표본으로-모집단의-모수-추정" id="toc-표본으로-모집단의-모수-추정" class="nav-link active" data-scroll-target="#표본으로-모집단의-모수-추정">표본으로 모집단의 모수 추정</a>
   <ul class="collapse">
-  <li><a href="#이항분포" id="toc-이항분포" class="nav-link" data-scroll-target="#이항분포">2. 이항분포</a></li>
-  </ul></li>
-  <li><a href="#연속형-확률변수와-확률밀도함수" id="toc-연속형-확률변수와-확률밀도함수" class="nav-link" data-scroll-target="#연속형-확률변수와-확률밀도함수">연속형 확률변수와 확률밀도함수</a>
-  <ul class="collapse">
-  <li><a href="#균일분포" id="toc-균일분포" class="nav-link" data-scroll-target="#균일분포">1. 균일분포</a></li>
-  <li><a href="#정규분포" id="toc-정규분포" class="nav-link" data-scroll-target="#정규분포">2. 정규분포</a></li>
+  <li><a href="#정규분포-𝜇𝜎2" id="toc-정규분포-𝜇𝜎2" class="nav-link" data-scroll-target="#정규분포-𝜇𝜎2">정규분포 (𝜇,𝜎2)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -168,34 +163,11 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="모집단과-표본집단" class="level1">
-<h1>1. 모집단과 표본집단</h1>
-<ul>
-<li>모집단: 특성을알아내고싶은전체집단</li>
-<li>표본집단: 모집단에서선택된부분집단</li>
-<li>표본추출 방법 중 단순랜덤추출:𝑁개중𝑛개를임의로선택하여추출 어떤실험에서나올수있는결과의경우의수가여러개이고,실험을진행하기전에어떠한결과가 나올지예측불가능하며,각결과가나올가능성을수치화할수있는실험</li>
-<li>표본공간(S): 랜덤실험으로부터나올수있는결과값들의집합</li>
-<li>사건(event): 표본공간의 부분집합</li>
-<li>확률함수(P): 어떤사건이일어나는가능성을측정하는함수(입력값은 사건, 결과값은 1과 0사이의 실수)</li>
-<li>확률변수(X): 는표본공간의원소들(실험의결과값)에정의된실수값을갖는함수</li>
-<li>확률분포: 확률변수𝑋의 값에 대응하는 확률이 어떻게 퍼져있는지 나타내는 용어. 확률변수𝑋가 가질 수 있는 값 𝑥에 대응하는 확률을 시각화 한 것 𝑋∼𝑓x : 확률변수 X가 확률분포 𝑓를 따른다.</li>
-<li>기대값(확률변수의 평균): 확률변수가가질수있는각각의값에그값이나타날확률을곱한 값들의합. 확률이 전체 횟수중의 빈도이므로 평균으로 볼 수 있다. 확률분포의무게중심을 잡아내는지표 # 이산형 확률변수와 확률질량함수 ## 1. 베르누이 분포</li>
-</ul>
-<p>from scipy.stats import bernoulli bernoulli.pmf(k, p) bernoulli.cdf(k, p) bernoulli.ppf(q, p) bernoulli.rvs(p, size, random_state)</p>
-<section id="이항분포" class="level2">
-<h2 class="anchored" data-anchor-id="이항분포">2. 이항분포</h2>
-<p>from scipy.stats import binom binom.pmf(k, n, p) binom.cdf(k, n, p) binom.ppf(q, n, p) binom.rvs(n, p, size=1, random_state=None)</p>
-</section>
-</section>
-<section id="연속형-확률변수와-확률밀도함수" class="level1">
-<h1>연속형 확률변수와 확률밀도함수</h1>
-<section id="균일분포" class="level2">
-<h2 class="anchored" data-anchor-id="균일분포">1. 균일분포</h2>
-<p>from scipy.stats import uniform uniform.pdf(x, loc=0, scale=1) uniform.cdf(x, loc=0, scale=1) uniform.ppf(q, loc=0, scale=1) uniform.rvs(loc=0, scale=1, size=None, random_state=None)</p>
-</section>
-<section id="정규분포" class="level2">
-<h2 class="anchored" data-anchor-id="정규분포">2. 정규분포</h2>
-<p>from scipy.stats import norm norm.pdf(x, loc=0, scale=1) norm.cdf(x, loc=0, scale=1) norm.ppf(q, loc=0, scale=1) norm.rvs(loc=0, scale=1, size=None, random_state=None)</p>
+<section id="표본으로-모집단의-모수-추정" class="level1">
+<h1>표본으로 모집단의 모수 추정</h1>
+<section id="정규분포-𝜇𝜎2" class="level2">
+<h2 class="anchored" data-anchor-id="정규분포-𝜇𝜎2">정규분포 (𝜇,𝜎2)</h2>
+<p>𝑋∼𝒩(𝜇,𝜎2)</p>
 
 
 </section>

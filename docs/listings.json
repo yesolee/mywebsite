@@ -2,11 +2,12 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/hw6/index.html",
       "/posts/hw5/index.html",
       "/posts/hw4/index.html",
+      "/posts/pj1_crime/index.html",
       "/posts/stat1/index.html",
       "/posts/hw3/index.html",
-      "/posts/pj1_crime/index.html",
       "/posts/plot/index.html",
       "/posts/np1/index.html",
       "/posts/np_image/index.html",

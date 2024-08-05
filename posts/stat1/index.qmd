@@ -1,8 +1,8 @@
 ---
-title: "통계계"
+title: "통계"
 author: "이예솔"
 date: "2024-07-29"
-categories: [bigdata]
+categories: [statistics]
 ---
 
 # 1. 모집단과 표본집단

@@ -1,0 +1,38 @@
+---
+title: "LS 빅데이터 스쿨 Homework 6"
+author: "이예솔"
+date: "2024-08-05"
+categories: [bigdata]
+---
+
+# 슬통교재 57p 신형자동차의 에너지 소비효율 등급
+```{python}
+import numpy as np
+from scipy.stats import norm
+from scipy.stats import t
+
+new_cars = np.array([15.078,15.752,15.549,15.56,16.098,13.277,15.462,16.116,15.214,16.93,14.118,14.927, 15.382, 16.709, 16.804])
+
+# 2. 검정을 위한 가설을 명확하게 서술하시오
+## 22년에도 1등급을 받을 수 있을것이다.(모평균이 16.0이상일것이다.)
+## Ho: mu0 >= 16, Ha : mu0 < 16 (단측검정)
+
+# 3. 검정통계량 => 모분산을 모르므로 스튜던트정리=>자유도n-1인 t분포
+mean_cars = new_cars.mean()
+std_cars = np.std(new_cars, ddof=1)
+se_cars = std_cars/np.sqrt(len(new_cars))
+T = (mean_cars - 16) / se_cars
+
+# 4. p-value
+p_value = norm.cdf(T,loc=0,scale=1)
+## 유의수준이 1%
+alpha = 0.01
+"기각(1등급 판단 불가)" if p_value < alpha else "1등급"
+
+# 6. 신형모델의 평균 복합 에너지 소비효율에 대하여 95% 신뢰구간
+a = mean_cars - t.ppf(0.975,df=len(new_cars)-1) * se_cars
+b = mean_cars + t.ppf(0.975,df=len(new_cars)-1) * se_cars
+
+
+```
+

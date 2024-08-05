@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="이예솔">
-<meta name="dcterms.date" content="2024-07-29">
+<meta name="dcterms.date" content="2024-08-05">
 
-<title>통계 – Sol</title>
+<title>LS 빅데이터 스쿨 Homework 6 – Sol</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -113,9 +147,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">통계</h1>
+      <h1 class="title">LS 빅데이터 스쿨 Homework 6</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">statistics</div>
+                <div class="quarto-category">bigdata</div>
               </div>
                   </div>
   </div>
@@ -133,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 29, 2024</p>
+        <p class="date">August 5, 2024</p>
       </div>
     </div>
     
@@ -149,15 +183,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#모집단과-표본집단" id="toc-모집단과-표본집단" class="nav-link active" data-scroll-target="#모집단과-표본집단">1. 모집단과 표본집단</a>
-  <ul class="collapse">
-  <li><a href="#이항분포" id="toc-이항분포" class="nav-link" data-scroll-target="#이항분포">2. 이항분포</a></li>
-  </ul></li>
-  <li><a href="#연속형-확률변수와-확률밀도함수" id="toc-연속형-확률변수와-확률밀도함수" class="nav-link" data-scroll-target="#연속형-확률변수와-확률밀도함수">연속형 확률변수와 확률밀도함수</a>
-  <ul class="collapse">
-  <li><a href="#균일분포" id="toc-균일분포" class="nav-link" data-scroll-target="#균일분포">1. 균일분포</a></li>
-  <li><a href="#정규분포" id="toc-정규분포" class="nav-link" data-scroll-target="#정규분포">2. 정규분포</a></li>
-  </ul></li>
+  <li><a href="#슬통교재-57p-신형자동차의-에너지-소비효율-등급" id="toc-슬통교재-57p-신형자동차의-에너지-소비효율-등급" class="nav-link active" data-scroll-target="#슬통교재-57p-신형자동차의-에너지-소비효율-등급">슬통교재 57p 신형자동차의 에너지 소비효율 등급</a></li>
   </ul>
 </nav>
     </div>
@@ -168,37 +194,37 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="모집단과-표본집단" class="level1">
-<h1>1. 모집단과 표본집단</h1>
-<ul>
-<li>모집단: 특성을알아내고싶은전체집단</li>
-<li>표본집단: 모집단에서선택된부분집단</li>
-<li>표본추출 방법 중 단순랜덤추출:𝑁개중𝑛개를임의로선택하여추출 어떤실험에서나올수있는결과의경우의수가여러개이고,실험을진행하기전에어떠한결과가 나올지예측불가능하며,각결과가나올가능성을수치화할수있는실험</li>
-<li>표본공간(S): 랜덤실험으로부터나올수있는결과값들의집합</li>
-<li>사건(event): 표본공간의 부분집합</li>
-<li>확률함수(P): 어떤사건이일어나는가능성을측정하는함수(입력값은 사건, 결과값은 1과 0사이의 실수)</li>
-<li>확률변수(X): 는표본공간의원소들(실험의결과값)에정의된실수값을갖는함수</li>
-<li>확률분포: 확률변수𝑋의 값에 대응하는 확률이 어떻게 퍼져있는지 나타내는 용어. 확률변수𝑋가 가질 수 있는 값 𝑥에 대응하는 확률을 시각화 한 것 𝑋∼𝑓x : 확률변수 X가 확률분포 𝑓를 따른다.</li>
-<li>기대값(확률변수의 평균): 확률변수가가질수있는각각의값에그값이나타날확률을곱한 값들의합. 확률이 전체 횟수중의 빈도이므로 평균으로 볼 수 있다. 확률분포의무게중심을 잡아내는지표 # 이산형 확률변수와 확률질량함수 ## 1. 베르누이 분포</li>
-</ul>
-<p>from scipy.stats import bernoulli bernoulli.pmf(k, p) bernoulli.cdf(k, p) bernoulli.ppf(q, p) bernoulli.rvs(p, size, random_state)</p>
-<section id="이항분포" class="level2">
-<h2 class="anchored" data-anchor-id="이항분포">2. 이항분포</h2>
-<p>from scipy.stats import binom binom.pmf(k, n, p) binom.cdf(k, n, p) binom.ppf(q, n, p) binom.rvs(n, p, size=1, random_state=None)</p>
-</section>
-</section>
-<section id="연속형-확률변수와-확률밀도함수" class="level1">
-<h1>연속형 확률변수와 확률밀도함수</h1>
-<section id="균일분포" class="level2">
-<h2 class="anchored" data-anchor-id="균일분포">1. 균일분포</h2>
-<p>from scipy.stats import uniform uniform.pdf(x, loc=0, scale=1) uniform.cdf(x, loc=0, scale=1) uniform.ppf(q, loc=0, scale=1) uniform.rvs(loc=0, scale=1, size=None, random_state=None)</p>
-</section>
-<section id="정규분포" class="level2">
-<h2 class="anchored" data-anchor-id="정규분포">2. 정규분포</h2>
-<p>from scipy.stats import norm norm.pdf(x, loc=0, scale=1) norm.cdf(x, loc=0, scale=1) norm.ppf(q, loc=0, scale=1) norm.rvs(loc=0, scale=1, size=None, random_state=None)</p>
+<section id="슬통교재-57p-신형자동차의-에너지-소비효율-등급" class="level1">
+<h1>슬통교재 57p 신형자동차의 에너지 소비효율 등급</h1>
+<div id="bee107e3" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> t</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>new_cars <span class="op">=</span> np.array([<span class="fl">15.078</span>,<span class="fl">15.752</span>,<span class="fl">15.549</span>,<span class="fl">15.56</span>,<span class="fl">16.098</span>,<span class="fl">13.277</span>,<span class="fl">15.462</span>,<span class="fl">16.116</span>,<span class="fl">15.214</span>,<span class="fl">16.93</span>,<span class="fl">14.118</span>,<span class="fl">14.927</span>, <span class="fl">15.382</span>, <span class="fl">16.709</span>, <span class="fl">16.804</span>])</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. 검정을 위한 가설을 명확하게 서술하시오</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">## 22년에도 1등급을 받을 수 있을것이다.(모평균이 16.0이상일것이다.)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">## Ho: mu0 &gt;= 16, Ha : mu0 &lt; 16 (단측검정)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. 검정통계량 =&gt; 모분산을 모르므로 스튜던트정리=&gt;자유도n-1인 t분포</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>mean_cars <span class="op">=</span> new_cars.mean()</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>std_cars <span class="op">=</span> np.std(new_cars, ddof<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>se_cars <span class="op">=</span> std_cars<span class="op">/</span>np.sqrt(<span class="bu">len</span>(new_cars))</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> (mean_cars <span class="op">-</span> <span class="dv">16</span>) <span class="op">/</span> se_cars</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. p-value</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>p_value <span class="op">=</span> norm.cdf(T,loc<span class="op">=</span><span class="dv">0</span>,scale<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">## 유의수준이 1%</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="fl">0.01</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">"기각(1등급 판단 불가)"</span> <span class="cf">if</span> p_value <span class="op">&lt;</span> alpha <span class="cf">else</span> <span class="st">"1등급"</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. 신형모델의 평균 복합 에너지 소비효율에 대하여 95% 신뢰구간</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> mean_cars <span class="op">-</span> t.ppf(<span class="fl">0.975</span>,df<span class="op">=</span><span class="bu">len</span>(new_cars)<span class="op">-</span><span class="dv">1</span>) <span class="op">*</span> se_cars</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> mean_cars <span class="op">+</span> t.ppf(<span class="fl">0.975</span>,df<span class="op">=</span><span class="bu">len</span>(new_cars)<span class="op">-</span><span class="dv">1</span>) <span class="op">*</span> se_cars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

@@ -1,8 +1,8 @@
 ---
-title: "TEAM PROJECT 1"
-author: "5조(내이름은코난탐정이조)"
-date: "2024-07-24"
-jupyter: python3
+title: "Project1-Crime"
+author: "5조(내이름은코난탐정이조)-윤대웅,이다경,이승학,이예솔"
+date: "2024-07-29"
+categories: [Team_Project]
 ---
 
 ### **어느 요일이 범죄로부터 가장 안전할까?**
