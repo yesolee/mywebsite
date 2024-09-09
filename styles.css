@@ -1,1 +1,6 @@
 /* css styles */
+body {
+    background-color: #f5f5dc; /* 베이지색 */
+    margin: 0; /* 여백 제거 */
+    padding: 0; /* 패딩 제거 */
+}

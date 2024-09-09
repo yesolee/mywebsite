@@ -1,20 +1,16 @@
 ---
-title: "Solog"
+title: "Yesol Lee"
 toc: false
 about:
     id: hero-heading
     template: jolla
-    image: logo2.webp
+    image: profile_bg.png
     links: 
       - icon: github
         text: Github
         href: https://github.com/yesolee
 ---
 
-### 홈페이지 첫 화면입니다.
+## 도전과 배움의 즐거움!
 
-안녕하세요. 블로그에 오신 것을 환영합니다.
-
-```{python}
-1+1
-```
+저의 블로그에 오신 것을 환영합니다.💕

@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Solog",
+    "title": "Yesol Lee",
     "section": "",
-    "text": "홈페이지 첫 화면입니다.\n안녕하세요. 블로그에 오신 것을 환영합니다.\n\n1+1\n\n2"
+    "text": "저의 블로그에 오신 것을 환영합니다.💕"
   },
   {
     "objectID": "about.html",
@@ -1062,5 +1062,54 @@
     "title": "LS 빅데이터 스쿨 Homework 7",
     "section": "6. 확률변수X ~ N(3,2^2)에서 크기가 20인 표본을 뽑은 후 표본분산을 계산한 것을 s1^2라 생각해보고 다음을 수행해보세요.",
     "text": "6. 확률변수X ~ N(3,2^2)에서 크기가 20인 표본을 뽑은 후 표본분산을 계산한 것을 s1^2라 생각해보고 다음을 수행해보세요.\n\n같은방법으로500개의𝑠2들,𝑠2 1,𝑠2 2,…,𝑠2 500발생시킵니다.\n발생한500개의𝑠2들각각에4.75를곱하고,그것들의히스토그램을그려보세요.(히스토그램 을그릴때probability=TRUE옵션을사용해서그릴것)\n위에서그린히스토그램에자유도가19인카이제곱분포확률밀도함수를겹쳐그려보세요\n\n\ns_2 = []\nfor i in range(500):\n    x = norm.rvs(loc=3, scale=2, size=20)\n    s_2.append(np.var(x, ddof=1))\n\nplt.hist(np.array(s_2)*4.75, bins=50, density=True)\nx= np.arange(0,50,0.1)\nplt.plot(x, chi2.pdf(x,df=19))"
+  },
+  {
+    "objectID": "index.html#도전과-배움의-즐거움",
+    "href": "index.html#도전과-배움의-즐거움",
+    "title": "Yesol Lee",
+    "section": "",
+    "text": "저의 블로그에 오신 것을 환영합니다.💕"
+  },
+  {
+    "objectID": "index.html#col-width50",
+    "href": "index.html#col-width50",
+    "title": "Yesol Lee",
+    "section": "col {width:50%}",
+    "text": "col {width:50%}\n\n취미/특기"
+  },
+  {
+    "objectID": "index.html#col-width50-1",
+    "href": "index.html#col-width50-1",
+    "title": "Yesol Lee",
+    "section": "col {width:50%}",
+    "text": "col {width:50%}\n\n존경인물\n\n\n존경이유"
+  },
+  {
+    "objectID": "index.html#row",
+    "href": "index.html#row",
+    "title": "Yesol Lee",
+    "section": "",
+    "text": "저의 블로그에 오신 것을 환영합니다.💕"
+  },
+  {
+    "objectID": "index.html#취미특기",
+    "href": "index.html#취미특기",
+    "title": "Yesol Lee",
+    "section": "취미/특기",
+    "text": "취미/특기"
+  },
+  {
+    "objectID": "index.html#존경인물",
+    "href": "index.html#존경인물",
+    "title": "Yesol Lee",
+    "section": "존경인물",
+    "text": "존경인물\n\n존경이유"
+  },
+  {
+    "objectID": "index.html#존경인물존경이유",
+    "href": "index.html#존경인물존경이유",
+    "title": "Yesol Lee",
+    "section": "존경인물/존경이유",
+    "text": "존경인물/존경이유"
   }
 ]
